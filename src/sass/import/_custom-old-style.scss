@@ -1,0 +1,138 @@
+$custom-color: $atx-base-color !default;
+$custom-table-header-background-color: $atx-base-color !default;
+$custom-border-color: lighten($atx-base-color, 30%) !default;
+
+a {
+  color: $custom-color;
+}
+
+.atx-body {
+
+  a.lien_ext, a.lien_ext:after, .title1, a.link, h2, h3, h3 a, h4, .login p.center a, .message-accueil .titre, .message-accueil a, .form-saisie .form-bloc .content .intitule-strong, .form-saisie .form-bloc .content .intitule-strong2, .form-saisie .form-bloc .content .intitule-strong-auto, .form-bloc-message .content .message, .form-bloc .content .intitule-left-auto strong, .layer .content .intitule-auto-bold, .champ-cpv table a:hover, .layer .content .caracteristiques-tranche a:hover.ajout-tranche, .layer .content .caracteristiques-lots-techniques a:hover.ajout-lot-techniques, a.acceder, .infos-modifs, .form-envoi-pub legend, .form-envoi-pub .gwt-TabBarItem, .form-envoi-pub .gwt-TabPanelBottom, .compositionGroupement .title, .form-bloc .content .numerus-clausus strong, #envoiCourrier .title, .pre-visu .top a:hover.fermer, .clause-choix-list a:hover.ajout-choix, #canevasMap .content a:hover.ajout-el-num, .toggle-all, .toggle-all a, .previsu-doc .content h5, .commissions-details .title, a:hover.ajout-consultation-pressentie, .action-inline .empty-action, #envoiCourrier .pj a, .popup-small ul.liste-docs-generes, .popup-small ul.liste-docs-generes li a, .popup-small ul.liste-docs-generes li a:hover, a.info-link, a:hover.ajout-el, a:hover.consulter-doc, a:hover.modif-link, .text-bloc a.download, .text-bloc a:hover.download, .partitioner a:hover, .classification .intitule-long, .toggle .title, .tableau-deliberations .liste-attributaires .title, .liste-lot-group .note-totale .intitule, .tableau-default .title, .tableau-default table th, .tableau-default table th a, h2 a, .montant-tranche .title, .formulaire-amont .bloc-consultation .caracteristiques-tranche .title, .formulaire-amont .bloc-consultation .caracteristiques-lots-techniques .title, .toggle-consultation,
+  .results-list table a, .results-list table i, .form-saisie .liste-pieces table th, .liste-publication table th, .liste-retraits table th, .questions-reponses table th, .questions-reponses table th a, .questions-reponses table td a, .liste-candidatures table th, .liste-candidatures table th a, .liste-lot-group .title, .results-list .liste-docs .title, .liste-docs-seance .title, .liste-docs-seance table th, .liste-docs-seance table th a, .liste-docs-seance table td a, .liste-lot-group table th, .liste-lot-group table td a, .liste-lot-group table th a, .liste-lot-group table.recap th a, .deliberation .liste-pieces table th, .results-list .liste-docs .layer-docs table th, table.actualites th, table.actualites td a, table.actualites th a, .liste-lot-group table th, .liste-lot-group table td a, .liste-lot-group table th a, .liste-membres table th, .liste-membres table th a, .validation-consultations table th, .validation-consultations table th a, .validation-consultations table td a, .tableau-deliberations table th, .tableau-deliberations table th a, .tableau-deliberations table td a, .tableau-deliberations .liste-attributaires .layer-attrib table th, .montant-tranche table th, .suivi-contrat .title, .suivi-contrat table th a, .suivi-contrat table td a, .suivi-contrat table tr.header-table, .bloc-action a:hover.action, .liste-lot-group table th, .liste-lot-group table td a, .liste-docs-seance table.generation-convocations th, .suivi-contrat table .actions-small, .suivi-contrat table th, #suiviMessagerieSecurisee .title, .liste-pieces table td a {
+    color: $custom-color;
+  }
+
+  #liste-etapes .entete-grille {
+    background-color: $custom-table-header-background-color;
+    color: #fff;
+  }
+
+  .layer .content, .form-envoi-pub .gwt-TabPanelBottom, .suivi-contrat table th,
+  .liste-lot-group table th, .liste-docs-seance table th, .form-saisie .liste-pieces table th, .liste-retraits table th, .questions-reponses table th, .liste-candidatures table th, .liste-publication table th, .deliberation .liste-pieces table th, .results-list .liste-docs .layer-docs table, table.actualites th, .liste-membres table th, .validation-consultations table th, .tableau-deliberations table th, .tableau-deliberations .liste-attributaires .layer-attrib table, .montant-tranche table th, .form-saisie .liste-pieces table th, .boutons, .tableau-default table th {
+    border-color: $custom-border-color;
+  }
+
+  .form-bloc .content .intitule-long {
+    width: 20%;
+  }
+
+  //  Example of angle-double-down
+  //  Example of angle-double-up
+  &#middle .left-part ul li {
+
+    &.menu-top-closed,
+    &.menu-closed,
+    &.menu-top-open,
+    &.menu-open {
+      background-image: none;
+
+      > span {
+        background: $custom-color;
+        display: block;
+        width: 100%;
+        @include box-sizing(border-box);
+        position: relative;
+        height: 22px;
+        line-height: 22px;
+
+        &:after {
+          content: "";
+          font-family: "FontAwesome";
+          font-weight: 400;
+          position: absolute;
+          right: 5px;
+          top: 0;
+          line-height: 22px;
+          height: 22px;
+        }
+      }
+
+    }
+
+    &.menu-top-closed > span:after,
+    &.menu-closed > span:after {
+      content: "\f103";
+    }
+    &.menu-top-open > span:after,
+    &.menu-open > span:after {
+      content: "\f102";
+    }
+
+  }
+
+}
+
+/* ---------->>> Passation <<<-----------*/
+.passation .main-part .content .column-long .intitule-moyen100 {
+  width: 117px;
+}
+
+/* ---------->>> Popup historique des évenements <<<-----------*/
+#container .historique .tableau tbody td:nth-child(5) {
+  width: 930px;
+  text-align: justify;
+}
+
+/* ---------->>> ecran creation de consultation <<<-----------*/
+.passation .atx-body .atx-form-panel .form-group label {
+  white-space: nowrap;
+}
+
+.passation .atx-body .atx-form-panel .atx-form-panel_container .atx-form-panel_headeing .title .pull-left + .pull-left {
+  display: inline-block;
+}
+
+.passation .atx-body .layer .content .intitule label,
+.layer .content .intitule label {
+  padding-right: 4px;
+}
+
+.passation .atx-body .main-part .layerBorder-moyen .form-bloc .content .intitule-80 {
+  width: 85px;
+}
+
+/*.passation .atx-body .main-part .form-saisie .form-bloc .content .liste-pieces > table:first-of-type .actions {
+  width: 207px;
+}*/
+
+.passation .gwt-DialogBox {
+  z-index: 9999;
+}
+
+#moduleExecution .atx-body .main-part #layer_contractant .line:first-of-type .content-bloc-long .line > .label {
+  display: none;
+}
+
+#moduleExecution .atx-body .main-part #layer_contractant .line label {
+  color: #000;
+  line-height: 30px;
+}
+
+#moduleExecution .atx-body .main-part .form-bloc .content #layer_contractant .line::after {
+  content: none;
+}
+
+#moduleExecution .atx-body .main-part .form-bloc .content .intitule {
+  color: #000;
+}
+
+/* ---------->>> ecran modification de clause <<<-----------*/
+/*.redaction .atx-body .main-part .atx-form-panel.atx-form-panel_style2 .atx-form-panel_body .row > .form-group:nth-child(5) .radio-choice-small {
+  line-height: 30px;
+}*/
+
+.redaction .atx-body .main-part .atx-form-panel_style2.form-horizontal .form-group:nth-of-type(5) .control-label,
+.redaction .atx-body .main-part .atx-form-panel_style2.form-horizontal .form-group:nth-of-type(6) .control-label {
+  padding-top: 1px;
+}

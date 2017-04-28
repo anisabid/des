@@ -1,0 +1,108 @@
+/*------------------------------------------------------------------
+[11. Button-groups]
+*/
+
+$btn-group-status-color_default: #333333 !default;
+$btn-group-status-background-color_default: #FFFFFF !default;
+$btn-group-status-border-color_default: #CCCCCC !default;
+
+$btn-group-status-color_success: #FFFFFF !default;
+$btn-group-status-background-color_success: #00E676 !default;
+$btn-group-status-border-color_success: #00E676 !default;
+
+$btn-group-status-color_error: #FFFFFF !default;
+$btn-group-status-background-color_error: #FF1744 !default;
+$btn-group-status-border-color_error: #FF1744 !default;
+
+$btn-group-status-color_disabled: #37474F !default;
+$btn-group-status-background-color_disabled: #B0BEC5 !default;
+$btn-group-status-border-color_disabled: #B0BEC5 !default;
+
+.btn-group.btn-group-status {
+  .status-done {
+
+  }
+  .status-resolved {
+
+  }
+
+  .status-failed {
+
+  }
+
+  .btn-success {
+
+  }
+
+  .btn-danger {
+
+  }
+
+  .btn {
+    color: $btn-group-status-color_default;
+    background-color: $btn-group-status-background-color_default;
+    border-color: $btn-group-status-border-color_default;
+
+    &:hover, &:focus, &:active {
+      background-color: darken($btn-group-status-background-color_default, 20%);
+    }
+
+    .not-hover & {
+      &:hover, &:focus, &:active {
+        background-color: $btn-group-status-background-color_default;
+      }
+    }
+
+    &, &:hover, &:active {
+      box-shadow: none;
+      outline: none;
+    }
+
+    &:focus {
+      background-color: transparent;
+    }
+
+  }
+
+  .btn-success.active {
+    color: $btn-group-status-color_success;
+    background-color: $btn-group-status-background-color_success;
+    border-color: $btn-group-status-border-color_success;
+
+    &:hover, &:focus, &:active {
+      background-color: lighten($btn-group-status-background-color_success, 3%);
+    }
+
+    .not-hover & {
+      &:hover, &:focus, &:active {
+        background-color: $btn-group-status-background-color_success;
+      }
+    }
+  }
+
+  .btn-error.active {
+    color: $btn-group-status-color_error;
+    background-color: $btn-group-status-background-color_error;
+    border-color: $btn-group-status-border-color_error;
+
+    &:hover, &:focus, &:active {
+      background-color: lighten($btn-group-status-background-color_error, 3%);
+    }
+
+    .not-hover & {
+      &:hover, &:focus, &:active {
+        background-color: $btn-group-status-background-color_error;
+      }
+    }
+  }
+
+  .disabled.btn-success,
+  .disabled.btn-error {
+    &, &:hover, &:focus, &:active {
+      color: $btn-group-status-color_disabled;
+      background-color: rgba($btn-group-status-background-color_disabled, .6);
+      border-color: $btn-group-status-border-color_disabled;
+    }
+  }
+
+}

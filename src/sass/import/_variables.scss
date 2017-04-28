@@ -1,0 +1,58 @@
+//
+// Variables
+// --------------------------------------------------
+
+/**
+ **
+ ** Auto generator
+ **
+ */
+
+$atx-auto-generate: false !default;
+
+// extend font-awesome
+$fa-font-path: "../fonts/awesome" !default;
+
+/**
+ **
+ ** Base
+ **
+ */
+
+$atx-base-unit: 8px !default;
+$atx-base-color: #1976D2 !default;
+$atx-base-padding-vertical: 8px !default;
+$atx-base-padding-horizontal: 8px !default;
+$atx-base-font-size: 12px !default;
+$atx-base-line-height: 20px !default;
+$atx-base-border-radius: 3px !default;
+$atx-base-btn-background-color: $atx-base-color !default;
+$atx-base-btn-background-color_hover: darken($atx-base-color, 30%) !default;
+$atx-base-darken: 10% !default;
+
+$atx-gradient: false !default;
+$atx-gradient_color-mix: #0000ff !default;
+$atx-gradient_directional-start_color: mix(darken($atx-base-color, 20%), $atx-gradient_color-mix) 0% !default;
+$atx-gradient_directional-end_color: mix($atx-base-color, $atx-gradient_color-mix) 20% !default;
+$atx-gradient_directional-deg: 45deg !default;
+
+/**
+ **
+ ** Bootstrap
+ **
+ */
+$brand-primary: $atx-base-color !default; // #2f7aba
+$brand-success: #10cfbd !default;
+$brand-info: #48b0f7 !default;
+$brand-warning: #f8d053 !default;
+$brand-danger: #f55753 !default;
+
+$state-success-text:             #10cfbd !default;
+$state-info-text:                #48b0f7 !default;
+$state-warning-text:             #f8d053 !default;
+$state-danger-text:              #f55753 !default;
+
+$line-height-computed: $atx-base-unit * 2 !default;
+$border-radius-base: 3px !default;
+$border-radius-large: 6px !default;
+$border-radius-small: 3px !default;

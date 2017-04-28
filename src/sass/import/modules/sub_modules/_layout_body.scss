@@ -1,0 +1,62 @@
+/*------------------------------------------------------------------
+[1.4 Body]
+*/
+
+$atx-body_footer-group-border-top: 1px solid #DEDEDE !default;
+$atx-body_footer-group-border-bottom: 1px solid $atx-base-color !default;
+
+.atx-body {
+  margin: 0 5% $atx-base-unit*4 5%;
+
+  min-height: 100%;
+
+  padding-top: $atx-header-base-height;
+  margin-top: -$atx-header-base-height;
+  padding-bottom: $atx-footer-base-height;
+  margin-bottom: -$atx-footer-base-height;
+
+  .affix-header & {
+    margin-top: $atx-base-unit*4;
+  }
+
+  .administration &,
+  .statistiques &{
+    * {
+      @include box-sizing(initial);
+    }
+    margin-left: 0;
+    margin-right: 0;
+
+    .main-part {
+      margin-left: 182px;
+      margin-right: 10px;
+    }
+
+  }
+
+  .atx-page-login & {
+    padding-top: $atx-base-unit*9;
+    margin-top: -($atx-base-unit*9);
+    height: 100%;
+  }
+
+  .atx-message-warning {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .atx-body_footer {
+
+    .atx-body_footer-group {
+      padding-top: $atx-base-unit;
+      margin-top: $atx-base-unit;
+      padding-bottom: $atx-base-unit;
+    }
+
+    .atx-body_footer-group + .atx-body_footer-group {
+      border-top: $atx-body_footer-group-border-top;
+      margin-top: 0;
+    }
+  }
+
+}

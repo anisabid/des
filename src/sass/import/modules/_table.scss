@@ -1,0 +1,106 @@
+/*------------------------------------------------------------------
+[6. Table]
+[6.0 Table variable default]
+[6.1 Table default]
+[6.2 Table theme offers]
+*/
+
+// 6.0 Table variable default
+// // Table :: table
+$atx-table_header-background-color: rgba(236, 240, 241, 0.35) !default;
+$atx-table_header-background-color_odd: rgba(236, 240, 241, .5) !default;
+$atx-table_header-border-bottom: 0px solid rgb(149, 165, 166) !default;
+$atx-table_row-background-color_hover: rgba(255, 253, 231, 1) !default;
+$atx-table_row-border: 1px solid rgba(221, 221, 221, 1) !default;
+$atx-table_row__open-border: 1px solid rgba(238, 238, 238, 1) !default;
+$atx-table_row_icon-color: $atx-base-color !default;
+$atx-table_row_actions_btn-color: rgba(158, 158, 158, 1) !default;
+$atx-table_row_actions_btn-color_hover: rgba(255, 255, 255, 1) !default;
+$atx-table_row_actions_btn-background-color_hover: $atx-base-color !default;
+$atx-table_row_header-background-color: rgba(245, 245, 245, 1) !default;
+$atx-table_row_header-border-bottom: 1px solid rgba(224, 224, 224, 1) !default;
+$atx-table_row__open-border-bottom: 1px solid rgba(224, 224, 224, 1) !default;
+// // Table :: sub_table
+$atx-sub_table_header-background-color: change-color($atx-base-color, $lightness: 0%, $alpha: 1) !default;
+$atx-sub_table_header-background-color_odd: change-color($atx-base-color, $lightness: 0%, $alpha: 0.8) !default;
+$atx-sub_table_header-color: rgba(255, 255, 255, 1) !default;
+$atx-sub_table_row-border: 1px solid rgba(221, 221, 221, 1) !default;
+
+// 6.1 Table default
+
+.atx-table {
+
+  padding: $atx-base-unit 0;
+
+  // Table Header
+  .atx-table_header {
+
+    .atx-table_header-cols.vertical-align {
+      display: table;
+      width: 100%;
+
+      border-bottom: $atx-table_header-border-bottom;
+      background-color: $atx-table_header-background-color;
+      padding-top: $atx-base-unit;
+      padding-bottom: $atx-base-unit;
+
+      > div[class*="col-"] {
+        display: table-cell;
+        vertical-align: middle;
+        float: none;
+      }
+
+    }
+
+    .btn.btn-sort {
+      background: none;
+      padding-left: 0;
+      &:hover, &:active, &:focus {
+        @include box-shadow(none); // Redeclare so transitions work
+      }
+
+      .fa {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .atx-table_body {
+    .row {
+      position: relative;
+      padding: 0;
+      @include transition(background-color .6s ease);
+      @include transition(margin .2s ease);
+      &:first-child {
+        border-top-width: 1px;
+      }
+      .atx-table_row-loader {
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        right: 0;
+        display: none;
+      }
+      &.loading {
+        border-bottom: 2px solid #ffffff;
+
+        & + .row {
+          border-top: 0;
+        }
+
+        .atx-table_row-loader {
+          display: block;
+        }
+      }
+
+    }
+
+  }
+
+}
+
+// 6.2 Table theme offers
+@import "sub_modules/table_themes/table_theme_offers";
+
+// 6.2 Table theme results
+@import "sub_modules/table_themes/table_theme_results";

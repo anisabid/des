@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Generator</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+<a href="#" class="btn btn-primary js-generator">Generator</a>
+
+<!-- jQuery -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script>
+    $('.js-generator').click(function () {
+
+        $.get("./bat/generator.js", function (data) {
+            console.log("Load was performed.");
+        });
+
+        return false;
+    });
+
+</script>
+</body>
+</html>

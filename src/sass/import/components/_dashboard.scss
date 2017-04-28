@@ -1,0 +1,26 @@
+.atx-body {
+  .dashboard {
+    .panel {
+
+      .panel-title,
+      .widget-controls,
+      .widget-controls a,
+      .footer-item a {
+        color: $atx-base-color;
+      }
+
+      .btn-primary {
+        background-color: $atx-base-color;
+        border-color: darken($atx-base-color, 40%);
+        &:hover {
+          background-color: darken($atx-base-color, 20%);
+        }
+      }
+
+      .sub-header .filter-item {
+        color: $atx-base-color;
+      }
+
+    }
+  }
+}

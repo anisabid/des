@@ -1,0 +1,21 @@
+{
+  "name": "wordappeal",
+  "description": "",
+  "main": "index.js",
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "fontawesome#^4.7.0",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.45",
+    "bootstrap": "^3.3.7",
+    "animatewithsass": "^3.2.2"
+  }
+}

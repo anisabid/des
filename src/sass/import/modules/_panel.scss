@@ -1,0 +1,80 @@
+/*------------------------------------------------------------------
+[10. Panel]
+  // [10.1 Scope Variable]
+*/
+
+// [10.1 Scope Variable]
+
+$atx-panel-color: rgba(255, 255, 255, 1) !default;
+$atx-panel-background-color: $atx-base-color !default;
+
+.atx-panel.panel {
+  .panel-heading {
+
+    line-height: $atx-base-unit*2;
+    position: relative;
+
+    .fa{
+      line-height: $atx-base-unit*2;
+    }
+
+    .atx-icon-plus {
+      display: none;
+    }
+
+    &.collapsed,
+    .collapsed {
+      .atx-icon-plus {
+        display: inline-block;
+      }
+      .atx-icon-minus {
+        display: none;
+      }
+
+    }
+
+    &.collapsed{
+      border-color: transparent;
+    }
+
+
+    .options {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: $atx-base-unit;
+
+      a {
+        display: block;
+        float: left;
+        margin-left: $atx-base-unit;
+        line-height: $atx-base-unit*3;
+        height: $atx-base-unit*3;
+        &:hover, &:active, &:focus {
+          text-decoration: none;
+        }
+
+        .fa,
+        .text {
+          display: block;
+          float: left;
+        }
+
+        .fa {
+          margin-right: $atx-base-unit*0.5;
+          line-height: $atx-base-unit*3;
+          height: $atx-base-unit*3;
+        }
+      }
+
+    }
+  }
+
+  &.panel-custom {
+    border-color: $atx-panel-background-color;
+    .panel-heading {
+      background-color: $atx-panel-background-color;
+      color: $atx-panel-color;
+    }
+  }
+}

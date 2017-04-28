@@ -1,0 +1,299 @@
+/*------------------------------------------------------------------
+[3. Form]
+
+  [3.1 Form panel]
+  [3.2 Form custom elements]
+*/
+
+/*
+  [3.1 Form panel]
+  */
+$atx-form-panel-border: 1px solid #ddd !default;
+$atx-form-panel_headeing-border-_bottom: 1px solid #ddd;
+$atx-form-panel_body-background: #fff;
+
+.atx-form-panel {
+  border-radius: $border-radius-base;
+  border: $atx-form-panel-border;
+
+  .atx-form-panel_container {
+    padding: 0;
+    margin: 0;
+
+    .atx-form-panel_headeing {
+      font-size: 13px;
+      font-weight: 400;
+      background: #f5f5f5;;
+      display: block;
+      position: relative;
+      @include clearfix();
+
+      .atx-form-panel_headeing_container {
+        padding: $atx-base-unit $atx-base-unit $atx-base-unit $atx-base-unit*4;
+        cursor: pointer;
+        @include clearfix();
+      }
+
+      .toggle {
+        float: left;
+        margin-right: $atx-base-unit;
+        height: $atx-base-unit*2;
+        width: $atx-base-unit*2;
+        position: absolute;
+        top: 50%;
+        left: $atx-base-unit;
+        margin-top: -$atx-base-unit;
+        .fa {
+          line-height: $atx-base-unit*2;
+          height: $atx-base-unit*2;
+          width: $atx-base-unit*2;
+          text-align: center;
+          &.fa-minus {
+            display: none;
+          }
+          &.fa-plus {
+            display: block;
+          }
+        }
+
+      }
+
+      .title {
+        line-height: $atx-base-unit*3;
+        text-transform: uppercase;
+        float: left;
+
+        .pull-left + .pull-left {
+          float: none !important;
+          margin-right: 180px;
+          overflow: hidden;
+          padding-left: 4px;
+        }
+
+      }
+
+      .options {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: $atx-base-unit;
+
+        a {
+          display: block;
+          float: left;
+          margin-left: $atx-base-unit;
+          line-height: $atx-base-unit*3;
+          height: $atx-base-unit*3;
+          &:hover, &:active, &:focus {
+            text-decoration: none;
+          }
+
+          .fa,
+          .text {
+            display: block;
+            float: left;
+          }
+
+          .fa {
+            margin-right: $atx-base-unit*0.5;
+            line-height: $atx-base-unit*3;
+            height: $atx-base-unit*3;
+          }
+        }
+
+      }
+
+    }
+
+    .atx-form-panel_body {
+      display: none;
+      padding: $atx-base-unit*2;
+      background: $atx-form-panel_body-background;
+    }
+
+    &.open {
+      .atx-form-panel_headeing {
+        display: block;
+        border-bottom: $atx-form-panel_headeing-border-_bottom;
+        .toggle {
+          .fa {
+            &.fa-minus {
+              display: block;
+            }
+            &.fa-plus {
+              display: none;
+
+            }
+          }
+        }
+
+      }
+      .atx-form-panel_body {
+        .no-js & {
+          display: block;
+        }
+
+      }
+    }
+
+  }
+
+  .form-group {
+    label {
+      font-weight: 500;
+      &.text-center {
+        text-align: center;
+      }
+      &.text-left {
+        text-align: left;
+      }
+    }
+  }
+}
+
+/*
+  [3.2 Form custom elements]
+  */
+input[type="checkbox"].custom {
+  display: none;
+
+  $form-custom-checkbox-size: 2*$atx-base-unit;
+  $form-custom-checkbox-text: $atx-base-unit;
+
+  + label {
+    padding-left: $form-custom-checkbox-size;
+    padding-left: $form-custom-checkbox-size;
+    min-height: $form-custom-checkbox-size;
+    position: relative;
+  }
+
+  + label:before,
+  + label:after {
+    font-family: FontAwesome;
+    font-size: $form-custom-checkbox-text;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: $form-custom-checkbox-size;
+    height: $form-custom-checkbox-size;
+    line-height: $form-custom-checkbox-size;
+    text-align: center;
+  }
+
+  + label:before {
+    content: '';
+    border: 1px solid rgba(207, 209, 214, .9);
+    background-color: rgba(255, 255, 255, .9);
+    @include box-shadow(inset 0 1px 4px rgba(0, 0, 0, .1));
+    border-radius: $border-radius-base;
+
+    -webkit-transition: all 0.50s;
+    -moz-transition: all 0.50s;
+    -o-transition: all 0.50s;
+    transition: all 0.50s;
+  }
+  + label:after {
+    font-family: FontAwesome;
+    font-size: $form-custom-checkbox-text;
+    line-height: $form-custom-checkbox-size;
+    content: '\f00c';
+    max-width: $form-custom-checkbox-size;
+    overflow: hidden;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    color: $atx-base-color;
+
+    -webkit-transition: all 0.50s;
+    -moz-transition: all 0.50s;
+    -o-transition: all 0.50s;
+    transition: all 0.50s;
+  }
+
+  &:checked {
+    + label::after {
+      max-width: $form-custom-checkbox-size;
+      opacity: 1;
+      width: $form-custom-checkbox-size;
+    }
+    + label:before {
+      border: 1px solid $atx-base-color;
+      background-color: rgba(255, 255, 255, .9);
+      @include box-shadow(inset 0 1px 4px rgba(0, 0, 0, .1));
+    }
+  }
+
+}
+
+$btn-ico-animate-border-color: #bbbbbb;
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.btn-ico-animate {
+  &:hover{
+    box-shadow: none;
+  }
+  &.btn-ajax {
+    outline: none;
+    height: 40px;
+    text-align: center;
+    //width: 130px;
+    border-radius: 40px;
+    background: transparent;
+    border: 2px solid transparent;
+    //color:$green;
+    letter-spacing: 1px;
+    text-shadow: 0;
+    cursor: pointer;
+    transition: all 0.25s ease;
+
+    &.onload {
+      width: 40px;
+      border-color: $btn-ico-animate-border-color;
+      border-width: 3px;
+      font-size: 0;
+      border-left-color: $brand-success;
+      animation: rotating 2s 0.25s linear infinite;
+
+      &:after {
+        content: "";
+      }
+    }
+
+    &.success {
+      .fa {
+        display: none;
+      }
+      width: 40px;
+      color: white;
+      background: $brand-success;
+      line-height: 24px;
+      &:after {
+        font-family: 'FontAwesome';
+        content: "\f00c";
+      }
+    }
+    &.error {
+      margin: 0;
+      .fa {
+        display: none;
+      }
+      width: 40px;
+      color: white;
+      background: $brand-danger;
+      line-height: 24px;
+      &:after {
+        font-family: 'FontAwesome';
+        content: "\f00d";
+      }
+    }
+  }
+}

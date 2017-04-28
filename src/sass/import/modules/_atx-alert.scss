@@ -1,0 +1,105 @@
+/*------------------------------------------------------------------
+[12. ATX Alert]
+*/
+
+.atx-notification {
+  position: relative;
+  padding-right: $atx-base-unit;
+  .subnav-notification {
+    position: relative;
+    .badge {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      margin-left: -4px;
+      padding: 3px 5px;
+      z-index: 2;
+      color: #f55753;
+      background-color: rgba(245, 87, 83, .2);
+      &.flash {
+        @include flash();
+      }
+      &.shake {
+        @include shake();
+      }
+      &.bounceIn {
+        @include bounceIn();
+      }
+      &.swing {
+        @include swing();
+      }
+    }
+    &.swing,
+    .fa.swing {
+      @include swing();
+    }
+  }
+
+  .atx-notification-body {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #ffffff;
+    padding: 0;
+    width: $atx-base-unit*53;
+    z-index: 20;
+    border: 1px solid rgba(100, 100, 100, 0.4);
+    @include box-shadow(0 3px 8px rgba(0, 0, 0, 0.25));
+    font-size: $atx-base-font-size;
+
+    &:after, &:before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      position: absolute;
+    }
+    &:after {
+      border-width: 0 6px 6px 6px;
+      border-color: transparent transparent rgba(100, 100, 100, 0.4) transparent;
+      z-index: 10;
+      top: -6px;
+      right: 10px;
+    }
+    &:before {
+      border-width: 0 5px 5px 5px;
+      border-color: transparent transparent #fff transparent;
+      position: absolute;
+      z-index: 11;
+      top: -5px;
+      right: 11px;
+    }
+
+    .notification-body_header {
+      color: #333;
+      padding: $atx-base-unit $atx-base-unit*2;
+      font-weight: bold;
+      background: #ffffff;
+      border-bottom: 1px solid #dddfe2;
+    }
+
+    .notification-body_list {
+      .notification-item {
+        border-bottom: 1px solid #dddfe2;
+        background-color: #ffffff;
+        transition: all 1s ease;
+        &.new-item {
+          background-color: rgba($brand-info, .05);
+        }
+        &.old-item {
+          background-color: #ffffff;
+          .item .circle {
+            color: rgba(#555, .5);
+          }
+        }
+        .item {
+          padding: $atx-base-unit*2 0;
+          color: #555;
+          .circle {
+            color: #48b0f7;
+          }
+        }
+      }
+    }
+  }
+}

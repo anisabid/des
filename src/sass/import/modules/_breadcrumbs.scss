@@ -1,0 +1,39 @@
+/*------------------------------------------------------------------
+[4. Breadcrumbs]
+  [4.1 Scope Variable]
+*/
+
+// [4.1 Scope Variable]
+
+$atx-breadcrumbs-color: $atx-base-color !default;
+$atx-breadcrumbs-link-color: darken($atx-base-color, 50%) !default;
+
+.atx-body {
+  .atx-breadcrumbs,
+  .breadcrumbs {
+    font-weight: 500;
+    color: $atx-breadcrumbs-color;
+    height: $atx-base-unit*3;
+    line-height: $atx-base-unit*3;
+    margin-bottom: $atx-base-unit*2;
+    position: relative;
+    &:before {
+      font: normal normal normal 14px/1 FontAwesome;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: "\f02e";
+      line-height: $atx-base-unit*3;
+      display: block;
+      float: left;
+      margin-right: $atx-base-unit;
+    }
+
+    a,
+    .link {
+      color: $atx-breadcrumbs-link-color;
+      font-weight: 300;
+      text-decoration: none;
+    }
+  }
+}
