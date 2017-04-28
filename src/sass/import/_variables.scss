@@ -1,17 +1,36 @@
+// Trends Default Theme
+// --------------------------------------------------
+// Copyright Reserved AA - 2017
+// --------------------------------------------------
+
+//
+// Legend
+// --------------------------------------------------
+/**
+  kt    : Kite Trends
+  ktv   : Kite Trends Variable
+ */
+
 //
 // Variables
 // --------------------------------------------------
 
-/**
- **
- ** Auto generator
- **
- */
+// CONST
+// --------------------------------------------------
+$CONST-NAMESPACE: "kt";
+$CONST-AUTO-GENERATE: false !default;
+$CONST-ING-URL: "../img";
+$CONST-ASSETS-URL: "../../assets";
 
-$atx-auto-generate: false !default;
+// Const Lighter Percent
+$CONST-PERCENT-light: 16%;
+$CONST-PERCENT-lighter: 9.5%;
+$CONST-PERCENT-lightest: 3%;
 
-// extend font-awesome
-$fa-font-path: "../fonts/awesome" !default;
+// Const Darker Percent
+$CONST-PERCENT-dark: 45%;
+$CONST-PERCENT-darker: 27%;
+$CONST-PERCENT-darkest: 18%;
 
 /**
  **
@@ -19,29 +38,48 @@ $fa-font-path: "../fonts/awesome" !default;
  **
  */
 
-$atx-base-unit: 8px !default;
-$atx-base-color: #1976D2 !default;
-$atx-base-padding-vertical: 8px !default;
-$atx-base-padding-horizontal: 8px !default;
-$atx-base-font-size: 12px !default;
-$atx-base-line-height: 20px !default;
-$atx-base-border-radius: 3px !default;
-$atx-base-btn-background-color: $atx-base-color !default;
-$atx-base-btn-background-color_hover: darken($atx-base-color, 30%) !default;
-$atx-base-darken: 10% !default;
+$ktv-prefix-class: #{$CONST-NAMESPACE}-;
+$ktv-base-unit: 8px !default;
+$ktv-base-color: #1976D2 !default;
 
-$atx-gradient: false !default;
-$atx-gradient_color-mix: #0000ff !default;
-$atx-gradient_directional-start_color: mix(darken($atx-base-color, 20%), $atx-gradient_color-mix) 0% !default;
-$atx-gradient_directional-end_color: mix($atx-base-color, $atx-gradient_color-mix) 20% !default;
-$atx-gradient_directional-deg: 45deg !default;
+
+// Global Color
+// --------------------------------------------------
+// Base Grey Guided Color * change only $base-light
+// --------------------------------------------------
+
+//Base Grey Color
+$color-master: #626262;
+
+// Lighter Grey colors
+$color-master-light:mix($color-master, #fff, $CONST-PERCENT-light);
+$color-master-lighter:mix($color-master, #fff, $CONST-PERCENT-lighter);
+$color-master-lightest:mix($color-master, #fff, $CONST-PERCENT-lightest);
+
+// Darker Grey colors
+$color-master-dark:mix($color-master, #000, $CONST-PERCENT-dark);
+$color-master-darker:mix($color-master, #000, $CONST-PERCENT-darker);
+$color-master-darkest:mix($color-master, #000, $CONST-PERCENT-darkest);
+
+$color-white: #fff;
+$color-black: #000;
+
+$color-success: #10cfbd;
+$color-complete : #48b0f7;
+$color-primary: #6d5cae;
+$color-warning: #f8d053;
+$color-danger: #f55753;
+$color-info: #3b4752;
+
+$base-font-family: "Roboto", Arial, sans-serif;
+
 
 /**
  **
  ** Bootstrap
  **
  */
-$brand-primary: $atx-base-color !default; // #2f7aba
+$brand-primary: $ktv-base-color !default; // #2f7aba
 $brand-success: #10cfbd !default;
 $brand-info: #48b0f7 !default;
 $brand-warning: #f8d053 !default;
@@ -51,8 +89,3 @@ $state-success-text:             #10cfbd !default;
 $state-info-text:                #48b0f7 !default;
 $state-warning-text:             #f8d053 !default;
 $state-danger-text:              #f55753 !default;
-
-$line-height-computed: $atx-base-unit * 2 !default;
-$border-radius-base: 3px !default;
-$border-radius-large: 6px !default;
-$border-radius-small: 3px !default;

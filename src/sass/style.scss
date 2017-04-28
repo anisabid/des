@@ -1,35 +1,20 @@
-// Import Reset
-//@import "import/reset";
-
-// Import Variables
-@import "import/variables";
-
 // Import FontAwesome
 @import "../../bower_components/font-awesome/scss/font-awesome";
 
 // Import Animate
 @import "../../bower_components/animatewithsass/animate.scss";
 
-// Import Palette
-@import "import/palette";
-
 // Import Bootstrap
-@import "import/bootstrap/bootstrap";
-
-// Surcharge Bootstrap
-@import "import/bootstrap";
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 
 // Import Bootstrap datetimepicker
 @import "../../bower_components/eonasdan-bootstrap-datetimepicker/src/sass/bootstrap-datetimepicker";
 
+// Import Variables
+@import "import/variables";
+
 // Import Utilities
 @import "import/utilities";
 
-// Includes of Modules
-@import "import/modules";
-
-// Includes of Modules
-@import "import/components";
-
-// Includes of Modules
-@import "import/custom-old-style";
+// Import Demo
+@import "demo";

@@ -1,27 +1,6 @@
 //
 // Utility classes
 // --------------------------------------------------
-
-@mixin center-block() {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-// New mixin to use as of v3.0.1
-@mixin text-hide() {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
-}
-
-@mixin container() {
-  width: $container-width;
-  @include center-block;
-}
-
 @mixin box-shadow($params) {
   -webkit-box-shadow: $params;
   -moz-box-shadow: $params;
@@ -33,17 +12,18 @@
   $spacing-abbreviation-list: p m;
   $direction-list: top right bottom left;
   $direction-abbreviation-list: t r b l;
+
   @each $current-spacing in $spacing-list {
     $i: index($spacing-list, $current-spacing);
     $current-spacing-abbreviation: nth($spacing-abbreviation-list, $i);
     .s-#{$current-spacing-abbreviation} {
-      #{$current-spacing}: $atx-base-unit;
+      #{$current-spacing}: $ktv-base-unit;
     }
     @each $current-direction in $direction-list {
       $j: index($direction-list, $current-direction);
       $current-direction-abbreviation: nth($direction-abbreviation-list, $j);
       .s-#{$current-spacing-abbreviation}#{$current-direction-abbreviation} {
-        #{$current-spacing}-#{$current-direction}: $atx-base-unit;
+        #{$current-spacing}-#{$current-direction}: $ktv-base-unit;
       }
     }
   }
@@ -51,111 +31,13 @@
 
 @include spacing;
 
-.clearfix {
-  @include clearfix;
-}
-
-.center-block {
-  @include center-block;
-}
-
-@mixin cell-middle() {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.cell-middle {
-  @include cell-middle;
-}
-
-.pull-right {
-  float: right !important;
-}
-
-.pull-left {
-  float: left !important;
-}
-
-.pull-overflow {
-  overflow: hidden;
-}
-
-.hide {
-  display: none !important;
-}
-
-.show {
-  display: block !important;
-}
-
-.invisible {
-  visibility: hidden;
-}
-
-.text-hide {
-  @include text-hide;
-}
-
-.hidden {
-  display: none !important;
-}
-
-.affix {
-  position: fixed;
-}
-
-.atx-relative {
-  position: relative;
-}
-
-.atx-absolute {
-  position: absolute;
-}
-
-.vertical-center {
-  display: inline-block;
-  vertical-align: middle;
-  float: none;
-}
-
-.vertical-align {
+.#{$ktv-prefix-class}vertical-align {
   display: table;
   width: 100%;
 }
 
-.vertical-align > [class*="col-"] {
+.#{$ktv-prefix-class}vertical-align > [class*="col-"] {
   display: table-cell;
   vertical-align: middle;
   float: none;
-}
-
-.fa.famr {
-  margin-right: $atx-base-unit;
-}
-
-.fa.faml {
-  margin-left: $atx-base-unit;
-}
-
-
-@-webkit-keyframes flash {
-  0% { opacity: 1; }
-  16% { opacity: .1; }
-  33% { opacity: 1; }
-  100% { opacity: 1; }
-}
-@keyframes flash {
-  0% { opacity: 1; }
-  16% { opacity: .1; }
-  33% { opacity: 1; }
-  100% { opacity: 1; }
-}
-
-@mixin atx-animation-flash() {
-  -webkit-animation: flash linear 3s infinite;
-  animation: flash linear 3s infinite;
-}
-
-.atx-animation-flash{
-  @include atx-animation-flash;
 }

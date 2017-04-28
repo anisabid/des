@@ -166,7 +166,7 @@ gulp.task('watch.build', ['build-styles', 'build-scripts'], function () {
 });
 
 gulp.task('serve', ['build'], function () {
-
+    
     gulp.watch([config.img.watch], ['build-img']);
     gulp.watch([config.js.watch], ['build-scripts']);
     gulp.watch([config.sass.watch], ['build-styles']);

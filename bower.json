@@ -16,6 +16,7 @@
     "font-awesome": "fontawesome#^4.7.0",
     "eonasdan-bootstrap-datetimepicker": "^4.17.45",
     "bootstrap": "^3.3.7",
-    "animatewithsass": "^3.2.2"
+    "animatewithsass": "^3.2.2",
+    "bootstrap-sass": "^3.3.7"
   }
 }
