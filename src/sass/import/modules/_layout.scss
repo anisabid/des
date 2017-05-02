@@ -1,0 +1,39 @@
+/*------------------------------------------------------------------
+[1. Layouts]
+*/
+html {
+    height: 100%;
+}
+/* Body Triggers for layout options 
+------------------------------------------------------------------
+*/
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: $ktv-color-master-lightest;
+}
+
+/* Header
+------------------------------------
+*/
+.header{
+    position: relative;
+    display: block;
+    //height: $layout-header-height;
+    width: 100%;
+    padding: 0 20px 0 0;
+    z-index: $ktv-zIndex-navbar;
+    background-color: #fff;
+    //border-bottom: 1px solid fade($color-master-light, 70%);
+    a{
+        color: #3b4751;
+        &.btn{
+            color: #8b91a0;
+        }
+        &.btn-warning{
+            color:#eaeef1;
+        }
+    }
+
+}

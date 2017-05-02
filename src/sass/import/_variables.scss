@@ -42,37 +42,35 @@ $ktv-prefix-class: #{$CONST-NAMESPACE}-;
 $ktv-base-unit: 8px !default;
 $ktv-base-color: #1976D2 !default;
 
-
 // Global Color
 // --------------------------------------------------
 // Base Grey Guided Color * change only $base-light
 // --------------------------------------------------
 
 //Base Grey Color
-$color-master: #626262;
+$ktv-color-master: #626262;
 
 // Lighter Grey colors
-$color-master-light:mix($color-master, #fff, $CONST-PERCENT-light);
-$color-master-lighter:mix($color-master, #fff, $CONST-PERCENT-lighter);
-$color-master-lightest:mix($color-master, #fff, $CONST-PERCENT-lightest);
+$ktv-color-master-light: mix($ktv-color-master, #fff, $CONST-PERCENT-light);
+$ktv-color-master-lighter: mix($ktv-color-master, #fff, $CONST-PERCENT-lighter);
+$ktv-color-master-lightest: mix($ktv-color-master, #fff, $CONST-PERCENT-lightest);
 
 // Darker Grey colors
-$color-master-dark:mix($color-master, #000, $CONST-PERCENT-dark);
-$color-master-darker:mix($color-master, #000, $CONST-PERCENT-darker);
-$color-master-darkest:mix($color-master, #000, $CONST-PERCENT-darkest);
+$ktv-color-master-dark: mix($ktv-color-master, #000, $CONST-PERCENT-dark);
+$ktv-color-master-darker: mix($ktv-color-master, #000, $CONST-PERCENT-darker);
+$ktv-color-master-darkest: mix($ktv-color-master, #000, $CONST-PERCENT-darkest);
 
-$color-white: #fff;
-$color-black: #000;
+$ktv-color-white: #fff;
+$ktv-color-black: #000;
 
-$color-success: #10cfbd;
-$color-complete : #48b0f7;
-$color-primary: #6d5cae;
-$color-warning: #f8d053;
-$color-danger: #f55753;
-$color-info: #3b4752;
+$ktv-color-success: #10cfbd;
+$ktv-color-complete: #48b0f7;
+$ktv-color-primary: #6d5cae;
+$ktv-color-warning: #f8d053;
+$ktv-color-danger: #f55753;
+$ktv-color-info: #3b4752;
 
 $base-font-family: "Roboto", Arial, sans-serif;
-
 
 /**
  **
@@ -80,12 +78,12 @@ $base-font-family: "Roboto", Arial, sans-serif;
  **
  */
 $brand-primary: $ktv-base-color !default; // #2f7aba
-$brand-success: #10cfbd !default;
-$brand-info: #48b0f7 !default;
-$brand-warning: #f8d053 !default;
-$brand-danger: #f55753 !default;
+$brand-success: $ktv-color-success;
+$brand-info: $ktv-color-complete;
+$brand-warning: $ktv-color-warning;
+$brand-danger: $ktv-color-danger;
 
-$state-success-text:             #10cfbd !default;
-$state-info-text:                #48b0f7 !default;
-$state-warning-text:             #f8d053 !default;
-$state-danger-text:              #f55753 !default;
+$state-success-text: $ktv-color-success !default;
+$state-info-text: $ktv-color-complete !default;
+$state-warning-text: $ktv-color-warning !default;
+$state-danger-text: $ktv-color-danger !default;
