@@ -1,39 +1,91 @@
 /*------------------------------------------------------------------
 [1. Layouts]
+  [1.1 Body]
+  [1.2 Header]
+  [1.3 Page Container]
 */
-html {
-    height: 100%;
-}
-/* Body Triggers for layout options 
+
+
+/* [1.1] Body Triggers for layout options
 ------------------------------------------------------------------
 */
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: $ktv-color-master-lightest;
+
+// Variable
+// --------------------------------------------------
+$ktv-body-background: $ktv-color-master-lightest !default;
+$ktv-body-color: $ktv-color-master !default;
+
+// Making
+// --------------------------------------------------
+html {
+  height: 100%;
 }
 
-/* Header
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: $ktv-body-color;
+  background-color: $ktv-body-background;
+}
+
+/* [1.2] Header
 ------------------------------------
 */
-.header{
-    position: relative;
-    display: block;
-    //height: $layout-header-height;
-    width: 100%;
-    padding: 0 20px 0 0;
-    z-index: $ktv-zIndex-navbar;
-    background-color: #fff;
-    //border-bottom: 1px solid fade($color-master-light, 70%);
-    a{
-        color: #3b4751;
-        &.btn{
-            color: #8b91a0;
-        }
-        &.btn-warning{
-            color:#eaeef1;
-        }
-    }
 
+// Variable
+// --------------------------------------------------
+$ktv-layout-header-height: $ktv-base-unit*8 !default;
+$ktv-layout-header-background: #fff !default;
+$ktv-layout-header-border-bottom: 1px solid opacify($ktv-color-master-light, .7) !default;
+
+// Making
+// --------------------------------------------------
+.#{$ktv-prefix-class}header {
+  position: relative;
+  display: block;
+  height: $ktv-layout-header-height;
+  width: 100%;
+  padding: 0;
+  z-index: $ktv-zIndex-navbar;
+  background-color: $ktv-layout-header-background;
+  border-bottom: 1px solid opacify($ktv-color-master-light, .7);
+  a {
+    color: #3b4751;
+    &.btn {
+      color: #8b91a0;
+    }
+    &.btn-warning {
+      color: #eaeef1;
+    }
+  }
+
+}
+
+/* [1.3] Page Container
+------------------------------------
+*/
+.#{$ktv-prefix-class}container {
+  @include full;
+  .#{$ktv-prefix-class}content-wrapper {
+    min-height: 100%;
+    position: relative;
+
+    .#{$ktv-prefix-class}footer {
+      /* Footer */
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      @include transition(left 0.3s ease);
+      &.fixed {
+        position: fixed;
+      }
+
+      .#{$ktv-prefix-class}footer-wrapper {
+        padding: 25px 0;
+        border-top: 1px solid rgba(98, 98, 98, 0.07);
+      }
+    }
+  }
 }

@@ -1,0 +1,39 @@
+// Margin
+$ktv-spacing-unit: $ktv-base-unit !default;
+
+@mixin generate-margin($n, $j:0) {
+  @if $j <= $n {
+
+    $spacing-list: padding margin;
+    $spacing-abbreviation-list: p m;
+    $direction-list: top right bottom left;
+    $direction-abbreviation-list: t r b l;
+
+    @for $i from $j through $n {
+
+      $step: $i * $ktv-spacing-unit;
+      $iclass: "";
+      @if $i != -1 {
+        $iclass: -#{$i};
+      }
+
+      @each $current-spacing in $spacing-list {
+        $cs: index($spacing-list, $current-spacing);
+        $current-spacing-abbreviation: nth($spacing-abbreviation-list, $cs);
+        .s-#{$current-spacing-abbreviation}#{$iclass} {
+          #{$current-spacing}: $step;
+        }
+        @each $current-direction in $direction-list {
+          $cd: index($direction-list, $current-direction);
+          $current-direction-abbreviation: nth($direction-abbreviation-list, $cd);
+          .s-#{$current-spacing-abbreviation}#{$current-direction-abbreviation}#{$iclass} {
+            #{$current-spacing}-#{$current-direction}: $step;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+@include generate-margin(20);

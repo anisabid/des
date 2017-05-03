@@ -1,52 +1,11 @@
 //
-// Utility classes
+// Utilities
 // --------------------------------------------------
-@mixin box-shadow($params) {
-  -webkit-box-shadow: $params;
-  -moz-box-shadow: $params;
-  box-shadow: $params;
-}
 
-@mixin spacing() {
-  $spacing-list: padding margin;
-  $spacing-abbreviation-list: p m;
-  $direction-list: top right bottom left;
-  $direction-abbreviation-list: t r b l;
+// Utilities
+@import "utilities/misc";
+@import "utilities/margin";
+@import "utilities/typography";
 
-  @each $current-spacing in $spacing-list {
-    $i: index($spacing-list, $current-spacing);
-    $current-spacing-abbreviation: nth($spacing-abbreviation-list, $i);
-    .s-#{$current-spacing-abbreviation} {
-      #{$current-spacing}: $ktv-base-unit;
-    }
-    @each $current-direction in $direction-list {
-      $j: index($direction-list, $current-direction);
-      $current-direction-abbreviation: nth($direction-abbreviation-list, $j);
-      .s-#{$current-spacing-abbreviation}#{$current-direction-abbreviation} {
-        #{$current-spacing}-#{$current-direction}: $ktv-base-unit;
-      }
-    }
-  }
-}
-
-@include spacing;
-
-.#{$ktv-prefix-class}vertical-align {
-  display: table;
-  width: 100%;
-}
-
-.#{$ktv-prefix-class}vertical-align > [class*="col-"],
-.#{$ktv-prefix-class}vertical-align > [class*="col"]{
-  display: table-cell;
-  vertical-align: middle;
-  float: none;
-}
-
-@mixin full() {
-  width: 100%;
-  height: 100%;
-}
-.#{$ktv-prefix-class}full {
-  @include full;
-}
+// Layout
+@import "utilities/vertical-align-block";

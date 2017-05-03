@@ -1,0 +1,13 @@
+// vertical align
+
+.#{$ktv-prefix-class}vertical-align {
+  display: table;
+  width: 100%;
+}
+
+.#{$ktv-prefix-class}vertical-align > [class*="col-"],
+.#{$ktv-prefix-class}vertical-align > [class*="col"] {
+  display: table-cell;
+  vertical-align: middle;
+  float: none;
+}
