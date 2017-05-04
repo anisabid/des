@@ -17198,13 +17198,17 @@ body {
   padding: 0;
   z-index: 800;
   background-color: #fff;
-  border-bottom: 1px solid #e6e6e6; }
-  .kt-header a {
-    color: #3b4751; }
-    .kt-header a.btn {
-      color: #8b91a0; }
-    .kt-header a.btn-warning {
-      color: #eaeef1; }
+  border: 0;
+  border-bottom: 1px solid #e6e6e6;
+  border-radius: 0; }
+  .kt-header .navbar {
+    border: 0;
+    margin: 0;
+    padding: 0; }
+  .kt-header .navbar-brand {
+    height: 64px; }
+    .kt-header .navbar-brand img {
+      height: 100%; }
 
 /* [1.3] Page Container
 ------------------------------------
