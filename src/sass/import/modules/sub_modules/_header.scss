@@ -1,0 +1,45 @@
+/* [1.2] Header
+------------------------------------
+*/
+
+// Variable
+// --------------------------------------------------
+$ktv-layout-header-height: $ktv-base-unit*8 !default;
+$ktv-layout-header-background: #fff !default;
+$ktv-layout-header-border-bottom: 1px solid opacify($ktv-color-master-light, .7) !default;
+
+// Making
+// --------------------------------------------------
+.#{$ktv-prefix-class}header {
+
+  position: relative;
+  display: block;
+  height: $ktv-layout-header-height;
+  width: 100%;
+  padding: 0;
+  z-index: $ktv-zIndex-navbar;
+  background-color: $ktv-layout-header-background;
+  border: 0;
+  border-bottom: 1px solid opacify($ktv-color-master-light, .7);
+  border-radius: 0;
+
+  .#{$ktv-prefix-class}fixed-header & {
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+
+  .navbar {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar-brand {
+    height: $ktv-layout-header-height;
+    img {
+      height: 100%;
+    }
+  }
+
+}

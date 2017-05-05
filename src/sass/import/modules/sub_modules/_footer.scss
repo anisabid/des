@@ -1,0 +1,24 @@
+/* [1.2] Footer
+------------------------------------
+*/
+
+// Variable
+// --------------------------------------------------
+
+// Making
+// --------------------------------------------------
+.#{$ktv-prefix-class}footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  @include transition(left 0.3s ease);
+  &.fixed {
+    position: fixed;
+  }
+
+  .#{$ktv-prefix-class}footer-wrapper {
+    padding: 25px 0;
+    border-top: 1px solid rgba(98, 98, 98, 0.07);
+  }
+}

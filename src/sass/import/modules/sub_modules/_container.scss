@@ -1,0 +1,27 @@
+/* [1.3] Page Container
+------------------------------------
+*/
+
+// Variable
+// --------------------------------------------------
+
+// Making
+// --------------------------------------------------
+.#{$ktv-prefix-class}container {
+  @include full;
+  .#{$ktv-prefix-class}content-wrapper {
+    min-height: 100%;
+    position: relative;
+
+    .#{$ktv-prefix-class}content {
+
+      .#{$ktv-prefix-class}fixed-header & {
+        z-index: 10;
+        padding-top: $ktv-layout-header-height;
+        padding-bottom: $ktv-base-unit*8;
+        min-height: 100%;
+        @include transition(all 0.3s ease);
+      }
+    }
+  }
+}

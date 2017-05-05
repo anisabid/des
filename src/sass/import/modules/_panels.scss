@@ -1,0 +1,14 @@
+//
+// Panels
+// --------------------------------------------------
+
+$ktv-panel-transparent-text:          $ktv-color-master !default;
+$ktv-panel-transparent-border:        $ktv-color-transparent !default;
+$ktv-panel-transparent-heading-bg:    $ktv-color-transparent !default;
+
+
+.panel-transparent {
+  background-color: $ktv-color-transparent;
+  @include box-shadow(none);
+  @include panel-variant($ktv-panel-transparent-border, $ktv-panel-transparent-text, $ktv-panel-transparent-heading-bg, $ktv-panel-transparent-border);
+}

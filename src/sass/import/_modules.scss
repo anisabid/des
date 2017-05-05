@@ -2,11 +2,11 @@
 // Structure
 // --------------------------------------------------
 
-//Z-indexes
-@import "modules/z_index";
-
 //Main Layout
 @import "modules/layout";
+
+//Breadcrumbs
+@import "modules/breadcrumbs";
 
 //View
 // @import "modules/view";
@@ -15,7 +15,7 @@
 // @import "modules/chat";
 
 //Panels
-// @import "modules/panels";
+@import "modules/panels";
 
 //Typography
 // @import "modules/typography";

@@ -1,17 +1,33 @@
-// Import FontAwesome
-@import "../../bower_components/font-awesome/scss/font-awesome";
+// Trends Stylesheet
+// --------------------------------------------------
+// Copyright Reserved AA - 2017
+// --------------------------------------------------
 
-// Import Animate
-@import "../../bower_components/animatewithsass/animate.scss";
-
-// Import Bootstrap
-@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
-
-// Import Bootstrap datetimepicker
-@import "../../bower_components/eonasdan-bootstrap-datetimepicker/src/sass/bootstrap-datetimepicker";
+//
+// Summary
+// --------------------------------------------------
+/**
+  [1. Variables]
+  [2. Color]
+  [3. Variables bootstrap]
+  [4. Components]
+  [5. Utilities]
+  [6. Modules]
+  [7. Pages]
+  [8. Demo]
+*/
 
 // Import Variables
 @import "import/variables";
+
+// Import Color
+@import "import/_color";
+
+// Import Variables bootstrap
+@import "import/variables_bootstrap";
+
+// Import Components
+@import "import/components";
 
 // Import Utilities
 @import "import/utilities";
@@ -23,4 +39,4 @@
 @import "import/pages";
 
 // Import Demo
-@import "demo";
+@import "themes/demo/theme";

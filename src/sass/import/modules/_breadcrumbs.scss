@@ -1,0 +1,17 @@
+//
+// Breadcrumbs
+// --------------------------------------------------
+
+.breadcrumb {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: $font-size-small;
+  > li {
+    + li:before {
+      font-family: $CONST-FONT-ICONS;
+    }
+    a:hover, a:focus {
+      text-decoration: none;
+    }
+  }
+}

@@ -20,13 +20,13 @@ $ktv-spacing-unit: $ktv-base-unit !default;
       @each $current-spacing in $spacing-list {
         $cs: index($spacing-list, $current-spacing);
         $current-spacing-abbreviation: nth($spacing-abbreviation-list, $cs);
-        .s-#{$current-spacing-abbreviation}#{$iclass} {
+        .#{$current-spacing-abbreviation}#{$iclass} {
           #{$current-spacing}: $step;
         }
         @each $current-direction in $direction-list {
           $cd: index($direction-list, $current-direction);
           $current-direction-abbreviation: nth($direction-abbreviation-list, $cd);
-          .s-#{$current-spacing-abbreviation}#{$current-direction-abbreviation}#{$iclass} {
+          .#{$current-spacing-abbreviation}-#{$current-direction-abbreviation}#{$iclass} {
             #{$current-spacing}-#{$current-direction}: $step;
           }
         }

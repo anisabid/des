@@ -12,78 +12,73 @@
  */
 
 //
-// Variables
+// Summary
 // --------------------------------------------------
+/**
+  [1. CONST]
+  [2. Variables]
+*/
 
-// CONST
+
+//
+// [1.] CONST
 // --------------------------------------------------
-$CONST-NAMESPACE: "kt";
+$CONST-NAMESPACE: "kt" !default;
 $CONST-AUTO-GENERATE: false !default;
-$CONST-ING-URL: "../img";
-$CONST-ASSETS-URL: "../../assets";
+$CONST-ING-URL: "../img" !default;
+$CONST-ASSETS-URL: "../../assets" !default;
 
-// Const Lighter Percent
-$CONST-PERCENT-light: 16%;
-$CONST-PERCENT-lighter: 9.5%;
-$CONST-PERCENT-lightest: 3%;
+// Const Shade
+$CONST-SHADE-light: 16% !default;
+$CONST-SHADE-lighter: 9.5% !default;
+$CONST-SHADE-lightest: 3% !default;
 
 // Const Darker Percent
-$CONST-PERCENT-dark: 45%;
-$CONST-PERCENT-darker: 27%;
-$CONST-PERCENT-darkest: 18%;
+$CONST-SHADE-dark: 45% !default;
+$CONST-SHADE-darker: 27% !default;
+$CONST-SHADE-darkest: 18% !default;
 
-/**
- **
- ** Base
- **
- */
+// Const Shade
+$CONST-MIX-light: 80% !default;
+$CONST-MIX-lighter: 60% !default;
+$CONST-MIX-lightest: 20% !default;
 
-$ktv-prefix-class: #{$CONST-NAMESPACE}-;
+// Const Darker Percent
+$CONST-MIX-dark: 80% !default;
+$CONST-MIX-darker: 60% !default;
+$CONST-MIX-darkest: 20% !default;
+
+
+//
+$CONST-FONT-ICONS: "FontAwesome" !default;
+
+//
+// [2.] Variables
+// --------------------------------------------------
+// Base
+// --------------------------------------------------
+$ktv-prefix-class: #{$CONST-NAMESPACE}- !default;
 $ktv-base-unit: 8px !default;
-$ktv-base-color: #1976D2 !default;
 
-// Global Color
+// Z-index Scale
 // --------------------------------------------------
-// Base Grey Guided Color * change only $base-light
+$ktv-zIndex-1:   100 !default;
+$ktv-zIndex-2:   200 !default;
+$ktv-zIndex-3:   300 !default;
+$ktv-zIndex-4:   400 !default;
+$ktv-zIndex-5:   500 !default;
+$ktv-zIndex-6:   600 !default;
+$ktv-zIndex-7:   700 !default;
+$ktv-zIndex-8:   800 !default;
+$ktv-zIndex-9:   900 !default;
+$ktv-zIndex-10: 1000 !default;
+
+// Z-index widget
 // --------------------------------------------------
-
-//Base Grey Color
-$ktv-color-master: #626262;
-
-// Lighter Grey colors
-$ktv-color-master-light: mix($ktv-color-master, #fff, $CONST-PERCENT-light);
-$ktv-color-master-lighter: mix($ktv-color-master, #fff, $CONST-PERCENT-lighter);
-$ktv-color-master-lightest: mix($ktv-color-master, #fff, $CONST-PERCENT-lightest);
-
-// Darker Grey colors
-$ktv-color-master-dark: mix($ktv-color-master, #000, $CONST-PERCENT-dark);
-$ktv-color-master-darker: mix($ktv-color-master, #000, $CONST-PERCENT-darker);
-$ktv-color-master-darkest: mix($ktv-color-master, #000, $CONST-PERCENT-darkest);
-
-$ktv-color-white: #fff;
-$ktv-color-black: #000;
-
-$ktv-color-success: #10cfbd;
-$ktv-color-complete: #48b0f7;
-$ktv-color-primary: #6d5cae;
-$ktv-color-warning: #f8d053;
-$ktv-color-danger: #f55753;
-$ktv-color-info: #3b4752;
-
-$base-font-family: "Roboto", Arial, sans-serif;
-
-/**
- **
- ** Bootstrap
- **
- */
-$brand-primary: $ktv-base-color !default; // #2f7aba
-$brand-success: $ktv-color-success;
-$brand-info: $ktv-color-complete;
-$brand-warning: $ktv-color-warning;
-$brand-danger: $ktv-color-danger;
-
-$state-success-text: $ktv-color-success !default;
-$state-info-text: $ktv-color-complete !default;
-$state-warning-text: $ktv-color-warning !default;
-$state-danger-text: $ktv-color-danger !default;
+$ktv-zIndex-sidebar : $ktv-zIndex-10 !default;
+$ktv-zIndex-tooltips : $ktv-zIndex-10 !default;
+$ktv-zIndex-notifications : $ktv-zIndex-9 !default;
+$ktv-zIndex-navbar : $ktv-zIndex-8 !default;
+$ktv-zIndex-dropdown : $ktv-zIndex-7 !default;
+$ktv-zIndex-dropdownMask : $ktv-zIndex-6 !default;
+$ktv-zIndex-portlet : $ktv-zIndex-6 !default;

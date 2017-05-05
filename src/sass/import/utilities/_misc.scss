@@ -1,8 +1,0 @@
-// full
-@mixin full() {
-  @include size(100%, 100%)
-}
-
-.#{$ktv-prefix-class}full {
-  @include full;
-}

@@ -1,0 +1,23 @@
+// full
+@mixin full() {
+  @include size(100%, 100%)
+}
+
+.#{$ktv-prefix-class}full {
+  @include full;
+}
+
+// no-border / clear-border
+.#{$ktv-prefix-class}no-border,
+.#{$ktv-prefix-class}clear-border {
+  border: none !important;
+}
+
+
+// no-box
+.#{$ktv-prefix-class}no-box-shadow,
+.#{$ktv-prefix-class}clear-box-shadow,
+.#{$ktv-prefix-class}no-shadow,
+.#{$ktv-prefix-class}clear-shadow{
+  @include box-shadow(none);
+}
