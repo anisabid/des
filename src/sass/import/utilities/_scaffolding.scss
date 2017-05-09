@@ -40,3 +40,13 @@
   border: 0;
   outline: none;
 }
+
+// Container Fluid LG
+@mixin container-fluid-lg() {
+  width: 90%;
+  margin: 0 5%;
+}
+
+.#{$ktv-prefix-class}container-fluid-lg {
+  @include container-fluid-lg;
+}
