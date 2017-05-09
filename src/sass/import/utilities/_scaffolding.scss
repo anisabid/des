@@ -13,11 +13,30 @@
   border: none !important;
 }
 
-
 // no-box
 .#{$ktv-prefix-class}no-box-shadow,
 .#{$ktv-prefix-class}clear-box-shadow,
 .#{$ktv-prefix-class}no-shadow,
-.#{$ktv-prefix-class}clear-shadow{
+.#{$ktv-prefix-class}clear-shadow {
   @include box-shadow(none);
+}
+
+// btn-clear
+@mixin btn-clear($margin: $ktv-base-unit, $padding: $ktv-base-unit, $height: null, $width: null, $text-align: center) {
+  @if $height {
+    height: $height;
+  }
+  @if $width {
+    width: $width;
+  }
+  margin: $margin;
+  padding: $padding;
+  @if $padding == 0 {
+    line-height: $height;
+  } @else {
+    line-height: $height - $padding*2;
+  }
+  text-align: $text-align;
+  border: 0;
+  outline: none;
 }

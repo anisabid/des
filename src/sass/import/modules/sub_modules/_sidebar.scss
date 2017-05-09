@@ -1,0 +1,138 @@
+/* [1.2] SideBar
+------------------------------------
+*/
+
+// Variable
+// --------------------------------------------------
+$ktv-layout-sidebar-width: $ktv-sidebar-width !default;
+$ktv-layout-sidebar-offset-right: $ktv-sidebar-offset !default;
+$ktv-layout-sidebar-menu-color: $ktv-color-white;
+// Making
+// --------------------------------------------------
+.#{$ktv-prefix-class}sidebar {
+
+  width: $ktv-layout-sidebar-width;
+  background-color: $ktv-color-menu;
+  z-index: $ktv-zIndex-sidebar;
+  left: -($ktv-layout-sidebar-width - $ktv-layout-sidebar-offset-right);
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  right: auto;
+  overflow: hidden;
+  @include transition-transform(400ms cubic-bezier(0.05, 0.74, 0.27, 0.99));
+
+  &:hover,
+  .#{$ktv-prefix-class}sidebar--pin & {
+    @include translate(($ktv-layout-sidebar-width - $ktv-layout-sidebar-offset-right), 0);
+
+    .#{$ktv-prefix-class}sidebar-header {
+      .sidebar-header-controls {
+        display: block;
+      }
+    }
+
+  }
+
+  a, .btn-link {
+    padding-left: $ktv-base-unit*4;
+    display: block;
+    line-height: $ktv-base-unit*5;
+    min-height: $ktv-base-unit*5;
+    color: rgba($ktv-layout-sidebar-menu-color, .4);
+    text-transform: uppercase;
+    text-decoration: none;
+    @include transition($ktv-link-transition);
+
+    &:hover {
+      color: $ktv-layout-sidebar-menu-color;
+
+    }
+
+  }
+
+  .#{$ktv-prefix-class}sidebar-header {
+    position: relative;
+    height: $ktv-header-height;
+    padding: $ktv-base-unit*2 $ktv-base-unit*2 $ktv-base-unit*2 $ktv-base-unit*3;
+    background-color: $ktv-color-menu-darkest;
+
+    .sidebar-header-logo {
+      float: left;
+      &,
+      .logo,
+      img {
+        height: 100%;
+      }
+    }
+
+    .sidebar-header-controls {
+      float: right;
+      display: none;
+
+      .btn {
+        @include btn-clear(0, 8px, $ktv-header-height - $ktv-base-unit*4, $ktv-header-height - $ktv-base-unit*4);
+
+        &.action-pin {
+          .fa {
+            &:before {
+              content: "\f192";
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  .#{$ktv-prefix-class}sidebar-menu {
+    position: absolute;
+    top: $ktv-header-height;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    .kt-sidebar-menu-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      margin-top: $ktv-base-unit*4;
+      margin-bottom: $ktv-base-unit*4;
+    }
+
+    .menu-items {
+      @include list-unstyled;
+      li {
+
+      }
+    }
+
+  }
+
+  // Overload CustomScrollBar
+  // --------------------------------------------------
+
+  .mCSB_inside > .mCSB_container {
+    margin-right: 0;
+  }
+
+  .mCSB_scrollTools {
+    .mCSB_draggerRail {
+      background-color: rgba($ktv-color-white, 0.05);
+    }
+    .mCSB_dragger {
+      .mCSB_dragger_bar {
+        background-color: rgba($ktv-color-white, 0.2);
+      }
+      &:hover {
+        .mCSB_dragger_bar {
+          background-color: rgba($ktv-color-white, 0.4);
+        }
+      }
+
+    }
+  }
+
+}

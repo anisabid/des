@@ -4,7 +4,7 @@
 
 // Variable
 // --------------------------------------------------
-$ktv-layout-header-height: $ktv-base-unit*8 !default;
+$ktv-layout-header-height: $ktv-header-height !default;
 $ktv-layout-header-background: #fff !default;
 $ktv-layout-header-border-bottom: 1px solid opacify($ktv-color-master-light, .7) !default;
 
@@ -37,8 +37,17 @@ $ktv-layout-header-border-bottom: 1px solid opacify($ktv-color-master-light, .7)
 
   .navbar-brand {
     height: $ktv-layout-header-height;
+    padding: $ktv-base-unit*2;
+    .logo,
     img {
       height: 100%;
+    }
+
+    .#{$ktv-prefix-class}sidebar--floating & {
+      & {
+        width: $ktv-sidebar-width;
+        padding-left: $ktv-sidebar-offset + ($ktv-base-unit*2);
+      }
     }
   }
 

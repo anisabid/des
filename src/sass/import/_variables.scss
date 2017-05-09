@@ -19,7 +19,6 @@
   [2. Variables]
 */
 
-
 //
 // [1.] CONST
 // --------------------------------------------------
@@ -48,7 +47,6 @@ $CONST-MIX-dark: 80% !default;
 $CONST-MIX-darker: 60% !default;
 $CONST-MIX-darkest: 20% !default;
 
-
 //
 $CONST-FONT-ICONS: "FontAwesome" !default;
 
@@ -59,26 +57,36 @@ $CONST-FONT-ICONS: "FontAwesome" !default;
 // --------------------------------------------------
 $ktv-prefix-class: #{$CONST-NAMESPACE}- !default;
 $ktv-base-unit: 8px !default;
+$ktv-link-transition: color 0.1s linear 0s,background-color 0.1s linear 0s,opacity 0.2s linear 0s !important !default;
+
+// Header
+// --------------------------------------------------
+$ktv-header-height: $ktv-base-unit*8 !default; // 8*8 = 64px
+
+// SideBar
+// --------------------------------------------------
+$ktv-sidebar-width: $ktv-base-unit*35 !default; // 8*35 = 280px
+$ktv-sidebar-offset: $ktv-base-unit*9 !default; // 8*9 = 72px
 
 // Z-index Scale
 // --------------------------------------------------
-$ktv-zIndex-1:   100 !default;
-$ktv-zIndex-2:   200 !default;
-$ktv-zIndex-3:   300 !default;
-$ktv-zIndex-4:   400 !default;
-$ktv-zIndex-5:   500 !default;
-$ktv-zIndex-6:   600 !default;
-$ktv-zIndex-7:   700 !default;
-$ktv-zIndex-8:   800 !default;
-$ktv-zIndex-9:   900 !default;
+$ktv-zIndex-1: 100 !default;
+$ktv-zIndex-2: 200 !default;
+$ktv-zIndex-3: 300 !default;
+$ktv-zIndex-4: 400 !default;
+$ktv-zIndex-5: 500 !default;
+$ktv-zIndex-6: 600 !default;
+$ktv-zIndex-7: 700 !default;
+$ktv-zIndex-8: 800 !default;
+$ktv-zIndex-9: 900 !default;
 $ktv-zIndex-10: 1000 !default;
 
 // Z-index widget
 // --------------------------------------------------
-$ktv-zIndex-sidebar : $ktv-zIndex-10 !default;
-$ktv-zIndex-tooltips : $ktv-zIndex-10 !default;
-$ktv-zIndex-notifications : $ktv-zIndex-9 !default;
-$ktv-zIndex-navbar : $ktv-zIndex-8 !default;
-$ktv-zIndex-dropdown : $ktv-zIndex-7 !default;
-$ktv-zIndex-dropdownMask : $ktv-zIndex-6 !default;
-$ktv-zIndex-portlet : $ktv-zIndex-6 !default;
+$ktv-zIndex-sidebar: $ktv-zIndex-10 !default;
+$ktv-zIndex-tooltips: $ktv-zIndex-10 !default;
+$ktv-zIndex-notifications: $ktv-zIndex-9 !default;
+$ktv-zIndex-navbar: $ktv-zIndex-8 !default;
+$ktv-zIndex-dropdown: $ktv-zIndex-7 !default;
+$ktv-zIndex-dropdownMask: $ktv-zIndex-6 !default;
+$ktv-zIndex-portlet: $ktv-zIndex-6 !default;

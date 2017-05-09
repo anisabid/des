@@ -44,6 +44,10 @@ module.exports = function () {
             {
                 src: 'bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css',
                 dist: './dist/lib/datetimepicker/'
+            },
+            {
+                src: 'bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
+                dist: './dist/lib/malihu-custom-scrollbar-plugin/'
             }
         ]
     };
