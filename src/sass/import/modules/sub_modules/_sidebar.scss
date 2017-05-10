@@ -5,8 +5,68 @@
 // Variable
 // --------------------------------------------------
 $ktv-layout-sidebar-width: $ktv-sidebar-width !default;
+$ktv-layout-sidebar-width--pin: $ktv-sidebar-width--pin !default;
 $ktv-layout-sidebar-offset-right: $ktv-sidebar-offset !default;
 $ktv-layout-sidebar-menu-color: $ktv-color-white;
+$ktv-icon-thumbnail-transition: all 0.1s linear 0s !default;
+
+// Mixin
+// --------------------------------------------------
+
+@mixin sidebar-btn-hover() {
+  color: $ktv-layout-sidebar-menu-color;
+  background-color: inherit;
+}
+
+@mixin sidebar-btn() {
+  @include clearfix;
+  padding-left: $ktv-base-unit*3;
+  padding-right: $ktv-base-unit*2;
+  display: block;
+  line-height: $ktv-base-unit*5;
+  min-height: $ktv-base-unit*5;
+  color: rgba($ktv-layout-sidebar-menu-color, .4);
+  text-transform: uppercase;
+  text-decoration: none;
+  @include transition($ktv-link-transition);
+
+  &:hover,
+  &.active {
+    @include sidebar-btn-hover;
+  }
+
+  &.detailed {
+    .title,
+    .details {
+      display: block;
+      line-height: $ktv-base-unit*2.5;
+    }
+    .details {
+      font-size: $font-size-base - 1;
+      opacity: 0.4;
+      display: block;
+      clear: both;
+    }
+  }
+
+}
+
+@mixin sidebar-link($font-size, $begin, $limit) {
+  @if ($begin < $limit) {
+    li {
+      a {
+        font-size: $font-size;
+        padding-left: $ktv-base-unit * (3 + ($begin * 2));
+      }
+      @include sidebar-link($font-size - ($begin + 1), $begin + 1, $limit);
+    }
+  }
+}
+
+@mixin recursive-link($font-size: $font-size-base + 2, $begin: 0, $limit: 4) {
+  @include sidebar-link($font-size, $begin, $limit);
+}
+
 // Making
 // --------------------------------------------------
 .#{$ktv-prefix-class}sidebar {
@@ -31,24 +91,20 @@ $ktv-layout-sidebar-menu-color: $ktv-color-white;
         display: block;
       }
     }
-
   }
 
-  a, .btn-link {
-    padding-left: $ktv-base-unit*4;
-    display: block;
-    line-height: $ktv-base-unit*5;
-    min-height: $ktv-base-unit*5;
-    color: rgba($ktv-layout-sidebar-menu-color, .4);
-    text-transform: uppercase;
-    text-decoration: none;
-    @include transition($ktv-link-transition);
+  .#{$ktv-prefix-class}sidebar--pin & {
+    width: $ktv-layout-sidebar-width--pin;
+  }
 
-    &:hover {
-      color: $ktv-layout-sidebar-menu-color;
+  a,
+  .btn-link,
+  .dropdown-menu > li > a {
+    @include sidebar-btn;
+  }
 
-    }
-
+  ul {
+    @include list-unstyled;
   }
 
   .#{$ktv-prefix-class}sidebar-header {
@@ -74,9 +130,11 @@ $ktv-layout-sidebar-menu-color: $ktv-color-white;
         @include btn-clear(0, 8px, $ktv-header-height - $ktv-base-unit*4, $ktv-header-height - $ktv-base-unit*4);
 
         &.action-pin {
-          .fa {
-            &:before {
-              content: "\f192";
+          .#{$ktv-prefix-class}sidebar--pin & {
+            .fa {
+              &:before {
+                content: $fa-var-dot-circle-o;
+              }
             }
           }
         }
@@ -103,10 +161,59 @@ $ktv-layout-sidebar-menu-color: $ktv-color-white;
     }
 
     .menu-items {
-      @include list-unstyled;
-      li {
 
+      .icon-thumbnail {
+        width: $ktv-base-unit*5;
+        height: $ktv-base-unit*5;
+        display: block;
+        float: right;
+        text-align: center;
+        line-height: $ktv-base-unit*5;
+        font-weight: $ktv-font-weight-black;
       }
+
+      .arrow {
+        display: block;
+        float: left;
+        &:before {
+          font-family: $CONST-FONT-ICONS;
+          content: $fa-var-angle-left;
+          display: block;
+          @include transition-transform(0.12s ease);
+        }
+      }
+
+      li {
+        color: rgba($ktv-layout-sidebar-menu-color, .4);
+        &:hover {
+          color: $ktv-layout-sidebar-menu-color;
+        }
+      }
+
+      @include recursive-link();
+
+      .sub-menu {
+        /*background-color: $ktv-color-menu-darker;
+        position: relative;
+        float: none;
+        z-index: inherit;*/
+        display: none;
+        a {
+          text-transform: none;
+        }
+      }
+
+      .open {
+        > a {
+          @include sidebar-btn-hover;
+          .arrow {
+            &:before {
+              @include rotate(-90deg);
+            }
+          }
+        }
+      }
+
     }
 
   }

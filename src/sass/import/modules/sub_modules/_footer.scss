@@ -16,13 +16,13 @@
   &.fixed {
     position: fixed;
   }
+  .#{$ktv-prefix-class}sidebar--pin & {
+    padding-left: $ktv-sidebar-width--pin;
+  }
 
   .#{$ktv-prefix-class}footer-wrapper {
     padding: 25px 0;
     border-top: 1px solid rgba(98, 98, 98, 0.07);
     @include transition(all 0.3s ease);
-    .#{$ktv-prefix-class}sidebar--pin &{
-      padding-left: $ktv-sidebar-width;
-    }
   }
 }

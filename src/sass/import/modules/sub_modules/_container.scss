@@ -15,7 +15,7 @@
     @include transition(all 0.3s ease);
 
     .#{$ktv-prefix-class}sidebar--pin &{
-      padding-left: $ktv-sidebar-width;
+      padding-left: $ktv-sidebar-width--pin;
     }
 
     .#{$ktv-prefix-class}content {
