@@ -6,33 +6,36 @@
 // --------------------------------------------------
 $ktv-layout-sidebar-width: $ktv-sidebar-width !default;
 $ktv-layout-sidebar-width--pin: $ktv-sidebar-width--pin !default;
+$ktv-layout-sidebar-background-color: $ktv-color-menu;
+$ktv-layout-sidebar-header-background-color: $ktv-color-menu-darkest;
 $ktv-layout-sidebar-offset-right: $ktv-sidebar-offset !default;
 $ktv-layout-sidebar-menu-color: $ktv-color-white;
+
 $ktv-icon-thumbnail-transition: all 0.1s linear 0s !default;
 
 // Mixin
 // --------------------------------------------------
 
-@mixin sidebar-btn-hover() {
-  color: $ktv-layout-sidebar-menu-color;
+@mixin sidebar-btn-hover($_ktv-layout-sidebar-menu-color:$ktv-layout-sidebar-menu-color) {
+  color: $_ktv-layout-sidebar-menu-color;
   background-color: inherit;
 }
 
-@mixin sidebar-btn() {
+@mixin sidebar-btn($_ktv-layout-sidebar-menu-color:$ktv-layout-sidebar-menu-color) {
   @include clearfix;
   padding-left: $ktv-base-unit*3;
   padding-right: $ktv-base-unit*2;
   display: block;
   line-height: $ktv-base-unit*5;
   min-height: $ktv-base-unit*5;
-  color: rgba($ktv-layout-sidebar-menu-color, .4);
+  color: rgba($_ktv-layout-sidebar-menu-color, .4);
   text-transform: uppercase;
   text-decoration: none;
   @include transition($ktv-link-transition);
 
   &:hover,
   &.active {
-    @include sidebar-btn-hover;
+    @include sidebar-btn-hover($_ktv-layout-sidebar-menu-color);
   }
 
   &.detailed {
@@ -67,12 +70,15 @@ $ktv-icon-thumbnail-transition: all 0.1s linear 0s !default;
   @include sidebar-link($font-size, $begin, $limit);
 }
 
-// Making
-// --------------------------------------------------
-.#{$ktv-prefix-class}sidebar {
+@mixin generate-sidebar(
+  $_ktv-layout-sidebar-background-color: $ktv-layout-sidebar-background-color,
+  $_ktv-layout-sidebar-header-background-color: $ktv-layout-sidebar-header-background-color,
+  $_ktv-layout-sidebar-menu-color: $ktv-layout-sidebar-menu-color,
+  $_ktv-layout-sidebar-mCSB-color: $ktv-color-white
+) {
 
   width: $ktv-layout-sidebar-width;
-  background-color: $ktv-color-menu;
+  background-color: $_ktv-layout-sidebar-background-color;
   z-index: $ktv-zIndex-sidebar;
   left: -($ktv-layout-sidebar-width - $ktv-layout-sidebar-offset-right);
   position: fixed;
@@ -100,7 +106,7 @@ $ktv-icon-thumbnail-transition: all 0.1s linear 0s !default;
   a,
   .btn-link,
   .dropdown-menu > li > a {
-    @include sidebar-btn;
+    @include sidebar-btn($_ktv-layout-sidebar-menu-color);
   }
 
   ul {
@@ -111,7 +117,7 @@ $ktv-icon-thumbnail-transition: all 0.1s linear 0s !default;
     position: relative;
     height: $ktv-header-height;
     padding: $ktv-base-unit*2 $ktv-base-unit*2 $ktv-base-unit*2 $ktv-base-unit*3;
-    background-color: $ktv-color-menu-darkest;
+    background-color: $_ktv-layout-sidebar-header-background-color;
 
     .sidebar-header-logo {
       float: left;
@@ -170,11 +176,13 @@ $ktv-icon-thumbnail-transition: all 0.1s linear 0s !default;
         text-align: center;
         line-height: $ktv-base-unit*5;
         font-weight: $ktv-font-weight-black;
+        background-color: mix($_ktv-layout-sidebar-background-color, #000, $CONST-SHADE-dark);;
       }
 
       .arrow {
         display: block;
         float: left;
+        margin-right: $ktv-base-unit*2;
         &:before {
           font-family: $CONST-FONT-ICONS;
           content: $fa-var-angle-left;
@@ -188,18 +196,23 @@ $ktv-icon-thumbnail-transition: all 0.1s linear 0s !default;
         &:hover {
           color: $ktv-layout-sidebar-menu-color;
         }
+        a {
+          margin-bottom: $ktv-base-unit;
+        }
       }
 
       @include recursive-link();
 
       .sub-menu {
-        /*background-color: $ktv-color-menu-darker;
-        position: relative;
-        float: none;
-        z-index: inherit;*/
         display: none;
+        background-color: mix($_ktv-layout-sidebar-background-color, #000, $CONST-SHADE-dark);
+        padding: $ktv-base-unit*2 0 $ktv-base-unit 0;
+        margin: 0 0 $ktv-base-unit 0;
         a {
           text-transform: none;
+        }
+        .icon-thumbnail {
+          background-color: $_ktv-layout-sidebar-background-color;
         }
       }
 
@@ -227,19 +240,35 @@ $ktv-icon-thumbnail-transition: all 0.1s linear 0s !default;
 
   .mCSB_scrollTools {
     .mCSB_draggerRail {
-      background-color: rgba($ktv-color-white, 0.05);
+      background-color: rgba($_ktv-layout-sidebar-mCSB-color, 0.05);
     }
     .mCSB_dragger {
       .mCSB_dragger_bar {
-        background-color: rgba($ktv-color-white, 0.2);
+        background-color: rgba($_ktv-layout-sidebar-mCSB-color, 0.2);
       }
       &:hover {
         .mCSB_dragger_bar {
-          background-color: rgba($ktv-color-white, 0.4);
+          background-color: rgba($_ktv-layout-sidebar-mCSB-color, 0.4);
         }
       }
 
     }
   }
-
 }
+
+// Making
+// --------------------------------------------------
+.#{$ktv-prefix-class}sidebar {
+  @include generate-sidebar;
+}
+
+/*
+.#{$ktv-prefix-class}sidebar.red {
+  @include generate-sidebar(
+                  $ktv-color-white,
+                  $ktv-color-danger,
+                  $ktv-color-info,
+                  $ktv-color-info
+  );
+}
+*/

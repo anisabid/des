@@ -9,6 +9,7 @@ var fs = require('fs'),
     browserSync = require('browser-sync'),
     superstatic = require('superstatic'),
     preprocess = require('gulp-preprocess'),
+    extender = require('gulp-html-extend')
     config = require('./gulp.config')();
 
 gulp.task('build-clean', function () {
@@ -27,6 +28,17 @@ gulp.task('build-libs', function () {
             )
     });
     return true;
+});
+
+
+gulp.task('build-tpl', [], function() {
+    return gulp.src(config.tpl.input)
+        .pipe(extender({annotations: true, verbose: false})) // default options
+        .pipe(gulp.dest(config.tpl.output));
+});
+
+gulp.task('watch.build.tpl', ['build-tpl'], function () {
+    gulp.watch([config.tpl.watch], ['build-tpl']);
 });
 
 gulp.task('build-scripts', function () {
@@ -128,8 +140,8 @@ gulp.task('build-theme-styles', function () {
             console.log(_all);
 
             function getDirectories(srcpath) {
-                return fs.readdirSync(srcpath)
-                    .filter(file => fs.statSync(path.join(srcpath, file)).isDirectory())
+                /*return fs.readdirSync(srcpath)
+                    .filter(file => fs.statSync(path.join(srcpath, file)).isDirectory())*/
             }
 
             getDirectories('./src/sass/theme/').forEach(function (theme, index, array) {
@@ -156,17 +168,19 @@ gulp.task('build-img', function () {
 
 gulp.task('build', function (callback) {
     runSequence('build-clean',
-        ['build-img', 'build-libs', 'build-scripts', 'build-styles'],
+        ['build-img', 'build-tpl', 'build-libs', 'build-scripts', 'build-styles'],
         callback);
 });
 
-gulp.task('watch.build', ['build-styles', 'build-scripts'], function () {
+gulp.task('watch.build', ['build-styles', 'build-tpl', 'build-scripts'], function () {
+    gulp.watch([config.tpl.watch], ['build-tpl']);
     gulp.watch([config.sass.watch], ['build-styles']);
     gulp.watch([config.js.watch], ['build-scripts']);
 });
 
 gulp.task('serve', ['build'], function () {
-    
+
+    gulp.watch([config.tpl.watch], ['build-tpl']);
     gulp.watch([config.img.watch], ['build-img']);
     gulp.watch([config.js.watch], ['build-scripts']);
     gulp.watch([config.sass.watch], ['build-styles']);

@@ -20,6 +20,12 @@ module.exports = function () {
             output: './dist/img/',
             watch: ['./src/img/*']
         },
+        tpl:{
+            src: './src/tpl/',
+            input: './src/tpl/*.html',
+            output: './demo/pages/',
+            watch: ['./src/tpl/*']
+        },
         lib: [
             {
                 src: 'bower_components/jquery/dist/jquery.min.js',
@@ -31,7 +37,7 @@ module.exports = function () {
             },
             {
                 src: 'bower_components/font-awesome/fonts/*',
-                dist: './dist/fonts/awesome/'
+                dist: './dist/fonts/'
             },
             {
                 src: 'bower_components/moment/min/moment.min.js',

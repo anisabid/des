@@ -74,6 +74,8 @@
 })(jQuery, KTJS);
 (function ($, $$) {
 
+    // ToDO
+    // Bug open subnav level 2
 
     $$.$({
         sidebar: {
