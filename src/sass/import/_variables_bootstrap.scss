@@ -107,9 +107,9 @@ $font-size-base:          12px !default;
 //$line-height-large:         1.3333333 !default; // extra decimals for Win 8.1 Chrome
 //$line-height-small:         1.5 !default;
 
-//$border-radius-base:        4px !default;
-//$border-radius-large:       6px !default;
-//$border-radius-small:       3px !default;
+$border-radius-base:        3px !default;
+$border-radius-large:       5px !default;
+$border-radius-small:       2px !default;
 
 //** Global color for active items (e.g., navs or dropdowns).
 //$component-active-color:    #fff !default;
@@ -239,7 +239,7 @@ $font-size-base:          12px !default;
 //** Background for the dropdown menu.
 //$dropdown-bg:                    #fff !default;
 //** Dropdown menu `border-color`.
-//$dropdown-border:                rgba(0,0,0,.15) !default;
+$dropdown-border:                rgba(230,230,230,.15) !default;
 //** Dropdown menu `border-color` **for IE8**.
 //$dropdown-fallback-border:       #ccc !default;
 //** Divider color for between dropdown items.
@@ -274,13 +274,14 @@ $font-size-base:          12px !default;
 //
 // Note: These variables are not generated into the Customizer.
 
-//$zindex-navbar:            1000 !default;
-//$zindex-dropdown:          1000 !default;
+$zindex-navbar:            $ktv-zIndex-navbar !default;
+$zindex-dropdown:          $ktv-zIndex-dropdown !default;
 //$zindex-popover:           1060 !default;
-//$zindex-tooltip:           1070 !default;
+//$zindex-tooltip:           $ktv-zIndex-tooltips !default;
 //$zindex-navbar-fixed:      1030 !default;
 //$zindex-modal-background:  1040 !default;
 //$zindex-modal:             1050 !default;
+
 
 
 //== Media queries breakpoints
@@ -364,8 +365,8 @@ $font-size-base:          12px !default;
 // Basics of a navbar
 //$navbar-height:                    50px !default;
 //$navbar-margin-bottom:             $line-height-computed !default;
-//$navbar-border-radius:             $border-radius-base !default;
-//$navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
+$navbar-border-radius:             0 !default;
+//$navbar-padding-horizontal:        floor(($grid-gutter-width / 2))!default;
 //$navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
 //$navbar-collapse-max-height:       340px !default;
 

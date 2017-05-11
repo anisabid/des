@@ -24,7 +24,7 @@ module.exports = function () {
             src: './src/tpl/',
             input: './src/tpl/*.html',
             output: './demo/pages/',
-            watch: ['./src/tpl/*']
+            watch: ['./src/tpl/**/*']
         },
         lib: [
             {

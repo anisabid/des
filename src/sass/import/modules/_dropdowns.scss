@@ -1,0 +1,23 @@
+//
+// DropDowns
+// --------------------------------------------------
+
+// Variable
+// --------------------------------------------------
+
+$ktv-modules-dropdowns-caret-icon: $fa-var-angle-down;
+
+// Making
+// --------------------------------------------------
+.caret {
+  position: relative;
+  border: 0;
+
+  &:after {
+    font-family: $CONST-FONT-ICONS;
+    content: $ktv-modules-dropdowns-caret-icon;
+    margin-top: -(floor(($font-size-base * $line-height-base)) / 2);
+    display: block;
+    //padding-left: $ktv-base-unit/2;
+  }
+}

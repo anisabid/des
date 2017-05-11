@@ -5,7 +5,7 @@
 // Variable
 // --------------------------------------------------
 $ktv-layout-header-height: $ktv-header-height !default;
-$ktv-layout-header-background: #fff !default;
+$ktv-layout-header-background: $ktv-color-white !default;
 $ktv-layout-header-border-bottom: 1px solid opacify($ktv-color-master-light, .7) !default;
 
 // Making

@@ -182,7 +182,7 @@ $ktv-icon-thumbnail-transition: all 0.1s linear 0s !default;
       .arrow {
         display: block;
         float: left;
-        margin-right: $ktv-base-unit*2;
+        margin-right: $ktv-base-unit*2.5;
         &:before {
           font-family: $CONST-FONT-ICONS;
           content: $fa-var-angle-left;

@@ -2,12 +2,22 @@
 /* Misc
 ------------------------------------
 */
-.hint-text{
+.hint-text {
   opacity: .7;
 }
-.no-decoration{
-  text-decoration:none !important;
+
+.no-decoration {
+  text-decoration: none !important;
 }
+
+.text-bold {
+  font-weight: $ktv-font-weight-bold;
+}
+
+.text-bolder {
+  font-weight: $ktv-font-weight-black;
+}
+
 /* Lins and Others
 ------------------------------------
 */
