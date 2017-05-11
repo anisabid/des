@@ -13380,8 +13380,8 @@ output {
   color: #555555;
   background-color: #fff;
   background-image: none;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
@@ -14540,8 +14540,8 @@ tbody.collapse.in {
   color: #555555;
   text-align: center;
   background-color: #eeeeee;
-  border: 1px solid #ccc;
-  border-radius: 3px; }
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 0; }
   .input-group-addon.input-sm,
   .input-group-sm > .input-group-addon,
   .input-group-sm > .input-group-btn > .input-group-addon.btn {
@@ -17728,7 +17728,8 @@ button.close {
 /* Misc
 ------------------------------------
 */
-.hint-text {
+.hint-text,
+.help {
   opacity: .7; }
 
 .no-decoration {
@@ -17793,6 +17794,10 @@ a {
     content: "";
     margin-top: -8.5px;
     display: block; }
+
+.form-control {
+  -webkit-box-shadow: none;
+  box-shadow: none; }
 
 /*------------------------------------------------------------------
 [1. Sections]
