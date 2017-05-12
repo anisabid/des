@@ -6,9 +6,293 @@
 // --------------------------------------------------
 
 $ktv-modules-forms-color: $ktv-color-master;
+$ktv-modules-forms-input-background-color--focused: rgba($ktv-color-black, .0175);
 
 // Making
 // --------------------------------------------------
-.form-control {
-  @include box-shadow(none);
+
+label .help {
+  font-size: $font-size-base - 1;
+  opacity: .4;
 }
+
+// form-control
+.form-control {
+  &,
+  &:focus {
+    @include box-shadow(none);
+  }
+
+  &:focus {
+    background-color: $ktv-modules-forms-input-background-color--focused;
+  }
+
+  .form-group-default & {
+    &,
+    &:focus {
+      border: 0;
+      background-color: transparent;
+    }
+  }
+}
+
+// form-group-default
+.form-group-default {
+  border: 1px solid $input-border;
+  label {
+    padding: $padding-base-horizontal $padding-base-horizontal 0 $padding-base-horizontal;
+    margin: 0;
+    width: 100%;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"],
+  .radio,
+  .checkbox {
+    margin: $padding-base-horizontal;
+    vertical-align: middle;
+    + label {
+      padding: 0 $padding-base-horizontal;
+    }
+  }
+
+  &.focused {
+    border-color: $input-border-focus;
+    background-color: $ktv-modules-forms-input-background-color--focused;
+    label {
+      opacity: .5;
+    }
+  }
+}
+
+/* Checkboxes and Radio buttons
+--------------------------------------------------
+*/
+
+.radio,
+.checkbox {
+  label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: $ktv-base-unit*3 !important;
+    margin-right: $ktv-base-unit*2;
+    line-height: $line-height-computed + 3;
+    &:before {
+      content: "";
+      display: inline-block;
+      width: $line-height-computed;
+      height: $line-height-computed;
+      margin-right: $ktv-base-unit;
+      position: absolute;
+      left: 0px;
+      background-color: $ktv-color-white;
+      border: 1px solid mix($ktv-color-master, #fff, 30%);
+    }
+  }
+}
+
+.radio {
+  label {
+    &:before {
+      bottom: 2.5px;
+      border-radius: 99px;
+      @include transition(border .3s 0s cubic-bezier(0.455, 0.030, 0.215, 1.330));
+    }
+  }
+  input[type=radio]:checked {
+    & + label {
+      &:before {
+        border-width: 5px;
+      }
+    }
+  }
+  input[type="radio"]:focus {
+    & + label {
+      color: $ktv-color-master-dark;
+      &:before {
+        background-color: $ktv-color-master-light;
+      }
+    }
+  }
+  input[type=radio] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  input[type=radio][disabled] {
+    & + label {
+      opacity: 0.65;
+    }
+  }
+
+}
+
+input[type=radio]:checked + label:before {
+  .radio.radio-success & {
+    border-color: $ktv-color-success;
+  }
+  .radio.radio-primary & {
+    border-color: $ktv-color-primary;
+  }
+  .radio.radio-info & {
+    border-color: $ktv-color-info;
+  }
+  .radio.radio-warning & {
+    border-color: $ktv-color-warning;
+  }
+  .radio.radio-danger & {
+    border-color: $ktv-color-danger;
+  }
+  .radio.radio-complete & {
+    border-color: $ktv-color-complete;
+  }
+}
+
+.checkbox {
+  input[type=radio][disabled] {
+    & + label {
+      &:after {
+        background-color: $ktv-color-master-light;
+      }
+    }
+  }
+  label {
+    transition: border 0.2s linear 0s, color 0.2s linear 0s;
+    white-space: nowrap;
+    &:before {
+      top: 1.4px;
+      border-radius: 3px;
+      transition: border 0.2s linear 0s, color 0.2s linear 0s;
+    }
+    &::after {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      left: 3.2px;
+      top: 0px;
+      font-size: 11px;
+      transition: border 0.2s linear 0s, color 0.2s linear 0s;
+    }
+    &:after {
+      border-radius: 3px;
+    }
+  }
+  input[type=checkbox] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  &.checkbox-circle {
+    label {
+      &:after {
+        border-radius: 99px;
+      }
+      &:before {
+        border-radius: 99px;
+      }
+    }
+  }
+  input[type=checkbox]:checked {
+    & + label {
+      //color: #4d5056;
+      &:before {
+        border-width: $ktv-base-unit;
+      }
+      &::after {
+        font-family: $CONST-FONT-ICONS;
+        content: $fa-var-check;
+        color: #fff;
+      }
+    }
+  }
+  input[type="checkbox"]:focus {
+    & + label {
+      color: $ktv-color-master-dark;
+      &:before {
+        background-color: $ktv-color-master-light;
+      }
+    }
+  }
+  input[type=checkbox][disabled] {
+    & + label {
+      opacity: 0.65;
+      &:before {
+        background-color: #eceff3;
+      }
+    }
+  }
+  &.right {
+    label {
+      margin-right: 35px;
+      padding-left: 0 !important;
+      &:before {
+        right: -35px;
+        left: auto;
+
+      }
+    }
+    input[type=checkbox]:checked {
+      & + label {
+        position: relative;
+        // margin-right: 0;
+        &::after {
+          font-family: $CONST-FONT-ICONS;
+          content: $fa-var-check;
+          position: absolute;
+          right: -27px;
+          left: auto;
+        }
+      }
+    }
+  }
+}
+
+input[type=checkbox]:checked + label {
+  .checkbox.check-success &:before {
+    border-color: $ktv-color-success;
+  }
+  .checkbox.check-primary &:before {
+    border-color: $ktv-color-primary;
+  }
+  .checkbox.check-complete &:before {
+    border-color: $ktv-color-complete;
+  }
+  .checkbox.check-warning &:before {
+    border-color: $ktv-color-warning;
+  }
+  .checkbox.check-danger &:before {
+    border-color: $ktv-color-danger;
+  }
+  .checkbox.check-info &:before {
+    border-color: $ktv-color-info;
+  }
+
+  .checkbox.check-success &::after,
+  .checkbox.check-primary &::after,
+  .checkbox.check-complete &::after,
+  .checkbox.check-warning &::after,
+  .checkbox.check-danger &::after,
+  .checkbox.check-info &::after {
+    color: $ktv-color-white;
+  }
+
+}
+
+// Radios and checkboxes on same line
+.radio-inline,
+.checkbox-inline {
+  margin-top: 0;
+  padding-left: $ktv-base-unit;
+}
+
+/*
+.select2-container--default .select2-results{
+  height: 200px;
+  overflow: auto;
+}
+
+.select2-container--default .select2-results > .select2-results__options{
+  max-height: initial;
+}*/

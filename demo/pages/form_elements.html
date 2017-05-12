@@ -54,7 +54,7 @@
     <!-- END SIDEBAR MENU HEADER-->
     <!-- START SIDEBAR MENU -->
     <div class="kt-sidebar-menu js-kt-sidebar-menu">
-        <div class="kt-sidebar-menu-wrapper mCustomScrollbar mCS-autoHide" data-mcs-outside="outside">
+        <div class="kt-sidebar-menu-wrapper js-kt-sidebar-menu-wrapper scrollbar-macosx">
             <!-- BEGIN MENU ITEMS-->
             <ul class="menu-items">
                 <li class=" ">
@@ -830,11 +830,25 @@
                                     </div>
                                     <div class="form-group  form-group-default required">
                                         <label>Placeholder</label>
-                                        <input type="email" class="form-control" placeholder="ex: some@example.com" required>
+                                        <input type="email" class="form-control" placeholder="ex: some@example.com"
+                                               required>
                                     </div>
                                     <div class="form-group form-group-default disabled">
                                         <label>Disabled</label>
-                                        <input type="email" class="form-control" value="You can put anything here" disabled>
+                                        <input type="email" class="form-control" value="You can put anything here"
+                                               disabled>
+                                    </div>
+                                    <div class="form-group  form-group-default required">
+                                        <div class="checkbox">
+                                            <input type="checkbox" value="0" id="checkbox-group-1">
+                                            <label for="checkbox-group-1">Keep Me Signed in</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group  form-group-default required">
+                                        <div class="radio">
+                                            <input type="radio" value="0" id="radio1">
+                                            <label for="radio1">Keep Me Signed in</label>
+                                        </div>
                                     </div>
                                 </form>
                             </div>
@@ -855,29 +869,27 @@
                                 </h5>
                                 <form role="form">
                                     <div class="form-group">
-                                        <label>Your name</label>
-                                        <span class="help">e.g. "Mona Lisa Portrait"</span>
+                                        <label>Your name <span class="help">e.g. "Mona Lisa Portrait"</span></label>
                                         <input type="email" class="form-control" required>
                                     </div>
                                     <div class="form-group">
-                                        <label>Password</label>
-                                        <span class="help">e.g. "Mona Lisa Portrait"</span>
+                                        <label>Password <span class="help">e.g. "Mona Lisa Portrait"</span></label>
                                         <input type="password" class="form-control" required>
                                     </div>
                                     <div class="form-group">
-                                        <label>Email</label>
-                                        <span class="help">e.g. "some@example.com"</span>
-                                        <input type="email" class="form-control" placeholder="ex: some@example.com" required>
+                                        <label>Email <span class="help">e.g. "some@example.com"</span></label>
+                                        <input type="email" class="form-control" placeholder="ex: some@example.com"
+                                               required>
                                     </div>
                                     <div class="form-group">
-                                        <label>Placeholder</label>
-                                        <span class="help">e.g. "some@example.com"</span>
-                                        <input type="email" class="form-control" placeholder="ex: some@example.com" required>
+                                        <label>Placeholder <span class="help">e.g. "some@example.com"</span></label>
+                                        <input type="email" class="form-control" placeholder="ex: some@example.com"
+                                               required>
                                     </div>
                                     <div class="form-group">
-                                        <label>Disabled</label>
-                                        <span class="help">e.g. "some@example.com"</span>
-                                        <input type="email" class="form-control" value="You can put anything here" disabled>
+                                        <label>Disabled <span class="help">e.g. "some@example.com"</span></label>
+                                        <input type="email" class="form-control" value="You can put anything here"
+                                               disabled>
                                     </div>
                                 </form>
                             </div>
@@ -887,6 +899,309 @@
                 </div>
             </div>
             <!-- END CONTAINER FLUID -->
+
+
+            <!-- START CONTAINER FLUID -->
+            <div class="container-fluid kt-container-fluid-lg">
+                <!-- START PANEL -->
+                <div class="panel">
+                    <div class="panel-heading">
+                        <div class="panel-title">Checkbox controls
+                        </div>
+                        <div class="tools">
+                            <a class="collapse" href="javascript:;"></a>
+                            <a class="config" data-toggle="modal" href="#grid-config"></a>
+                            <a class="reload" href="javascript:;"></a>
+                            <a class="remove" href="javascript:;"></a>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h5>Color
+                                    <span class="semi-bold">Options</span>
+                                </h5>
+                                <p>Our very own image-less pure CSS and retina compatible check box. These check boxes
+                                    are customized and aviable in all boostrap color classes</p>
+                                <br>
+                                <div class="checkbox ">
+                                    <input type="checkbox" value="1" id="checkbox1">
+                                    <label for="checkbox1">Keep Me Signed in</label>
+                                </div>
+                                <div class="checkbox check-success  ">
+                                    <input type="checkbox" checked="checked" value="1" id="checkbox2">
+                                    <label for="checkbox2">I agree</label>
+                                </div>
+                                <div class="checkbox check-primary">
+                                    <input type="checkbox" value="1" id="checkbox3">
+                                    <label for="checkbox3">Mark</label>
+                                </div>
+                                <div class="checkbox check-info">
+                                    <input type="checkbox" value="1" id="checkbox4">
+                                    <label for="checkbox4">Steve Jobs</label>
+                                </div>
+                                <div class="checkbox check-warning">
+                                    <input type="checkbox" checked="checked" value="1" id="checkbox5">
+                                    <label for="checkbox5">Action</label>
+                                </div>
+                                <div class="checkbox check-danger">
+                                    <input type="checkbox" checked="checked" value="1" id="checkbox6">
+                                    <label for="checkbox6">Mark as read</label>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4">
+                                <h5>Shape
+                                    <span class="semi-bold">Options</span>
+                                </h5>
+                                <p>Bored with traditional boxed shape check boxes? Here is a circle one simply add the
+                                    class
+                                    <code>.checkbox-circle</code>to change it</p>
+                                <br>
+                                <div class="checkbox  checkbox-circle">
+                                    <input type="checkbox" checked="checked" value="1" id="checkbox7">
+                                    <label for="checkbox7">Keep Me Signed in</label>
+                                </div>
+                                <div class="checkbox check-success checkbox-circle">
+                                    <input type="checkbox" value="1" id="checkbox8">
+                                    <label for="checkbox8">I agree</label>
+                                </div>
+                                <div class="checkbox check-primary checkbox-circle">
+                                    <input type="checkbox" checked="checked" value="1" id="checkbox9">
+                                    <label for="checkbox9">Mark</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <h5>State
+                                    <span class="semi-bold">Options</span>
+                                </h5>
+                                <p>These act the same way as normal HTML check boxes. Here are some states that</p>
+                                <br>
+                                <div class="checkbox check-success">
+                                    <input type="checkbox" disabled="disabled" value="check1" name="check" id="check1">
+                                    <label for="check1">Checkbox No. 1</label>
+                                    <br>
+                                    <input type="checkbox" disabled="disabled" checked="checked" value="check2"
+                                           name="check" id="check2">
+                                    <label for="check2">Checkbox No. 2</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END PANEL -->
+            </div>
+            <!-- END CONTAINER FLUID -->
+
+            <!-- START CONTAINER FLUID -->
+            <div class="container-fluid kt-container-fluid-lg">
+                <!-- START PANEL -->
+                <div class="panel">
+                    <div class="panel-heading">
+                        <div class="panel-title">Toggle controls
+                        </div>
+                        <div class="tools">
+                            <a class="collapse" href="javascript:;"></a>
+                            <a class="config" data-toggle="modal" href="#grid-config"></a>
+                            <a class="reload" href="javascript:;"></a>
+                            <a class="remove" href="javascript:;"></a>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5>Color
+                                    <span class="semi-bold">Options</span>
+                                </h5>
+                                <p>Pure CSS radio button with a cool animation. These are available in all primary
+                                    colors in bootstrap
+                                </p>
+                                <br>
+                                <div class="radio radio-success">
+                                    <input type="radio" value="yes" name="optionyes" id="yes">
+                                    <label for="yes">Agree</label>
+                                    <input type="radio" checked="checked" value="no" name="optionyes" id="no">
+                                    <label for="no">Disagree</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h5>State
+                                    <span class="semi-bold">Options</span>
+                                </h5>
+                                <p>Use of different color opacity helps to destigues between different states such as
+                                    disable
+                                </p>
+                                <br>
+                                <div class="radio radio-primary">
+                                    <input type="radio" disabled="disabled" value="Disabled" name="Disabled"
+                                           id="Disabled">
+                                    <label for="Disabled">Disabled</label>
+                                    <input type="radio" disabled="disabled" checked="checked" value="ADisabled"
+                                           name="ADisabled" id="ADisabled">
+                                    <label for="ADisabled">Disabled</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END PANEL -->
+            </div>
+            <!-- END CONTAINER FLUID -->
+
+            <!-- START CONTAINER FLUID -->
+            <div class="container-fluid kt-container-fluid-lg">
+                <!-- START PANEL -->
+                <div class="panel">
+                    <div class="panel-heading">
+                        <div class="panel-title">Dropdown Controls
+                        </div>
+                        <div class="tools">
+                            <a href="javascript:;" class="collapse"></a>
+                            <a href="#grid-config" data-toggle="modal" class="config"></a>
+                            <a href="javascript:;" class="reload"></a>
+                            <a href="javascript:;" class="remove"></a>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <p>We've simplified our dropdown buttons by getting rid of the dedicated dropdown
+                                    associated with them, this looks more clean and also available in all different
+                                    colors</p>
+                                <br>
+                                <select class="form-control">
+                                    <option value="sightseeing">Web-safe</option>
+                                    <option value="business">Helvetica</option>
+                                    <option value="honeymoon">SegeoUI</option>
+                                </select>
+                                <br>
+                                <br>
+                                <p class="small">The button will be automatically sized according to the visible content
+                                    size. Make sure there is enough room for the hidden content to show</p>
+                            </div>
+                            <div class="col-sm-4">
+                                <h5>
+                                    Simple dropdowns
+                                </h5>
+                                <p>These are highly customizable dropdowns that come with search option for use to
+                                    search</p>
+                                <form role="form">
+                                    <div class="form-group ">
+                                        <select class="form-control" data-init-plugin="select2">
+                                            <optgroup label="Alaskan/Hawaiian Time Zone">
+                                                <option value="AK">Alaska</option>
+                                                <option value="HI">Hawaii</option>
+                                            </optgroup>
+                                            <optgroup label="Pacific Time Zone">
+                                                <option value="CA">California</option>
+                                                <option value="NV">Nevada</option>
+                                                <option value="OR">Oregon</option>
+                                                <option value="WA">Washington</option>
+                                            </optgroup>
+                                            <optgroup label="Mountain Time Zone">
+                                                <option value="AZ">Arizona</option>
+                                                <option value="CO">Colorado</option>
+                                                <option value="ID">Idaho</option>
+                                                <option value="MT">Montana</option>
+                                                <option value="NE">Nebraska</option>
+                                                <option value="NM">New Mexico</option>
+                                                <option value="ND">North Dakota</option>
+                                                <option value="UT">Utah</option>
+                                                <option value="WY">Wyoming</option>
+                                            </optgroup>
+                                            <optgroup label="Central Time Zone">
+                                                <option value="AL">Alabama</option>
+                                                <option value="AR">Arkansas</option>
+                                                <option value="IL">Illinois</option>
+                                                <option value="IA">Iowa</option>
+                                                <option value="KS">Kansas</option>
+                                                <option value="KY">Kentucky</option>
+                                                <option value="LA">Louisiana</option>
+                                                <option value="MN">Minnesota</option>
+                                                <option value="MS">Mississippi</option>
+                                                <option value="MO">Missouri</option>
+                                                <option value="OK">Oklahoma</option>
+                                                <option value="SD">South Dakota</option>
+                                                <option value="TX">Texas</option>
+                                                <option value="TN">Tennessee</option>
+                                                <option value="WI">Wisconsin</option>
+                                            </optgroup>
+                                            <optgroup label="Eastern Time Zone">
+                                                <option value="CT">Connecticut</option>
+                                                <option value="DE">Delaware</option>
+                                                <option value="FL">Florida</option>
+                                                <option value="GA">Georgia</option>
+                                                <option value="IN">Indiana</option>
+                                                <option value="ME">Maine</option>
+                                                <option value="MD">Maryland</option>
+                                                <option value="MA">Massachusetts</option>
+                                                <option value="MI">Michigan</option>
+                                                <option value="NH">New Hampshire</option>
+                                                <option value="NJ">New Jersey</option>
+                                                <option value="NY">New York</option>
+                                                <option value="NC">North Carolina</option>
+                                                <option value="OH">Ohio</option>
+                                                <option value="PA">Pennsylvania</option>
+                                                <option value="RI">Rhode Island</option>
+                                                <option value="SC">South Carolina</option>
+                                                <option value="VT">Vermont</option>
+                                                <option value="VA">Virginia</option>
+                                                <option value="WV">West Virginia</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                </form>
+                                <form class="" role="form">
+                                    <div class="form-group form-group-default form-group-default-select2 required">
+                                        <label class="">Project</label>
+                                        <select class="form-control" data-init-plugin="select2">
+                                            <optgroup label="Alaskan/Hawaiian Time Zone">
+                                                <option value="AK">Alaska</option>
+                                                <option value="HI">Hawaii</option>
+                                            </optgroup>
+                                            <optgroup label="Pacific Time Zone">
+                                                <option value="CA">California</option>
+                                                <option value="NV">Nevada</option>
+                                                <option value="OR">Oregon</option>
+                                                <option value="WA">Washington</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-sm-4">
+                                <h5>
+                                    Multi select
+                                </h5>
+                                <p>Fancy multiselect option box. Customized for the anypreference</p>
+                                <br>
+                                <div class="form-group">
+                                    <select id="multi" class="form-control" multiple>
+                                        <option value="Jim">Jim</option>
+                                        <option value="John">John</option>
+                                        <option value="Lucy">Lucy</option>
+                                    </select>
+                                </div>
+                                <form class="" role="form">
+                                    <div class="form-group form-group-default form-group-default-select2">
+                                        <label>Project</label>
+                                        <select id="select2-test-json" class=" form-control" data-init-plugin="select2"
+                                                multiple data-json='{"select2":{"maximumSelectionLength":2}}'>
+                                            <option value="Jim">Jim</option>
+                                            <option value="John">John</option>
+                                            <option value="Lucy">Lucy</option>
+                                        </select>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END PANEL -->
+            </div>
+            <!-- END CONTAINER FLUID -->
+
+
         </div>
         <!-- END KT-CONTENT -->
 
@@ -916,14 +1231,104 @@
     </div>
     <!-- END KT-CONTENT-WRAPPER -->
 
+    <!--span class="select2-container select2-container--default select2-container--open"
+          style="position: absolute; top: 1588px; left: 686.359px;"><span
+            class="select2-dropdown select2-dropdown--below" dir="ltr" style="width: 530.219px;"><span
+            class="select2-search select2-search--dropdown"><input class="select2-search__field" type="search"
+                                                                   tabindex="0" autocomplete="off" autocorrect="off"
+                                                                   autocapitalize="off" spellcheck="false"
+                                                                   role="textbox"></span>
+        <span class="select2-results"><ul
+            class="select2-results__options" role="tree" id="select2-5o2l-results" aria-expanded="true"
+            aria-hidden="false"><li class="select2-results__option" role="group"
+                                    aria-label="Alaskan/Hawaiian Time Zone"><strong class="select2-results__group">Alaskan/Hawaiian Time Zone</strong><ul
+            class="select2-results__options select2-results__options--nested"><li class="select2-results__option"
+                                                                                  id="select2-5o2l-result-mn2i-AK"
+                                                                                  role="treeitem" aria-selected="true">Alaska</li><li
+            class="select2-results__option" id="select2-5o2l-result-cuco-HI" role="treeitem" aria-selected="false">Hawaii</li></ul></li><li
+            class="select2-results__option" role="group" aria-label="Pacific Time Zone"><strong
+            class="select2-results__group">Pacific Time Zone</strong><ul
+            class="select2-results__options select2-results__options--nested"><li class="select2-results__option"
+                                                                                  id="select2-5o2l-result-kfrh-CA"
+                                                                                  role="treeitem" aria-selected="false">California</li><li
+            class="select2-results__option select2-results__option--highlighted" id="select2-5o2l-result-yff4-NV"
+            role="treeitem" aria-selected="false">Nevada</li><li class="select2-results__option"
+                                                                 id="select2-5o2l-result-yiyh-OR" role="treeitem"
+                                                                 aria-selected="false">Oregon</li><li
+            class="select2-results__option" id="select2-5o2l-result-bx9v-WA" role="treeitem" aria-selected="false">Washington</li></ul></li><li
+            class="select2-results__option" role="group" aria-label="Mountain Time Zone"><strong
+            class="select2-results__group">Mountain Time Zone</strong><ul
+            class="select2-results__options select2-results__options--nested"><li class="select2-results__option"
+                                                                                  id="select2-5o2l-result-wbmt-AZ"
+                                                                                  role="treeitem" aria-selected="false">Arizona</li><li
+            class="select2-results__option" id="select2-5o2l-result-66x9-CO" role="treeitem" aria-selected="false">Colorado</li><li
+            class="select2-results__option" id="select2-5o2l-result-116q-ID" role="treeitem"
+            aria-selected="false">Idaho</li><li class="select2-results__option" id="select2-5o2l-result-if3y-MT"
+                                                role="treeitem" aria-selected="false">Montana</li><li
+            class="select2-results__option" id="select2-5o2l-result-zha6-NE" role="treeitem" aria-selected="false">Nebraska</li><li
+            class="select2-results__option" id="select2-5o2l-result-rlvg-NM" role="treeitem" aria-selected="false">New Mexico</li><li
+            class="select2-results__option" id="select2-5o2l-result-m91f-ND" role="treeitem" aria-selected="false">North Dakota</li><li
+            class="select2-results__option" id="select2-5o2l-result-fori-UT" role="treeitem"
+            aria-selected="false">Utah</li><li class="select2-results__option" id="select2-5o2l-result-hzps-WY"
+                                               role="treeitem" aria-selected="false">Wyoming</li></ul></li><li
+            class="select2-results__option" role="group" aria-label="Central Time Zone"><strong
+            class="select2-results__group">Central Time Zone</strong><ul
+            class="select2-results__options select2-results__options--nested"><li class="select2-results__option"
+                                                                                  id="select2-5o2l-result-bltd-AL"
+                                                                                  role="treeitem" aria-selected="false">Alabama</li><li
+            class="select2-results__option" id="select2-5o2l-result-6b61-AR" role="treeitem" aria-selected="false">Arkansas</li><li
+            class="select2-results__option" id="select2-5o2l-result-ls2r-IL" role="treeitem" aria-selected="false">Illinois</li><li
+            class="select2-results__option" id="select2-5o2l-result-zyq4-IA" role="treeitem"
+            aria-selected="false">Iowa</li><li class="select2-results__option" id="select2-5o2l-result-01x1-KS"
+                                               role="treeitem" aria-selected="false">Kansas</li><li
+            class="select2-results__option" id="select2-5o2l-result-6lo3-KY" role="treeitem" aria-selected="false">Kentucky</li><li
+            class="select2-results__option" id="select2-5o2l-result-dvvq-LA" role="treeitem" aria-selected="false">Louisiana</li><li
+            class="select2-results__option" id="select2-5o2l-result-f3oh-MN" role="treeitem" aria-selected="false">Minnesota</li><li
+            class="select2-results__option" id="select2-5o2l-result-77n1-MS" role="treeitem" aria-selected="false">Mississippi</li><li
+            class="select2-results__option" id="select2-5o2l-result-bp58-MO" role="treeitem" aria-selected="false">Missouri</li><li
+            class="select2-results__option" id="select2-5o2l-result-cebt-OK" role="treeitem" aria-selected="false">Oklahoma</li><li
+            class="select2-results__option" id="select2-5o2l-result-ifou-SD" role="treeitem" aria-selected="false">South Dakota</li><li
+            class="select2-results__option" id="select2-5o2l-result-e9lu-TX" role="treeitem"
+            aria-selected="false">Texas</li><li class="select2-results__option" id="select2-5o2l-result-icvz-TN"
+                                                role="treeitem" aria-selected="false">Tennessee</li><li
+            class="select2-results__option" id="select2-5o2l-result-hglv-WI" role="treeitem" aria-selected="false">Wisconsin</li></ul></li><li
+            class="select2-results__option" role="group" aria-label="Eastern Time Zone"><strong
+            class="select2-results__group">Eastern Time Zone</strong><ul
+            class="select2-results__options select2-results__options--nested"><li class="select2-results__option"
+                                                                                  id="select2-5o2l-result-21hs-CT"
+                                                                                  role="treeitem" aria-selected="false">Connecticut</li><li
+            class="select2-results__option" id="select2-5o2l-result-7sep-DE" role="treeitem" aria-selected="false">Delaware</li><li
+            class="select2-results__option" id="select2-5o2l-result-47to-FL" role="treeitem" aria-selected="false">Florida</li><li
+            class="select2-results__option" id="select2-5o2l-result-0omt-GA" role="treeitem" aria-selected="false">Georgia</li><li
+            class="select2-results__option" id="select2-5o2l-result-iaks-IN" role="treeitem" aria-selected="false">Indiana</li><li
+            class="select2-results__option" id="select2-5o2l-result-oy62-ME" role="treeitem"
+            aria-selected="false">Maine</li><li class="select2-results__option" id="select2-5o2l-result-ddpk-MD"
+                                                role="treeitem" aria-selected="false">Maryland</li><li
+            class="select2-results__option" id="select2-5o2l-result-3j56-MA" role="treeitem" aria-selected="false">Massachusetts</li><li
+            class="select2-results__option" id="select2-5o2l-result-wc1y-MI" role="treeitem" aria-selected="false">Michigan</li><li
+            class="select2-results__option" id="select2-5o2l-result-49kb-NH" role="treeitem" aria-selected="false">New Hampshire</li><li
+            class="select2-results__option" id="select2-5o2l-result-4ev7-NJ" role="treeitem" aria-selected="false">New Jersey</li><li
+            class="select2-results__option" id="select2-5o2l-result-k2ev-NY" role="treeitem" aria-selected="false">New York</li><li
+            class="select2-results__option" id="select2-5o2l-result-h8fy-NC" role="treeitem" aria-selected="false">North Carolina</li><li
+            class="select2-results__option" id="select2-5o2l-result-rfvp-OH" role="treeitem"
+            aria-selected="false">Ohio</li><li class="select2-results__option" id="select2-5o2l-result-rz6s-PA"
+                                               role="treeitem" aria-selected="false">Pennsylvania</li><li
+            class="select2-results__option" id="select2-5o2l-result-e4vu-RI" role="treeitem" aria-selected="false">Rhode Island</li><li
+            class="select2-results__option" id="select2-5o2l-result-sbmu-SC" role="treeitem" aria-selected="false">South Carolina</li><li
+            class="select2-results__option" id="select2-5o2l-result-uhc0-VT" role="treeitem" aria-selected="false">Vermont</li><li
+            class="select2-results__option" id="select2-5o2l-result-lqxe-VA" role="treeitem" aria-selected="false">Virginia</li><li
+            class="select2-results__option" id="select2-5o2l-result-fdtm-WV" role="treeitem" aria-selected="false">West Virginia</li></ul></li></ul></span></span></span-->
+
 </div>
+
 
 <!-- start footer.tpl.html-->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../../dist/lib/jquery/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../../bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../../dist/lib/bootstrap/bootstrap.min.js"></script>
+<script src="../../dist/lib/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+<script src="../../dist/lib/select2/select2.full.min.js"></script>
 <script src="../../dist/js/ng-script.js"></script>
 <!-- end footer.tpl.html-->
 

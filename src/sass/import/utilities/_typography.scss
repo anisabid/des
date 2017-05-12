@@ -4,19 +4,37 @@
 */
 .hint-text,
 .help {
-  opacity: .7;
+  opacity: .6;
 }
 
 .no-decoration {
   text-decoration: none !important;
 }
 
-.text-bold {
-  font-weight: $ktv-font-weight-bold;
+// Text Weight
+//------------------------------------
+.text-thin {
+  font-weight: $ktv-font-weight-thin !important;
 }
 
-.text-bolder {
-  font-weight: $ktv-font-weight-black;
+.text-light {
+  font-weight: $ktv-font-weight-light !important;
+}
+
+.text-regular {
+  font-weight: $ktv-font-weight-regular !important;
+}
+
+.text-medium {
+  font-weight: $ktv-font-weight-medium !important;
+}
+
+.text-bold {
+  font-weight: $ktv-font-weight-bold !important;
+}
+
+.text-black {
+  font-weight: $ktv-font-weight-black !important;
 }
 
 /* Lins and Others

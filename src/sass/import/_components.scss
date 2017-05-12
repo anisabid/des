@@ -10,8 +10,8 @@
   [2. Animate]
   [3. Bootstrap]
   [4. Bootstrap datetimepicker]
-  [5. ]
-  [6. ]
+  [5. Bootstrap Select2]
+  [6. mCustomScrollbar]
   [7. ]
   [8. ]
   [9. ]
@@ -30,5 +30,9 @@
 // Import Bootstrap datetimepicker
 @import "../../../bower_components/eonasdan-bootstrap-datetimepicker/src/sass/bootstrap-datetimepicker";
 
-// Import Bootstrap datetimepicker
-@import "../../../bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css";
+// Import Bootstrap Select2
+@import "../../../bower_components/select2/src/scss/core";
+
+// Import ScrollBar
+@import "../../../bower_components/jquery.scrollbar/sass/jquery.scrollbar";
+

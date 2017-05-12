@@ -36,6 +36,18 @@ module.exports = function () {
                 dist: './dist/lib/bootstrap/'
             },
             {
+                src: 'bower_components/select2/dist/js/select2.min.js',
+                dist: './dist/lib/select2/'
+            },
+            {
+                src: 'bower_components/select2/dist/js/select2.full.min.js',
+                dist: './dist/lib/select2/'
+            },
+            {
+                src: 'bower_components/select2/dist/css/select2.min.css',
+                dist: './dist/lib/select2/'
+            },
+            {
                 src: 'bower_components/font-awesome/fonts/*',
                 dist: './dist/fonts/'
             },
@@ -52,8 +64,8 @@ module.exports = function () {
                 dist: './dist/lib/datetimepicker/'
             },
             {
-                src: 'bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
-                dist: './dist/lib/malihu-custom-scrollbar-plugin/'
+                src: 'bower_components/jquery.scrollbar/jquery.scrollbar.min.js',
+                dist: './dist/lib/jquery.scrollbar/'
             }
         ]
     };

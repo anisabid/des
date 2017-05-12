@@ -39,7 +39,11 @@
                     })
                 }
             },
+            sidebar: function () {
+                $('.js-kt-sidebar-menu-wrapper').scrollbar();
+            },
             ready: function () {
+                this.sidebar();
                 this.menu.toggle();
                 this.toggle();
             }

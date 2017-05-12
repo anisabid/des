@@ -18,6 +18,9 @@
     "bootstrap": "^3.3.7",
     "animatewithsass": "^3.2.2",
     "bootstrap-sass": "^3.3.7",
-    "malihu-custom-scrollbar-plugin": "^3.1.5"
+    "malihu-custom-scrollbar-plugin": "^3.1.5",
+    "select2-bootstrap-theme": "^0.1.0-beta.10",
+    "select2": "^4.0.3",
+    "jquery.scrollbar": "^0.2.11"
   }
 }
