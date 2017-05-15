@@ -19053,19 +19053,26 @@ label .help {
   font-size: 11px;
   opacity: .4; }
 
-.form-control, .form-control:focus {
+.form-control, .form-control:focus,
+.has-error .form-control,
+.has-error .form-control:focus {
   -webkit-box-shadow: none;
   box-shadow: none; }
 
-.form-control:focus {
+.form-control:focus,
+.has-error .form-control:focus {
   background-color: rgba(0, 0, 0, 0.0175); }
 
-.form-group-default .form-control, .form-group-default .form-control:focus {
+.form-group-default .form-control, .form-group-default .form-control:focus, .form-group-default
+.has-error .form-control, .form-group-default
+.has-error .form-control:focus {
   border: 0;
   background-color: transparent; }
 
 .form-group-default {
   border: 1px solid rgba(0, 0, 0, 0.07); }
+  .form-group-default.has-error {
+    border-color: #F55753; }
   .form-group-default label {
     padding: 8px 8px 0 8px;
     margin: 0;
@@ -19249,15 +19256,35 @@ label .help {
   margin-top: 0;
   padding-left: 8px; }
 
-/*
-.select2-container--default .select2-results{
-  height: 200px;
-  overflow: auto;
-}
+/* Select2
+--------------------------------------------------
+*/
+.form-group-default .select2 {
+  width: calc(100% + 2px) !important;
+  margin-left: -1px; }
 
-.select2-container--default .select2-results > .select2-results__options{
-  max-height: initial;
-}*/
+.select2 .select2-selection {
+  border-radius: 0;
+  border-color: rgba(0, 0, 0, 0.07);
+  background-color: transparent; }
+  .form-group-default .select2 .select2-selection {
+    border: 0; }
+
+.select2-dropdown {
+  border-color: rgba(0, 0, 0, 0.07); }
+
+/* scrollbar height/width & offset from container borders */
+.scrollbar-macosx > .scroll-element.scroll-y .scroll-bar {
+  left: -5px;
+  min-height: 10px;
+  width: 3px; }
+
+.scrollbar-inner > .scroll-element.scroll-y {
+  height: 100%;
+  right: 2px;
+  top: 0;
+  width: 3px; }
+
 /*------------------------------------------------------------------
 [1. Sections]
   [1.1 Body]
@@ -19540,10 +19567,6 @@ body {
         -ms-transform: rotate(-90deg);
         -o-transform: rotate(-90deg);
         transform: rotate(-90deg); }
-  .kt-sidebar .scrollbar-macosx > .scroll-element.scroll-y .scroll-bar {
-    left: -5px;
-    min-height: 10px;
-    width: 3px; }
 
 /*
 .kt-sidebar.red {

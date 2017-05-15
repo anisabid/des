@@ -24,16 +24,10 @@
                     $(this).parents('.form-group').removeClass('focused');
                 });
             },
-            select2: function () {
-
-                //$('.select2-container .select2-results').mCustomScrollbar();
-
+            initPluginSelect2: function () {
                 $('[data-init-plugin="select2"]').select2(
                     $('#select2-test-json').json().select2
-                ).on('select2:open', function(e){
-                    //$('.select2-container .select2-results').mCustomScrollbar();
-                    //console.log('select2:opening', $(this));
-                    //$('.select2-results').mCustomScrollbar()
+                ).on('select2:open', function (e) {
                     $('.select2-results .select2-results__options').addClass('scrollbar-inner').scrollbar({
                         ignoreMobile: false
                     })
@@ -41,7 +35,7 @@
             },
             ready: function () {
                 this.formGroupDefault();
-                this.select2();
+                this.initPluginSelect2();
             }
         }
     });

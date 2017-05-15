@@ -17,7 +17,8 @@ label .help {
 }
 
 // form-control
-.form-control {
+.form-control,
+.has-error .form-control {
   &,
   &:focus {
     @include box-shadow(none);
@@ -39,6 +40,11 @@ label .help {
 // form-group-default
 .form-group-default {
   border: 1px solid $input-border;
+
+  &.has-error {
+    border-color: $state-danger-text;
+  }
+
   label {
     padding: $padding-base-horizontal $padding-base-horizontal 0 $padding-base-horizontal;
     margin: 0;
@@ -287,12 +293,26 @@ input[type=checkbox]:checked + label {
   padding-left: $ktv-base-unit;
 }
 
-/*
-.select2-container--default .select2-results{
-  height: 200px;
-  overflow: auto;
+/* Select2
+--------------------------------------------------
+*/
+
+.select2 {
+
+  .form-group-default & {
+    width: calc(100% + 2px) !important;
+    margin-left: -1px;
+  }
+  .select2-selection {
+    border-radius: $input-border-radius;
+    border-color: $input-border;
+    background-color: transparent;
+    .form-group-default & {
+      border: 0;
+    }
+  }
 }
 
-.select2-container--default .select2-results > .select2-results__options{
-  max-height: initial;
-}*/
+.select2-dropdown {
+  border-color: $input-border;
+}

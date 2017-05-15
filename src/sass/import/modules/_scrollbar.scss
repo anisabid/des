@@ -1,0 +1,18 @@
+//
+// Overload Scrollbar
+// --------------------------------------------------
+
+/* scrollbar height/width & offset from container borders */
+
+.scrollbar-macosx > .scroll-element.scroll-y .scroll-bar {
+  left: -5px;
+  min-height: 10px;
+  width: 3px;
+}
+
+.scrollbar-inner > .scroll-element.scroll-y {
+  height: 100%;
+  right: 2px;
+  top: 0;
+  width: 3px;
+}

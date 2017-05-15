@@ -230,11 +230,6 @@ $ktv-icon-thumbnail-transition: all 0.1s linear 0s !default;
     }
 
   }
-
-  // Overload Scrollbar
-  // --------------------------------------------------
-
-  .scrollbar-macosx > .scroll-element.scroll-y .scroll-bar { left: -5px; min-height: 10px; width: 3px; }
 }
 
 // Making
