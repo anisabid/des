@@ -17,438 +17,460 @@
 
         <!-- BEGIN KT-CONTENT -->
         <div class="kt-content">
+            <!-- BEGIN KT-INNER-CONTENT -->
+            <div class="kt-inner-content">
 
-            <!-- @@include= ./extends/sections/horizontal_menu.tpl.html {} -->
+                <!-- @@include= ./extends/sections/horizontal_menu.tpl.html {} -->
 
-            <div class="container-fluid kt-container-fluid-lg">
-                <!-- BEGIN BREADCRUMB -->
-                <ol class="breadcrumb">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Forms</a></li>
-                    <li class="active">Form elements</li>
-                </ol>
-                <!-- END BREADCRUMB -->
-            </div>
-            <!-- BEGIN JUMBOTRON -->
-            <div class="jumbotron">
-                <div class="container-fluid kt-container-fluid-lg">
-                    <div class="h3 ">Fome Elements</div>
+                <div class="container-fluid ">
+                    <!-- BEGIN BREADCRUMB -->
+                    <ol class="breadcrumb">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Forms</a></li>
+                        <li class="active">Form elements</li>
+                    </ol>
+                    <!-- END BREADCRUMB -->
                 </div>
-            </div>
-            <!-- END JUMBOTRON -->
+                <!-- BEGIN JUMBOTRON -->
+                <div class="jumbotron">
+                    <div class="container-fluid ">
+                        <div class="h3 ">Fome Elements</div>
+                    </div>
+                </div>
+                <!-- END JUMBOTRON -->
 
-            <!-- BEGIN CONTAINER FLUID -->
-            <div class="container-fluid kt-container-fluid-lg">
-                <div class="row">
-                    <div class="col-md-6">
-                        <!-- START PANEL -->
-                        <div class="panel ">
-                            <div class="panel-heading">
-                                <div class="panel-title">
-                                    Option #one
+                <!-- BEGIN CONTAINER FLUID -->
+                <div class="container-fluid">
+                    <div class="">
+                        <div class="col-md-6">
+                            <!-- START PANEL -->
+                            <div class="panel ">
+                                <div class="panel-heading">
+                                    <div class="panel-title">
+                                        Option #one
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <h5>
+                                        Pages default style
+                                    </h5>
+                                    <form class="" role="form">
+                                        <div class="form-group form-group-default required ">
+                                            <label class="control-label">Project</label>
+                                            <input type="email" class="form-control" required>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group form-group-default required">
+                                                    <label class="control-label">First name</label>
+                                                    <input type="text" class="form-control" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group form-group-default">
+                                                    <label class="control-label">Last name</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group form-group-default required">
+                                            <label class="control-label">Password</label>
+                                            <input type="password" class="form-control" required>
+                                        </div>
+                                        <div class="form-group  form-group-default required">
+                                            <label class="control-label">Placeholder</label>
+                                            <input type="email" class="form-control" placeholder="ex: some@example.com"
+                                                   required>
+                                        </div>
+                                        <div class="form-group form-group-default disabled">
+                                            <label class="control-label">Disabled</label>
+                                            <input type="email" class="form-control" value="You can put anything here"
+                                                   disabled>
+                                        </div>
+                                        <div class="form-group  form-group-default required">
+                                            <div class="checkbox">
+                                                <input type="checkbox" value="0" id="checkbox-group-1">
+                                                <label for="checkbox-group-1">Keep Me Signed in</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group  form-group-default required">
+                                            <div class="radio">
+                                                <input type="radio" value="0" id="radio1">
+                                                <label for="radio1">Keep Me Signed in</label>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
-                            <div class="panel-body">
-                                <h5>
-                                    Pages default style
-                                </h5>
-                                <form class="" role="form">
-                                    <div class="form-group form-group-default required ">
-                                        <label class="control-label">Project</label>
-                                        <input type="email" class="form-control" required>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="form-group form-group-default required">
-                                                <label class="control-label">First name</label>
-                                                <input type="text" class="form-control" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-group form-group-default">
-                                                <label class="control-label">Last name</label>
-                                                <input type="text" class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group form-group-default required">
-                                        <label class="control-label">Password</label>
-                                        <input type="password" class="form-control" required>
-                                    </div>
-                                    <div class="form-group  form-group-default required">
-                                        <label class="control-label">Placeholder</label>
-                                        <input type="email" class="form-control" placeholder="ex: some@example.com"
-                                               required>
-                                    </div>
-                                    <div class="form-group form-group-default disabled">
-                                        <label class="control-label">Disabled</label>
-                                        <input type="email" class="form-control" value="You can put anything here"
-                                               disabled>
-                                    </div>
-                                    <div class="form-group  form-group-default required">
-                                        <div class="checkbox">
-                                            <input type="checkbox" value="0" id="checkbox-group-1">
-                                            <label for="checkbox-group-1">Keep Me Signed in</label>
-                                        </div>
-                                    </div>
-                                    <div class="form-group  form-group-default required">
-                                        <div class="radio">
-                                            <input type="radio" value="0" id="radio1">
-                                            <label for="radio1">Keep Me Signed in</label>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
+                            <!-- END PANEL -->
                         </div>
-                        <!-- END PANEL -->
+                        <div class="col-md-6">
+                            <!-- START PANEL -->
+                            <div class="panel">
+                                <div class="panel-heading">
+                                    <div class="panel-title">
+                                        Option #two
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <h5>
+                                        Traditional Standard Style
+                                    </h5>
+                                    <form role="form">
+                                        <div class="form-group">
+                                            <label class="control-label">Your name <span class="help">e.g. "Mona Lisa Portrait"</span></label>
+                                            <input type="email" class="form-control" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Password <span class="help">e.g. "Mona Lisa Portrait"</span></label>
+                                            <input type="password" class="form-control" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Email <span class="help">e.g. "some@example.com"</span></label>
+                                            <input type="email" class="form-control" placeholder="ex: some@example.com"
+                                                   required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Placeholder <span class="help">e.g. "some@example.com"</span></label>
+                                            <input type="email" class="form-control" placeholder="ex: some@example.com"
+                                                   required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Disabled <span class="help">e.g. "some@example.com"</span></label>
+                                            <input type="email" class="form-control" value="You can put anything here"
+                                                   disabled>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- END PANEL -->
+                        </div>
                     </div>
-                    <div class="col-md-6">
+                </div>
+                <!-- END CONTAINER FLUID -->
+
+
+                <!-- START CONTAINER FLUID -->
+                <div class="container-fluid ">
+                    <div class="col-md-12">
                         <!-- START PANEL -->
                         <div class="panel">
                             <div class="panel-heading">
-                                <div class="panel-title">
-                                    Option #two
+                                <div class="panel-title">Checkbox controls
+                                </div>
+                                <div class="tools">
+                                    <a class="collapse" href="javascript:;"></a>
+                                    <a class="config" data-toggle="modal" href="#grid-config"></a>
+                                    <a class="reload" href="javascript:;"></a>
+                                    <a class="remove" href="javascript:;"></a>
                                 </div>
                             </div>
                             <div class="panel-body">
-                                <h5>
-                                    Traditional Standard Style
-                                </h5>
-                                <form role="form">
-                                    <div class="form-group">
-                                        <label class="control-label">Your name <span class="help">e.g. "Mona Lisa Portrait"</span></label>
-                                        <input type="email" class="form-control" required>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h5>Color
+                                            <span class="semi-bold">Options</span>
+                                        </h5>
+                                        <p>Our very own image-less pure CSS and retina compatible check box. These check
+                                            boxes
+                                            are customized and aviable in all boostrap color classes</p>
+                                        <br>
+                                        <div class="checkbox ">
+                                            <input type="checkbox" value="1" id="checkbox1">
+                                            <label for="checkbox1">Keep Me Signed in</label>
+                                        </div>
+                                        <div class="checkbox check-success  ">
+                                            <input type="checkbox" checked="checked" value="1" id="checkbox2">
+                                            <label for="checkbox2">I agree</label>
+                                        </div>
+                                        <div class="checkbox check-primary">
+                                            <input type="checkbox" value="1" id="checkbox3">
+                                            <label for="checkbox3">Mark</label>
+                                        </div>
+                                        <div class="checkbox check-info">
+                                            <input type="checkbox" value="1" id="checkbox4">
+                                            <label for="checkbox4">Steve Jobs</label>
+                                        </div>
+                                        <div class="checkbox check-warning">
+                                            <input type="checkbox" checked="checked" value="1" id="checkbox5">
+                                            <label for="checkbox5">Action</label>
+                                        </div>
+                                        <div class="checkbox check-danger">
+                                            <input type="checkbox" checked="checked" value="1" id="checkbox6">
+                                            <label for="checkbox6">Mark as read</label>
+                                        </div>
+
                                     </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Password <span class="help">e.g. "Mona Lisa Portrait"</span></label>
-                                        <input type="password" class="form-control" required>
+                                    <div class="col-md-4">
+                                        <h5>Shape
+                                            <span class="semi-bold">Options</span>
+                                        </h5>
+                                        <p>Bored with traditional boxed shape check boxes? Here is a circle one simply
+                                            add
+                                            the
+                                            class
+                                            <code>.checkbox-circle</code>to change it</p>
+                                        <br>
+                                        <div class="checkbox  checkbox-circle">
+                                            <input type="checkbox" checked="checked" value="1" id="checkbox7">
+                                            <label for="checkbox7">Keep Me Signed in</label>
+                                        </div>
+                                        <div class="checkbox check-success checkbox-circle">
+                                            <input type="checkbox" value="1" id="checkbox8">
+                                            <label for="checkbox8">I agree</label>
+                                        </div>
+                                        <div class="checkbox check-primary checkbox-circle">
+                                            <input type="checkbox" checked="checked" value="1" id="checkbox9">
+                                            <label for="checkbox9">Mark</label>
+                                        </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Email <span class="help">e.g. "some@example.com"</span></label>
-                                        <input type="email" class="form-control" placeholder="ex: some@example.com"
-                                               required>
+                                    <div class="col-md-4">
+                                        <h5>State
+                                            <span class="semi-bold">Options</span>
+                                        </h5>
+                                        <p>These act the same way as normal HTML check boxes. Here are some states
+                                            that</p>
+                                        <br>
+                                        <div class="checkbox check-success">
+                                            <input type="checkbox" disabled="disabled" value="check1" name="check"
+                                                   id="check1">
+                                            <label for="check1">Checkbox No. 1</label>
+                                            <br>
+                                            <input type="checkbox" disabled="disabled" checked="checked" value="check2"
+                                                   name="check" id="check2">
+                                            <label for="check2">Checkbox No. 2</label>
+                                        </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Placeholder <span class="help">e.g. "some@example.com"</span></label>
-                                        <input type="email" class="form-control" placeholder="ex: some@example.com"
-                                               required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Disabled <span class="help">e.g. "some@example.com"</span></label>
-                                        <input type="email" class="form-control" value="You can put anything here"
-                                               disabled>
-                                    </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
                         <!-- END PANEL -->
                     </div>
                 </div>
-            </div>
-            <!-- END CONTAINER FLUID -->
+                <!-- END CONTAINER FLUID -->
 
-
-            <!-- START CONTAINER FLUID -->
-            <div class="container-fluid kt-container-fluid-lg">
-                <!-- START PANEL -->
-                <div class="panel">
-                    <div class="panel-heading">
-                        <div class="panel-title">Checkbox controls
-                        </div>
-                        <div class="tools">
-                            <a class="collapse" href="javascript:;"></a>
-                            <a class="config" data-toggle="modal" href="#grid-config"></a>
-                            <a class="reload" href="javascript:;"></a>
-                            <a class="remove" href="javascript:;"></a>
-                        </div>
-                    </div>
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <h5>Color
-                                    <span class="semi-bold">Options</span>
-                                </h5>
-                                <p>Our very own image-less pure CSS and retina compatible check box. These check boxes
-                                    are customized and aviable in all boostrap color classes</p>
-                                <br>
-                                <div class="checkbox ">
-                                    <input type="checkbox" value="1" id="checkbox1">
-                                    <label for="checkbox1">Keep Me Signed in</label>
+                <!-- START CONTAINER FLUID -->
+                <div class="container-fluid ">
+                    <div class="col-md-12">
+                        <!-- START PANEL -->
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <div class="panel-title">Toggle controls
                                 </div>
-                                <div class="checkbox check-success  ">
-                                    <input type="checkbox" checked="checked" value="1" id="checkbox2">
-                                    <label for="checkbox2">I agree</label>
-                                </div>
-                                <div class="checkbox check-primary">
-                                    <input type="checkbox" value="1" id="checkbox3">
-                                    <label for="checkbox3">Mark</label>
-                                </div>
-                                <div class="checkbox check-info">
-                                    <input type="checkbox" value="1" id="checkbox4">
-                                    <label for="checkbox4">Steve Jobs</label>
-                                </div>
-                                <div class="checkbox check-warning">
-                                    <input type="checkbox" checked="checked" value="1" id="checkbox5">
-                                    <label for="checkbox5">Action</label>
-                                </div>
-                                <div class="checkbox check-danger">
-                                    <input type="checkbox" checked="checked" value="1" id="checkbox6">
-                                    <label for="checkbox6">Mark as read</label>
-                                </div>
-
-                            </div>
-                            <div class="col-md-4">
-                                <h5>Shape
-                                    <span class="semi-bold">Options</span>
-                                </h5>
-                                <p>Bored with traditional boxed shape check boxes? Here is a circle one simply add the
-                                    class
-                                    <code>.checkbox-circle</code>to change it</p>
-                                <br>
-                                <div class="checkbox  checkbox-circle">
-                                    <input type="checkbox" checked="checked" value="1" id="checkbox7">
-                                    <label for="checkbox7">Keep Me Signed in</label>
-                                </div>
-                                <div class="checkbox check-success checkbox-circle">
-                                    <input type="checkbox" value="1" id="checkbox8">
-                                    <label for="checkbox8">I agree</label>
-                                </div>
-                                <div class="checkbox check-primary checkbox-circle">
-                                    <input type="checkbox" checked="checked" value="1" id="checkbox9">
-                                    <label for="checkbox9">Mark</label>
+                                <div class="tools">
+                                    <a class="collapse" href="javascript:;"></a>
+                                    <a class="config" data-toggle="modal" href="#grid-config"></a>
+                                    <a class="reload" href="javascript:;"></a>
+                                    <a class="remove" href="javascript:;"></a>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <h5>State
-                                    <span class="semi-bold">Options</span>
-                                </h5>
-                                <p>These act the same way as normal HTML check boxes. Here are some states that</p>
-                                <br>
-                                <div class="checkbox check-success">
-                                    <input type="checkbox" disabled="disabled" value="check1" name="check" id="check1">
-                                    <label for="check1">Checkbox No. 1</label>
-                                    <br>
-                                    <input type="checkbox" disabled="disabled" checked="checked" value="check2"
-                                           name="check" id="check2">
-                                    <label for="check2">Checkbox No. 2</label>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h5>Color
+                                            <span class="semi-bold">Options</span>
+                                        </h5>
+                                        <p>Pure CSS radio button with a cool animation. These are available in all
+                                            primary
+                                            colors in bootstrap
+                                        </p>
+                                        <br>
+                                        <div class="radio radio-success">
+                                            <input type="radio" value="yes" name="optionyes" id="yes">
+                                            <label for="yes">Agree</label>
+                                            <input type="radio" checked="checked" value="no" name="optionyes" id="no">
+                                            <label for="no">Disagree</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5>State
+                                            <span class="semi-bold">Options</span>
+                                        </h5>
+                                        <p>Use of different color opacity helps to destigues between different states
+                                            such
+                                            as
+                                            disable
+                                        </p>
+                                        <br>
+                                        <div class="radio radio-primary">
+                                            <input type="radio" disabled="disabled" value="Disabled" name="Disabled"
+                                                   id="Disabled">
+                                            <label for="Disabled">Disabled</label>
+                                            <input type="radio" disabled="disabled" checked="checked" value="ADisabled"
+                                                   name="ADisabled" id="ADisabled">
+                                            <label for="ADisabled">Disabled</label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- END PANEL -->
                     </div>
                 </div>
-                <!-- END PANEL -->
-            </div>
-            <!-- END CONTAINER FLUID -->
+                <!-- END CONTAINER FLUID -->
 
-            <!-- START CONTAINER FLUID -->
-            <div class="container-fluid kt-container-fluid-lg">
-                <!-- START PANEL -->
-                <div class="panel">
-                    <div class="panel-heading">
-                        <div class="panel-title">Toggle controls
-                        </div>
-                        <div class="tools">
-                            <a class="collapse" href="javascript:;"></a>
-                            <a class="config" data-toggle="modal" href="#grid-config"></a>
-                            <a class="reload" href="javascript:;"></a>
-                            <a class="remove" href="javascript:;"></a>
-                        </div>
-                    </div>
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h5>Color
-                                    <span class="semi-bold">Options</span>
-                                </h5>
-                                <p>Pure CSS radio button with a cool animation. These are available in all primary
-                                    colors in bootstrap
-                                </p>
-                                <br>
-                                <div class="radio radio-success">
-                                    <input type="radio" value="yes" name="optionyes" id="yes">
-                                    <label for="yes">Agree</label>
-                                    <input type="radio" checked="checked" value="no" name="optionyes" id="no">
-                                    <label for="no">Disagree</label>
+                <!-- START CONTAINER FLUID -->
+                <div class="container-fluid ">
+                    <div class="col-md-12">
+                        <!-- START PANEL -->
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <div class="panel-title">Dropdown Controls
+                                </div>
+                                <div class="tools">
+                                    <a href="javascript:;" class="collapse"></a>
+                                    <a href="#grid-config" data-toggle="modal" class="config"></a>
+                                    <a href="javascript:;" class="reload"></a>
+                                    <a href="javascript:;" class="remove"></a>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <h5>State
-                                    <span class="semi-bold">Options</span>
-                                </h5>
-                                <p>Use of different color opacity helps to destigues between different states such as
-                                    disable
-                                </p>
-                                <br>
-                                <div class="radio radio-primary">
-                                    <input type="radio" disabled="disabled" value="Disabled" name="Disabled"
-                                           id="Disabled">
-                                    <label for="Disabled">Disabled</label>
-                                    <input type="radio" disabled="disabled" checked="checked" value="ADisabled"
-                                           name="ADisabled" id="ADisabled">
-                                    <label for="ADisabled">Disabled</label>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <p>We've simplified our dropdown buttons by getting rid of the dedicated
+                                            dropdown
+                                            associated with them, this looks more clean and also available in all
+                                            different
+                                            colors</p>
+                                        <br>
+                                        <select class="form-control">
+                                            <option value="sightseeing">Web-safe</option>
+                                            <option value="business">Helvetica</option>
+                                            <option value="honeymoon">SegeoUI</option>
+                                        </select>
+                                        <br>
+                                        <br>
+                                        <p class="small">The button will be automatically sized according to the visible
+                                            content
+                                            size. Make sure there is enough room for the hidden content to show</p>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <h5>
+                                            Simple dropdowns
+                                        </h5>
+                                        <p>These are highly customizable dropdowns that come with search option for use
+                                            to
+                                            search</p>
+                                        <form role="form">
+                                            <div class="form-group ">
+                                                <select class="form-control" data-init-plugin="select2">
+                                                    <optgroup label="Alaskan/Hawaiian Time Zone">
+                                                        <option value="AK">Alaska</option>
+                                                        <option value="HI">Hawaii</option>
+                                                    </optgroup>
+                                                    <optgroup label="Pacific Time Zone">
+                                                        <option value="CA">California</option>
+                                                        <option value="NV">Nevada</option>
+                                                        <option value="OR">Oregon</option>
+                                                        <option value="WA">Washington</option>
+                                                    </optgroup>
+                                                    <optgroup label="Mountain Time Zone">
+                                                        <option value="AZ">Arizona</option>
+                                                        <option value="CO">Colorado</option>
+                                                        <option value="ID">Idaho</option>
+                                                        <option value="MT">Montana</option>
+                                                        <option value="NE">Nebraska</option>
+                                                        <option value="NM">New Mexico</option>
+                                                        <option value="ND">North Dakota</option>
+                                                        <option value="UT">Utah</option>
+                                                        <option value="WY">Wyoming</option>
+                                                    </optgroup>
+                                                    <optgroup label="Central Time Zone">
+                                                        <option value="AL">Alabama</option>
+                                                        <option value="AR">Arkansas</option>
+                                                        <option value="IL">Illinois</option>
+                                                        <option value="IA">Iowa</option>
+                                                        <option value="KS">Kansas</option>
+                                                        <option value="KY">Kentucky</option>
+                                                        <option value="LA">Louisiana</option>
+                                                        <option value="MN">Minnesota</option>
+                                                        <option value="MS">Mississippi</option>
+                                                        <option value="MO">Missouri</option>
+                                                        <option value="OK">Oklahoma</option>
+                                                        <option value="SD">South Dakota</option>
+                                                        <option value="TX">Texas</option>
+                                                        <option value="TN">Tennessee</option>
+                                                        <option value="WI">Wisconsin</option>
+                                                    </optgroup>
+                                                    <optgroup label="Eastern Time Zone">
+                                                        <option value="CT">Connecticut</option>
+                                                        <option value="DE">Delaware</option>
+                                                        <option value="FL">Florida</option>
+                                                        <option value="GA">Georgia</option>
+                                                        <option value="IN">Indiana</option>
+                                                        <option value="ME">Maine</option>
+                                                        <option value="MD">Maryland</option>
+                                                        <option value="MA">Massachusetts</option>
+                                                        <option value="MI">Michigan</option>
+                                                        <option value="NH">New Hampshire</option>
+                                                        <option value="NJ">New Jersey</option>
+                                                        <option value="NY">New York</option>
+                                                        <option value="NC">North Carolina</option>
+                                                        <option value="OH">Ohio</option>
+                                                        <option value="PA">Pennsylvania</option>
+                                                        <option value="RI">Rhode Island</option>
+                                                        <option value="SC">South Carolina</option>
+                                                        <option value="VT">Vermont</option>
+                                                        <option value="VA">Virginia</option>
+                                                        <option value="WV">West Virginia</option>
+                                                    </optgroup>
+                                                </select>
+                                            </div>
+                                        </form>
+                                        <form class="" role="form">
+                                            <div class="form-group form-group-default form-group-default-select2 required">
+                                                <label class="">Project</label>
+                                                <select class="form-control" data-init-plugin="select2">
+                                                    <optgroup label="Alaskan/Hawaiian Time Zone">
+                                                        <option value="AK">Alaska</option>
+                                                        <option value="HI">Hawaii</option>
+                                                    </optgroup>
+                                                    <optgroup label="Pacific Time Zone">
+                                                        <option value="CA">California</option>
+                                                        <option value="NV">Nevada</option>
+                                                        <option value="OR">Oregon</option>
+                                                        <option value="WA">Washington</option>
+                                                    </optgroup>
+                                                </select>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <h5>
+                                            Multi select
+                                        </h5>
+                                        <p>Fancy multiselect option box. Customized for the anypreference</p>
+                                        <br>
+                                        <div class="form-group">
+                                            <select id="multi" class="form-control" multiple>
+                                                <option value="Jim">Jim</option>
+                                                <option value="John">John</option>
+                                                <option value="Lucy">Lucy</option>
+                                            </select>
+                                        </div>
+                                        <form class="" role="form">
+                                            <div class="form-group form-group-default form-group-default-select2">
+                                                <label class="control-label">Project</label>
+                                                <select id="select2-test-json" class="form-control"
+                                                        data-init-plugin="select2"
+                                                        multiple data-json='{"select2":{"maximumSelectionLength":2}}'>
+                                                    <option value="Jim">Jim</option>
+                                                    <option value="John">John</option>
+                                                    <option value="Lucy">Lucy</option>
+                                                </select>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- END PANEL -->
                     </div>
                 </div>
-                <!-- END PANEL -->
+                <!-- END CONTAINER FLUID -->
+
             </div>
-            <!-- END CONTAINER FLUID -->
-
-            <!-- START CONTAINER FLUID -->
-            <div class="container-fluid kt-container-fluid-lg">
-                <!-- START PANEL -->
-                <div class="panel">
-                    <div class="panel-heading">
-                        <div class="panel-title">Dropdown Controls
-                        </div>
-                        <div class="tools">
-                            <a href="javascript:;" class="collapse"></a>
-                            <a href="#grid-config" data-toggle="modal" class="config"></a>
-                            <a href="javascript:;" class="reload"></a>
-                            <a href="javascript:;" class="remove"></a>
-                        </div>
-                    </div>
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <p>We've simplified our dropdown buttons by getting rid of the dedicated dropdown
-                                    associated with them, this looks more clean and also available in all different
-                                    colors</p>
-                                <br>
-                                <select class="form-control">
-                                    <option value="sightseeing">Web-safe</option>
-                                    <option value="business">Helvetica</option>
-                                    <option value="honeymoon">SegeoUI</option>
-                                </select>
-                                <br>
-                                <br>
-                                <p class="small">The button will be automatically sized according to the visible content
-                                    size. Make sure there is enough room for the hidden content to show</p>
-                            </div>
-                            <div class="col-sm-4">
-                                <h5>
-                                    Simple dropdowns
-                                </h5>
-                                <p>These are highly customizable dropdowns that come with search option for use to
-                                    search</p>
-                                <form role="form">
-                                    <div class="form-group ">
-                                        <select class="form-control" data-init-plugin="select2">
-                                            <optgroup label="Alaskan/Hawaiian Time Zone">
-                                                <option value="AK">Alaska</option>
-                                                <option value="HI">Hawaii</option>
-                                            </optgroup>
-                                            <optgroup label="Pacific Time Zone">
-                                                <option value="CA">California</option>
-                                                <option value="NV">Nevada</option>
-                                                <option value="OR">Oregon</option>
-                                                <option value="WA">Washington</option>
-                                            </optgroup>
-                                            <optgroup label="Mountain Time Zone">
-                                                <option value="AZ">Arizona</option>
-                                                <option value="CO">Colorado</option>
-                                                <option value="ID">Idaho</option>
-                                                <option value="MT">Montana</option>
-                                                <option value="NE">Nebraska</option>
-                                                <option value="NM">New Mexico</option>
-                                                <option value="ND">North Dakota</option>
-                                                <option value="UT">Utah</option>
-                                                <option value="WY">Wyoming</option>
-                                            </optgroup>
-                                            <optgroup label="Central Time Zone">
-                                                <option value="AL">Alabama</option>
-                                                <option value="AR">Arkansas</option>
-                                                <option value="IL">Illinois</option>
-                                                <option value="IA">Iowa</option>
-                                                <option value="KS">Kansas</option>
-                                                <option value="KY">Kentucky</option>
-                                                <option value="LA">Louisiana</option>
-                                                <option value="MN">Minnesota</option>
-                                                <option value="MS">Mississippi</option>
-                                                <option value="MO">Missouri</option>
-                                                <option value="OK">Oklahoma</option>
-                                                <option value="SD">South Dakota</option>
-                                                <option value="TX">Texas</option>
-                                                <option value="TN">Tennessee</option>
-                                                <option value="WI">Wisconsin</option>
-                                            </optgroup>
-                                            <optgroup label="Eastern Time Zone">
-                                                <option value="CT">Connecticut</option>
-                                                <option value="DE">Delaware</option>
-                                                <option value="FL">Florida</option>
-                                                <option value="GA">Georgia</option>
-                                                <option value="IN">Indiana</option>
-                                                <option value="ME">Maine</option>
-                                                <option value="MD">Maryland</option>
-                                                <option value="MA">Massachusetts</option>
-                                                <option value="MI">Michigan</option>
-                                                <option value="NH">New Hampshire</option>
-                                                <option value="NJ">New Jersey</option>
-                                                <option value="NY">New York</option>
-                                                <option value="NC">North Carolina</option>
-                                                <option value="OH">Ohio</option>
-                                                <option value="PA">Pennsylvania</option>
-                                                <option value="RI">Rhode Island</option>
-                                                <option value="SC">South Carolina</option>
-                                                <option value="VT">Vermont</option>
-                                                <option value="VA">Virginia</option>
-                                                <option value="WV">West Virginia</option>
-                                            </optgroup>
-                                        </select>
-                                    </div>
-                                </form>
-                                <form class="" role="form">
-                                    <div class="form-group form-group-default form-group-default-select2 required">
-                                        <label class="">Project</label>
-                                        <select class="form-control" data-init-plugin="select2">
-                                            <optgroup label="Alaskan/Hawaiian Time Zone">
-                                                <option value="AK">Alaska</option>
-                                                <option value="HI">Hawaii</option>
-                                            </optgroup>
-                                            <optgroup label="Pacific Time Zone">
-                                                <option value="CA">California</option>
-                                                <option value="NV">Nevada</option>
-                                                <option value="OR">Oregon</option>
-                                                <option value="WA">Washington</option>
-                                            </optgroup>
-                                        </select>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="col-sm-4">
-                                <h5>
-                                    Multi select
-                                </h5>
-                                <p>Fancy multiselect option box. Customized for the anypreference</p>
-                                <br>
-                                <div class="form-group">
-                                    <select id="multi" class="form-control" multiple>
-                                        <option value="Jim">Jim</option>
-                                        <option value="John">John</option>
-                                        <option value="Lucy">Lucy</option>
-                                    </select>
-                                </div>
-                                <form class="" role="form">
-                                    <div class="form-group form-group-default form-group-default-select2">
-                                        <label class="control-label">Project</label>
-                                        <select id="select2-test-json" class="form-control" data-init-plugin="select2"
-                                                multiple data-json='{"select2":{"maximumSelectionLength":2}}'>
-                                            <option value="Jim">Jim</option>
-                                            <option value="John">John</option>
-                                            <option value="Lucy">Lucy</option>
-                                        </select>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- END PANEL -->
-            </div>
-            <!-- END CONTAINER FLUID -->
-
-
+            <!-- END KT-INNER-CONTENT -->
         </div>
         <!-- END KT-CONTENT -->
 

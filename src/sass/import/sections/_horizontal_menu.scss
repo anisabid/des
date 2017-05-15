@@ -12,13 +12,15 @@ $ktv-layout-hzm-background: $ktv-color-white !default;
 
 .#{$ktv-prefix-class}horizontal-menu {
   background-color: $ktv-layout-hzm-background;
-
-  .#{$ktv-prefix-class}sidebar--floating & {
-    padding-left: $ktv-sidebar-offset;
-  }
+  z-index: $ktv-zIndex-navbar;
 
   .#{$ktv-prefix-class}sidebar--floating.#{$ktv-prefix-class}sidebar--pin & {
     padding-left: 0;
+  }
+
+  .#{$ktv-prefix-class}header & {
+    padding-left: 0;
+    float: left;
   }
 
   .navbar {
@@ -29,7 +31,19 @@ $ktv-layout-hzm-background: $ktv-color-white !default;
       li a {
         color: $dropdown-link-color;
       }
+
+      > li > a {
+        .#{$ktv-prefix-class}header & {
+          //line-height: $ktv-layout-header-height;
+          font-size: $font-size-large;
+          height: $ktv-layout-header-height - 1;
+          padding-top: (($ktv-layout-header-height - $line-height-computed) / 2);
+          padding-bottom: (($ktv-layout-header-height - $line-height-computed) / 2);
+        }
+      }
+
     }
+
   }
 
   @media screen and (min-width: 768px) {
@@ -49,22 +63,30 @@ $ktv-layout-hzm-background: $ktv-color-white !default;
           @include box-shadow(0 4px 9px rgba(0, 0, 0, .075));
 
           // Links within the dropdown menu
-          li a {
-            display: block;
-            clear: both;
-            font-weight: normal;
-            line-height: $line-height-base;
-            color: $dropdown-link-color;
-            white-space: nowrap; // prevent links from randomly breaking onto new lines
+          li {
+            a {
 
-            // Hover/Focus state
+              display: block;
+              clear: both;
+              font-weight: normal;
+              line-height: $line-height-base;
+              color: $dropdown-link-color;
+              white-space: nowrap; // prevent links from randomly breaking onto new lines
 
-            &:hover,
-            &:focus {
+              // Hover/Focus state
+
+              &:hover,
+              &:focus,
+              &.active {
+                text-decoration: none;
+                color: $link-color;
+              }
+
+            }
+            &.active > a {
               text-decoration: none;
               color: $link-color;
             }
-
           }
 
           // Active state

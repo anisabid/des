@@ -6,6 +6,7 @@
   [1.4 Footer]
   [1.5 SideBar]
   [1.6 Horizontal Menu]
+  [1.7 Secondary SideBar]
 */
 
 /* [1.1] Body
@@ -66,5 +67,13 @@ body {
 // Import
 // --------------------------------------------------
 @import "sections/_horizontal_menu";
+
+
+/* [1.7] Secondary SideBar
+------------------------------------
+*/
+// Import
+// --------------------------------------------------
+@import "sections/secondary_sidebar";
 
 

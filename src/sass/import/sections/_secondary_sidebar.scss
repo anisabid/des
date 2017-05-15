@@ -1,0 +1,27 @@
+/* [1.7] Secondary SideBar
+------------------------------------
+*/
+
+// Variable
+// --------------------------------------------------
+$ktv-layout-ssb-width: $ktv-secondary-sidebar-width !default;
+$ktv-layout-ssb-background: $ktv-color-info-darker !default;
+
+// Mixin
+// --------------------------------------------------
+
+@mixin generate-secondary-sidebar(
+  $_ktv-layout-ssb-background: $ktv-layout-ssb-background
+) {
+  position: fixed;
+  width: $ktv-layout-ssb-width;
+  height: 100%;
+  background-color: $_ktv-layout-ssb-background;
+  padding: $ktv-base-unit*2;
+}
+
+// Making
+// --------------------------------------------------
+.#{$ktv-prefix-class}secondary-sidebar {
+  @include generate-secondary-sidebar;
+}

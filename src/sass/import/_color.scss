@@ -2,8 +2,28 @@
 // Global Color
 // --------------------------------------------------
 
+@mixin generate-button-color($background, $color) {
+  $border: darken($background, 10%);
+
+  color: rgba($color, .9);
+  background-color: $background;
+  border-color: $border;
+
+  &:focus,
+  &.focus {
+    color: $color !important;
+    background-color: darken($background, 10%);
+    border-color: darken($border, 25%);
+  }
+  &:hover {
+    color: $color !important;
+    background-color: darken($background, 10%);
+    border-color: darken($border, 12%);
+  }
+}
+
 // Mixin
-@mixin generate-color-class($color-name, $color) {
+@mixin generate-color-class($color-name, $color, $text-color:$ktv-color-black) {
 
   // Background Color
   .bg-#{$color-name} {
@@ -18,6 +38,9 @@
   // Border Color
   .border-#{$color-name} {
     border-color: $color !important;
+  }
+  .btn-#{$color-name} {
+    @include generate-button-color($color, $text-color)
   }
 
 }
@@ -64,16 +87,16 @@ $ktv-color-warning: #F8D053;
 */
 
 // White color generate
-@include generate-color-class('transparent', $ktv-color-transparent);
+@include generate-color-class('transparent', $ktv-color-transparent, $ktv-color-black);
 
 // White color generate
-@include generate-color-class('white', $ktv-color-white);
+@include generate-color-class('white', $ktv-color-white, $ktv-color-black);
 
 // Black color generate
-@include generate-color-class('black', $ktv-color-black);
+@include generate-color-class('black', $ktv-color-black, $ktv-color-white);
 
 // Master color generate
-@include generate-color-class('master', $ktv-color-master);
+@include generate-color-class('master', $ktv-color-master, $ktv-color-white);
 // Lighter Master colors
 $ktv-color-master-light: mix($ktv-color-master, #fff, $CONST-SHADE-light);
 @include generate-color-class('master-light', $ktv-color-master-light);
@@ -84,11 +107,11 @@ $ktv-color-master-lightest: mix($ktv-color-master, #fff, $CONST-SHADE-lightest);
 
 // Darker Master colors
 $ktv-color-master-dark: mix($ktv-color-master, #000, $CONST-SHADE-dark);
-@include generate-color-class('master-dark', $ktv-color-master-dark);
+@include generate-color-class('master-dark', $ktv-color-master-dark, $ktv-color-white);
 $ktv-color-master-darker: mix($ktv-color-master, #000, $CONST-SHADE-darker);
-@include generate-color-class('master-darker', $ktv-color-master-darker);
+@include generate-color-class('master-darker', $ktv-color-master-darker, $ktv-color-white);
 $ktv-color-master-darkest: mix($ktv-color-master, #000, $CONST-SHADE-darkest);
-@include generate-color-class('master-darkest', $ktv-color-master-darkest);
+@include generate-color-class('master-darkest', $ktv-color-master-darkest, $ktv-color-white);
 
 // Primary color generate
 @include generate-color-class('primary', $ktv-color-primary);
@@ -102,14 +125,14 @@ $ktv-color-primary-lightest: mix($ktv-color-primary, #fff, $CONST-MIX-lightest);
 
 // Darker Primary colors
 $ktv-color-primary-dark: mix($ktv-color-primary, #000, $CONST-MIX-dark);
-@include generate-color-class('primary-dark', $ktv-color-primary-dark);
+@include generate-color-class('primary-dark', $ktv-color-primary-dark, $ktv-color-white);
 $ktv-color-primary-darker: mix($ktv-color-primary, #000, $CONST-MIX-darker);
-@include generate-color-class('primary-darker', $ktv-color-primary-darker);
+@include generate-color-class('primary-darker', $ktv-color-primary-darker, $ktv-color-white);
 $ktv-color-primary-darkest: mix($ktv-color-primary, #000, $CONST-MIX-darkest);
-@include generate-color-class('primary-darkest', $ktv-color-primary-darkest);
+@include generate-color-class('primary-darkest', $ktv-color-primary-darkest, $ktv-color-white);
 
 // Complete color generate
-@include generate-color-class('complete', $ktv-color-complete);
+@include generate-color-class('complete', $ktv-color-complete, $ktv-color-white);
 // Lighter Complete colors
 $ktv-color-complete-light: mix($ktv-color-complete, #fff, $CONST-MIX-light);
 @include generate-color-class('complete-light', $ktv-color-complete-light);
@@ -120,11 +143,11 @@ $ktv-color-complete-lightest: mix($ktv-color-complete, #fff, $CONST-MIX-lightest
 
 // Darker Complete colors
 $ktv-color-complete-dark: mix($ktv-color-complete, #000, $CONST-MIX-dark);
-@include generate-color-class('complete-dark', $ktv-color-complete-dark);
+@include generate-color-class('complete-dark', $ktv-color-complete-dark, $ktv-color-white);
 $ktv-color-complete-darker: mix($ktv-color-complete, #000, $CONST-MIX-darker);
-@include generate-color-class('complete-darker', $ktv-color-complete-darker);
+@include generate-color-class('complete-darker', $ktv-color-complete-darker, $ktv-color-white);
 $ktv-color-complete-darkest: mix($ktv-color-complete, #000, $CONST-MIX-darkest);
-@include generate-color-class('complete-darkest', $ktv-color-complete-darkest);
+@include generate-color-class('complete-darkest', $ktv-color-complete-darkest, $ktv-color-white);
 
 // Success color generate
 @include generate-color-class('success', $ktv-color-success);
@@ -138,11 +161,11 @@ $ktv-color-success-lightest: mix($ktv-color-success, #fff, $CONST-MIX-lightest);
 
 // Darker Success colors
 $ktv-color-success-dark: mix($ktv-color-success, #000, $CONST-MIX-dark);
-@include generate-color-class('success-dark', $ktv-color-success-dark);
+@include generate-color-class('success-dark', $ktv-color-success-dark, $ktv-color-white);
 $ktv-color-success-darker: mix($ktv-color-success, #000, $CONST-MIX-darker);
-@include generate-color-class('success-darker', $ktv-color-success-darker);
+@include generate-color-class('success-darker', $ktv-color-success-darker, $ktv-color-white);
 $ktv-color-success-darkest: mix($ktv-color-success, #000, $CONST-MIX-darkest);
-@include generate-color-class('success-darkest', $ktv-color-success-darkest);
+@include generate-color-class('success-darkest', $ktv-color-success-darkest, $ktv-color-white);
 
 // Menu color generate
 @include generate-color-class('menu', $ktv-color-menu);
@@ -156,11 +179,11 @@ $ktv-color-menu-lightest: mix($ktv-color-menu, #fff, $CONST-MIX-lightest);
 
 // Darker Menu colors
 $ktv-color-menu-dark: mix($ktv-color-menu, #000, $CONST-MIX-dark);
-@include generate-color-class('menu-dark', $ktv-color-menu-dark);
+@include generate-color-class('menu-dark', $ktv-color-menu-dark, $ktv-color-white);
 $ktv-color-menu-darker: mix($ktv-color-menu, #000, $CONST-MIX-darker);
-@include generate-color-class('menu-darker', $ktv-color-menu-darker);
+@include generate-color-class('menu-darker', $ktv-color-menu-darker, $ktv-color-white);
 $ktv-color-menu-darkest: mix($ktv-color-menu, #000, $CONST-MIX-darkest);
-@include generate-color-class('menu-darkest', $ktv-color-menu-darkest);
+@include generate-color-class('menu-darkest', $ktv-color-menu-darkest, $ktv-color-white);
 
 // Info color generate
 @include generate-color-class('info', $ktv-color-info);
@@ -174,11 +197,11 @@ $ktv-color-info-lightest: mix($ktv-color-info, #fff, $CONST-MIX-lightest);
 
 // Darker Info colors
 $ktv-color-info-dark: mix($ktv-color-info, #000, $CONST-MIX-dark);
-@include generate-color-class('info-dark', $ktv-color-info-dark);
+@include generate-color-class('info-dark', $ktv-color-info-dark, $ktv-color-white);
 $ktv-color-info-darker: mix($ktv-color-info, #000, $CONST-MIX-darker);
-@include generate-color-class('info-darker', $ktv-color-info-darker);
+@include generate-color-class('info-darker', $ktv-color-info-darker, $ktv-color-white);
 $ktv-color-info-darkest: mix($ktv-color-info, #000, $CONST-MIX-darkest);
-@include generate-color-class('info-darkest', $ktv-color-info-darkest);
+@include generate-color-class('info-darkest', $ktv-color-info-darkest, $ktv-color-white);
 
 // Danger color generate
 @include generate-color-class('danger', $ktv-color-danger);
@@ -192,11 +215,11 @@ $ktv-color-danger-lightest: mix($ktv-color-danger, #fff, $CONST-MIX-lightest);
 
 // Darker Danger colors
 $ktv-color-danger-dark: mix($ktv-color-danger, #000, $CONST-MIX-dark);
-@include generate-color-class('danger-dark', $ktv-color-danger-dark);
+@include generate-color-class('danger-dark', $ktv-color-danger-dark, $ktv-color-white);
 $ktv-color-danger-darker: mix($ktv-color-danger, #000, $CONST-MIX-darker);
-@include generate-color-class('danger-darker', $ktv-color-danger-darker);
+@include generate-color-class('danger-darker', $ktv-color-danger-darker, $ktv-color-white);
 $ktv-color-danger-darkest: mix($ktv-color-danger, #000, $CONST-MIX-darkest);
-@include generate-color-class('danger-darkest', $ktv-color-danger-darkest);
+@include generate-color-class('danger-darkest', $ktv-color-danger-darkest, $ktv-color-white);
 
 // Warning color generate
 @include generate-color-class('warning', $ktv-color-warning);
@@ -210,8 +233,8 @@ $ktv-color-warning-lightest: mix($ktv-color-warning, #fff, $CONST-MIX-lightest);
 
 // Darker Warning colors
 $ktv-color-warning-dark: mix($ktv-color-warning, #000, $CONST-MIX-dark);
-@include generate-color-class('warning-dark', $ktv-color-warning-dark);
+@include generate-color-class('warning-dark', $ktv-color-warning-dark, $ktv-color-white);
 $ktv-color-warning-darker: mix($ktv-color-warning, #000, $CONST-MIX-darker);
-@include generate-color-class('warning-darker', $ktv-color-warning-darker);
+@include generate-color-class('warning-darker', $ktv-color-warning-darker, $ktv-color-white);
 $ktv-color-warning-darkest: mix($ktv-color-warning, #000, $CONST-MIX-darkest);
-@include generate-color-class('warning-darkest', $ktv-color-warning-darkest);
+@include generate-color-class('warning-darkest', $ktv-color-warning-darkest, $ktv-color-white);

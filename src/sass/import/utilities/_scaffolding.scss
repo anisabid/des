@@ -50,3 +50,24 @@
 .#{$ktv-prefix-class}container-fluid-lg {
   @include container-fluid-lg;
 }
+
+// Offset SideBar
+@mixin offset-sidebar() {
+  .#{$ktv-prefix-class}sidebar--floating & {
+    @include transition(all 0.3s ease);
+    margin-left: $ktv-sidebar-offset;
+  }
+
+  .#{$ktv-prefix-class}sidebar--pin & {
+    @include transition(all 0.3s ease);
+    margin-left: $ktv-sidebar-width--pin;
+  }
+}
+
+// Offset Secondary SideBar
+@mixin offset-secondary-sidebar() {
+  .#{$ktv-prefix-class}secondary-sidebar--pin &{
+    @include transition(all 0.3s ease);
+    margin-left: $ktv-secondary-sidebar-width;
+  }
+}

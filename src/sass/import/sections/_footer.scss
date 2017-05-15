@@ -16,9 +16,9 @@
   &.fixed {
     position: fixed;
   }
-  .#{$ktv-prefix-class}sidebar--pin & {
-    padding-left: $ktv-sidebar-width--pin;
-  }
+
+  //@include offset-sidebar;
+  @include offset-secondary-sidebar;
 
   .#{$ktv-prefix-class}footer-wrapper {
     padding: 25px 0;
