@@ -26,7 +26,7 @@
         },
         ready: function () {
             $.each(this, function (index, obj) {
-                if (index !== '$' && index !== 'ready' && index !== 'fn') {
+                if (index !== '$' && index !== 'ready' && index !== 'fn' && index !== 'plugins') {
                     obj.ready();
                 }
             });

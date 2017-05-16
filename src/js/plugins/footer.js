@@ -1,5 +1,11 @@
 (function ($, $$) {
+    /**
+     *  plugin/footer.js
+     */
 
+    // ToDO
+    // ...
+    
     $$.$({
         footer: {
             fn1: function () {

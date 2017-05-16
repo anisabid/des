@@ -15,9 +15,100 @@ $ktv-layout-ssb-background: $ktv-color-info-darker !default;
 ) {
   position: fixed;
   width: $ktv-layout-ssb-width;
-  height: 100%;
+  height: calc(100% - #{$ktv-header-height});
   background-color: $_ktv-layout-ssb-background;
-  padding: $ktv-base-unit*2;
+
+  .#{$ktv-prefix-class}secondary-sidebar-wrap {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    @include full;
+  }
+
+  .#{$ktv-prefix-class}inner-secondary-sidebar {
+    padding: $ktv-base-unit*2;
+  }
+
+  .menu-title {
+    font-weight: $ktv-font-weight-light;
+    font-size: $font-size-h4;
+    color: $ktv-color-white;
+    padding: $ktv-base-unit*2 0 $ktv-base-unit 0;
+    border-bottom: 1px solid rgba($ktv-color-white, .1);
+    margin-bottom: $ktv-base-unit*2;
+  }
+
+  .main-menu,
+  .sub-menu {
+    padding-left: $ktv-base-unit*3;
+
+    a {
+      position: relative;
+      line-height: $ktv-base-unit*4;
+      display: block;
+      font-size: $font-size-large;
+      font-weight: $ktv-font-weight-regular;
+      @include clearfix;
+
+      .fa {
+        padding-right: $ktv-base-unit;
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      .badge {
+        float: right;
+        background-color: $ktv-color-info;
+        margin-top: (($ktv-base-unit*4) - $line-height-computed) / 2;
+      }
+
+    }
+  }
+
+  .main-menu {
+    > li > a {
+      &:before {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        //background-color: $ktv-color-transparent;
+        background-color: $link-hover-color;
+        //height: $ktv-base-unit*4;
+        top: (($ktv-base-unit*2) - 3px);
+        margin-left: -($ktv-base-unit*3);
+        border-radius: 50%;
+        @include transition($ktv-link-transition);
+        opacity: 0;
+      }
+
+      &:hover:before,
+      &.active:before {
+        opacity: 1;
+        //background-color: $link-hover-color;
+      }
+    }
+  }
+
+  .sub-menu {
+    a {
+      color: rgba($link-color, .5);
+      &:hover,
+      &:focus,
+      &.active {
+        color: rgba($link-hover-color, .5);
+      }
+    }
+  }
+
+  ul {
+    @include list-unstyled;
+    //@include clear-offset;
+
+  }
 }
 
 // Making

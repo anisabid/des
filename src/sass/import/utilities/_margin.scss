@@ -1,6 +1,35 @@
 // Margin
 $ktv-spacing-unit: $ktv-base-unit !default;
 
+@mixin clear-margin() {
+  margin: 0;
+}
+
+.clear-margin,
+.no-margin {
+  @include clear-margin;
+}
+
+@mixin clear-padding() {
+  padding: 0;
+}
+
+.clear-padding,
+.no-padding {
+  @include clear-padding;
+}
+
+@mixin clear-offset() {
+  @include clear-margin;
+  @include clear-padding;
+}
+
+.clear-offset,
+.no-offset {
+  @include clear-margin;
+  @include clear-padding;
+}
+
 @mixin generate-margin($n, $j:0) {
   @if $j <= $n {
 

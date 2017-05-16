@@ -26,7 +26,7 @@
         },
         ready: function () {
             $.each(this, function (index, obj) {
-                if (index !== '$' && index !== 'ready' && index !== 'fn') {
+                if (index !== '$' && index !== 'ready' && index !== 'fn' && index !== 'plugins') {
                     obj.ready();
                 }
             });
@@ -54,30 +54,119 @@
 
 })(jQuery, KTJS);
 (function ($, $$) {
+    /**
+     *  extend/data-init.js
+     */
+
+    // ToDO
+    // ...
+
 
     $.fn.extend({
+        initPlugin: function (arg) {
+            var data = (!arg) ? $(this).data('init-plugin') : arg,
+                _data = [],
+                regexp_array = /(^\[*)(.[^\[\]]*)(\]?)/g,
+                regexp_trim = /(?=\S)[^,]+?(?=\s*(,|$))/g;
 
-        json: function () {
-            var data = $(this).data('json'),
-                _data = {};
-            if (typeof data === 'object') {
-                return data;
-            } else {
-                try {
-                    _data = JSON.parse(data);
+            // Test if has plugin to init
+            if (data) {
 
-                } catch (e) {
-                    _data = {};
-                    console.error("Parsing data error in element :", this);
+                // Test if data type is array
+                if (typeof data === 'object') {
+                    _data = arg
+                } else { // Else convert data to array
+                    data = regexp_array.exec(data)[2];
+                    _data = data.match(regexp_trim);
                 }
-                return _data;
+
+                if (_data.length) {
+                    $.each(_data, function (index, obj) {
+                        console.log(index);
+                        console.log(obj);
+                    })
+                }
+
             }
         }
     });
 
 })(jQuery, KTJS);
 (function ($, $$) {
+    /**
+     *  extend/data-json.js
+     */
 
+    // ToDO
+    // ...
+
+
+    /**
+     * @param
+     *  index: string // specifically index in data
+     *
+     * @description
+     *  This extend function used to get json data defined in tag element
+     *
+     * @define
+     *  <div id="input-test-json" data-json='{"select2":{"maximumSelectionLength":2}}'>...<div>
+     *
+     * @used
+     *  - Get all index
+     *  $('#input-test-json').json()
+     *
+     *  - Get select2 index
+     *  $('#input-test-json').json().select2
+     *  $('#input-test-json').json('select2')
+     *
+     * @example
+     *  <div id="input-test-json" data-json='{"select2":{"maximumSelectionLength":2}}'>...<div>
+     *  $('[data-init-plugin="select2"]').select2(
+     *   $('#input-test-json').json().select2
+     *  )
+     *
+     */
+
+
+    $.fn.extend({
+
+        json: function (index) {
+            var data = $(this).data('json'),
+                _data = {};
+
+            // Get all data
+            if (typeof data === 'object') {
+                _data = data;
+            } else {
+                try {
+                    _data = JSON.parse(data);
+                } catch (e) {
+                    _data = {};
+                    console.error("Parsing data error in element :", this);
+                }
+            }
+
+            // Get specifically index
+            if(index && _data[index]){
+                _data = _data[index];
+            }
+
+            // return _data
+            return _data;
+
+
+        }
+    });
+
+})(jQuery, KTJS);
+(function ($, $$) {
+    /**
+     *  plugin/footer.js
+     */
+
+    // ToDO
+    // ...
+    
     $$.$({
         footer: {
             fn1: function () {
@@ -94,9 +183,12 @@
 
 })(jQuery, KTJS);
 (function ($, $$) {
+    /**
+     *  plugin/form.js
+     */
 
     // ToDO
-    // Bug open subnav level 2
+    // ...
 
     $$.$({
         forms: {
@@ -119,7 +211,7 @@
                     $(this).parents('.form-group').removeClass('focused');
                 });
             },
-            initPluginSelect2: function () {
+            initPlugin: function () {
                 $('[data-init-plugin="select2"]').select2(
                     $('#select2-test-json').json().select2
                 ).on('select2:open', function (e) {
@@ -130,7 +222,7 @@
             },
             ready: function () {
                 this.formGroupDefault();
-                this.initPluginSelect2();
+                this.initPlugin();
             }
         }
     });
@@ -139,6 +231,12 @@
 
 
 (function ($, $$) {
+    /**
+     *  plugin/header.js
+     */
+
+    // ToDO
+    // ...
 
     $$.$({
         header: {
@@ -154,6 +252,56 @@
 
 })(jQuery, KTJS);
 (function ($, $$) {
+    /**
+     *  plugin/initPlugin.js
+     */
+
+    // ToDO
+    // ...
+
+    $$.$({
+        initPlugin: {
+            plugins: {
+                list: []
+            },
+            init: function ($scope, arg) {
+                $('[data-init-plugin]').each(function () {
+                    $(this).initPlugin();
+                });
+            },
+            ready: function () {
+                this.init();
+            }
+        }
+    });
+
+})(jQuery, KTJS);
+(function ($, $$) {
+    /**
+     *  plugin/scrollbar.js
+     */
+
+    // ToDO
+    // ...
+
+    $$.$({
+        scrollbar: {
+            initPlugin: function ($scope, arg) {
+                var _arg = (!arg)? {} : arg;
+                $scope.scrollbar(_arg);
+            },
+            ready: function () {
+                return true;
+            }
+        }
+    });
+
+})(jQuery, KTJS);
+(function ($, $$) {
+
+    /**
+     *  plugin/sidebar.js
+     */
 
     // ToDO
     // Bug open subnav level 2
@@ -194,11 +342,12 @@
                     })
                 }
             },
-            sidebar: function () {
-                $('.js-kt-sidebar-menu-wrapper').scrollbar();
+            initPlugin: function () {
+                //$('.js-kt-sidebar-menu-wrapper').scrollbar();
+                KTJS.scrollbar.initPlugin($('.js-kt-sidebar-menu-wrapper'));
             },
             ready: function () {
-                this.sidebar();
+                this.initPlugin();
                 this.menu.toggle();
                 this.toggle();
             }

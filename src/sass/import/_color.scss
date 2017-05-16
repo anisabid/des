@@ -3,7 +3,7 @@
 // --------------------------------------------------
 
 @mixin generate-button-color($background, $color) {
-  $border: darken($background, 10%);
+  $border: darken($background, 2%);
 
   color: rgba($color, .9);
   background-color: $background;
@@ -12,13 +12,13 @@
   &:focus,
   &.focus {
     color: $color !important;
-    background-color: darken($background, 10%);
-    border-color: darken($border, 25%);
+    background-color: darken($background, 3%);
+    border-color: darken($border, 3%);
   }
   &:hover {
     color: $color !important;
-    background-color: darken($background, 10%);
-    border-color: darken($border, 12%);
+    background-color: darken($background, 2%);
+    border-color: darken($border, 2%);
   }
 }
 
@@ -150,7 +150,7 @@ $ktv-color-complete-darkest: mix($ktv-color-complete, #000, $CONST-MIX-darkest);
 @include generate-color-class('complete-darkest', $ktv-color-complete-darkest, $ktv-color-white);
 
 // Success color generate
-@include generate-color-class('success', $ktv-color-success);
+@include generate-color-class('success', $ktv-color-success, $ktv-color-white);
 // Lighter Success colors
 $ktv-color-success-light: mix($ktv-color-success, #fff, $CONST-MIX-light);
 @include generate-color-class('success-light', $ktv-color-success-light);
@@ -204,7 +204,7 @@ $ktv-color-info-darkest: mix($ktv-color-info, #000, $CONST-MIX-darkest);
 @include generate-color-class('info-darkest', $ktv-color-info-darkest, $ktv-color-white);
 
 // Danger color generate
-@include generate-color-class('danger', $ktv-color-danger);
+@include generate-color-class('danger', $ktv-color-danger, $ktv-color-white);
 // Lighter Danger colors
 $ktv-color-danger-light: mix($ktv-color-danger, #fff, $CONST-MIX-light);
 @include generate-color-class('danger-light', $ktv-color-danger-light);
@@ -222,7 +222,7 @@ $ktv-color-danger-darkest: mix($ktv-color-danger, #000, $CONST-MIX-darkest);
 @include generate-color-class('danger-darkest', $ktv-color-danger-darkest, $ktv-color-white);
 
 // Warning color generate
-@include generate-color-class('warning', $ktv-color-warning);
+@include generate-color-class('warning', $ktv-color-warning, $ktv-color-white);
 // Lighter Warning colors
 $ktv-color-warning-light: mix($ktv-color-warning, #fff, $CONST-MIX-light);
 @include generate-color-class('warning-light', $ktv-color-warning-light);

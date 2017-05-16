@@ -1,7 +1,10 @@
 (function ($, $$) {
+    /**
+     *  plugin/form.js
+     */
 
     // ToDO
-    // Bug open subnav level 2
+    // ...
 
     $$.$({
         forms: {
@@ -24,7 +27,7 @@
                     $(this).parents('.form-group').removeClass('focused');
                 });
             },
-            initPluginSelect2: function () {
+            initPlugin: function () {
                 $('[data-init-plugin="select2"]').select2(
                     $('#select2-test-json').json().select2
                 ).on('select2:open', function (e) {
@@ -35,7 +38,7 @@
             },
             ready: function () {
                 this.formGroupDefault();
-                this.initPluginSelect2();
+                this.initPlugin();
             }
         }
     });

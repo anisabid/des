@@ -43,4 +43,7 @@
 a {
   text-shadow: none !important;
   @include transition($ktv-link-transition);
+  &.active {
+    color: $link-hover-color;
+  }
 }

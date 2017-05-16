@@ -1,5 +1,9 @@
 (function ($, $$) {
 
+    /**
+     *  plugin/sidebar.js
+     */
+
     // ToDO
     // Bug open subnav level 2
 
@@ -39,11 +43,12 @@
                     })
                 }
             },
-            sidebar: function () {
-                $('.js-kt-sidebar-menu-wrapper').scrollbar();
+            initPlugin: function () {
+                //$('.js-kt-sidebar-menu-wrapper').scrollbar();
+                KTJS.scrollbar.initPlugin($('.js-kt-sidebar-menu-wrapper'));
             },
             ready: function () {
-                this.sidebar();
+                this.initPlugin();
                 this.menu.toggle();
                 this.toggle();
             }

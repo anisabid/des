@@ -7,19 +7,37 @@
   @include full;
 }
 
+@mixin full-width() {
+  width: 100%;
+}
+
+.#{$ktv-prefix-class}full-width {
+  @include full-width;
+}
+
+@mixin full-height() {
+  height: 100%;
+}
+
+.#{$ktv-prefix-class}full-height {
+  @include full-height;
+}
+
 // no-border / clear-border
 .#{$ktv-prefix-class}no-border,
 .#{$ktv-prefix-class}clear-border {
   border: none !important;
 }
 
-// no-box
+// no-box-shadow
 .#{$ktv-prefix-class}no-box-shadow,
 .#{$ktv-prefix-class}clear-box-shadow,
 .#{$ktv-prefix-class}no-shadow,
 .#{$ktv-prefix-class}clear-shadow {
   @include box-shadow(none);
 }
+
+
 
 // btn-clear
 @mixin btn-clear($margin: $ktv-base-unit, $padding: $ktv-base-unit, $height: null, $width: null, $text-align: center) {
@@ -51,6 +69,8 @@
   @include container-fluid-lg;
 }
 
+
+
 // Offset SideBar
 @mixin offset-sidebar() {
   .#{$ktv-prefix-class}sidebar--floating & {
@@ -66,7 +86,7 @@
 
 // Offset Secondary SideBar
 @mixin offset-secondary-sidebar() {
-  .#{$ktv-prefix-class}secondary-sidebar--pin &{
+  .#{$ktv-prefix-class}secondary-sidebar--pin & {
     @include transition(all 0.3s ease);
     margin-left: $ktv-secondary-sidebar-width;
   }

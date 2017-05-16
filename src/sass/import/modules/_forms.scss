@@ -6,7 +6,7 @@
 // --------------------------------------------------
 
 $ktv-modules-forms-color: $ktv-color-master;
-$ktv-modules-forms-input-background-color--focused: rgba($ktv-color-black, .0175);
+$ktv-modules-forms-input-background-color--focused: rgba($input-bg, .9);
 
 // Making
 // --------------------------------------------------
@@ -17,6 +17,12 @@ label .help {
 }
 
 // form-control
+.form-control {
+  &:focus {
+    background-color: $ktv-modules-forms-input-background-color--focused;
+  }
+}
+
 .form-control,
 .has-error .form-control {
   &,
@@ -24,9 +30,9 @@ label .help {
     @include box-shadow(none);
   }
 
-  &:focus {
+  /*&:focus {
     background-color: $ktv-modules-forms-input-background-color--focused;
-  }
+  }*/
 
   .form-group-default & {
     &,
@@ -41,7 +47,8 @@ label .help {
 .form-group-default {
   border: 1px solid $input-border;
 
-  &.has-error {
+  &.has-error,
+  &.has-error.focused {
     border-color: $state-danger-text;
   }
 
