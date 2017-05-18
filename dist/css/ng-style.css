@@ -19844,6 +19844,10 @@ label .help {
 .form-control:focus {
   background-color: rgba(255, 255, 255, 0.9); }
 
+.btn.disabled, .btn[disabled],
+fieldset[disabled] .btn {
+  color: #333; }
+
 .form-control,
 .has-error .form-control {
   /*&:focus {
@@ -19860,8 +19864,32 @@ label .help {
     border: 0;
     background-color: transparent; }
 
+.form-group.required .control-label {
+  position: relative;
+  padding-right: 12px;
+  margin-right: 8px; }
+  .form-group.required .control-label:after {
+    color: #F55753;
+    content: "*";
+    font-family: arial;
+    font-size: 15px;
+    position: absolute;
+    right: 0;
+    top: -4px; }
+
 .form-group-default {
-  border: 1px solid rgba(0, 0, 0, 0.07); }
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  position: relative; }
+  .form-group-default.required .control-label:after {
+    content: ""; }
+  .form-group-default.required:after {
+    color: #F55753;
+    content: "*";
+    font-family: arial;
+    font-size: 20px;
+    position: absolute;
+    right: 15px;
+    top: 9px; }
   .form-group-default.has-error, .form-group-default.has-error.focused {
     border-color: #F55753; }
   .form-group-default label {
@@ -20489,7 +20517,7 @@ body {
       position: relative;
       line-height: 32px;
       display: block;
-      font-size: 15px;
+      font-size: 12px;
       font-weight: 400; }
       .kt-secondary-sidebar .main-menu a:before, .kt-secondary-sidebar .main-menu a:after,
       .kt-secondary-sidebar .sub-menu a:before,
@@ -20531,3 +20559,46 @@ body {
   .kt-secondary-sidebar ul {
     padding-left: 0;
     list-style: none; }
+
+.mpe {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+  .mpe .content {
+    padding: 16px; }
+  .mpe .section-a,
+  .mpe .section-b,
+  .mpe .section-c {
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: relative;
+    height: 100%;
+    float: left; }
+  .mpe .section-a {
+    width: 40%;
+    background-color: #0c4ea2; }
+  .mpe .section-b {
+    width: 20%;
+    background-color: #ffffff; }
+  .mpe .section-c {
+    width: 40%;
+    background-color: #ee1c25; }
+  .mpe[data-csection="a"] .section-a {
+    width: 60%; }
+  .mpe[data-csection="a"] .section-b {
+    width: 20%; }
+  .mpe[data-csection="a"] .section-c {
+    width: 20%; }
+  .mpe[data-csection="b"] .section-a {
+    width: 30%; }
+  .mpe[data-csection="b"] .section-b {
+    width: 40%; }
+  .mpe[data-csection="b"] .section-c {
+    width: 30%; }
+  .mpe[data-csection="c"] .section-a {
+    width: 20%; }
+  .mpe[data-csection="c"] .section-b {
+    width: 20%; }
+  .mpe[data-csection="c"] .section-c {
+    width: 60%; }

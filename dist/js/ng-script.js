@@ -39,6 +39,17 @@
     window.KTJS = $$;
 
 })(window, jQuery);
+
+
+(function (window, $) {
+
+    $(document).ready(function () {
+        $('.mpe .section').hover(function () {
+            $('.mpe').attr('data-csection', $(this).data('section'));
+        });
+    });
+
+})(window, jQuery);
 (function ($, $$) {
 
     $$.$({
@@ -166,7 +177,7 @@
 
     // ToDO
     // ...
-    
+
     $$.$({
         footer: {
             fn1: function () {
@@ -182,6 +193,8 @@
     });
 
 })(jQuery, KTJS);
+
+
 (function ($, $$) {
     /**
      *  plugin/form.js

@@ -5,7 +5,7 @@
 
     // ToDO
     // ...
-    
+
     $$.$({
         footer: {
             fn1: function () {
@@ -21,3 +21,4 @@
     });
 
 })(jQuery, KTJS);
+

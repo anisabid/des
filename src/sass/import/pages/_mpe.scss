@@ -1,0 +1,72 @@
+$bg-a: #0c4ea2;
+$bg-b: #ffffff;
+$bg-c: #ee1c25;
+
+.mpe {
+  @include full;
+  position: relative;
+
+  .content {
+    padding: 16px;
+  }
+
+  .section-a,
+  .section-b,
+  .section-c {
+    @include transition(all 0.5s ease);
+    position: relative;
+    height: 100%;
+    float: left;
+  }
+
+  .section-a {
+    width: 40%;
+    background-color: $bg-a;
+  }
+
+  .section-b {
+    width: 20%;
+    background-color: $bg-b;
+  }
+
+  .section-c {
+    width: 40%;
+    background-color: $bg-c;
+  }
+
+  &[data-csection="a"] {
+    .section-a {
+      width: 60%;
+    }
+    .section-b {
+      width: 20%;
+    }
+    .section-c {
+      width: 20%;
+    }
+  }
+
+  &[data-csection="b"] {
+    .section-a {
+      width: 30%;
+    }
+    .section-b {
+      width: 40%;
+    }
+    .section-c {
+      width: 30%;
+    }
+  }
+
+  &[data-csection="c"] {
+    .section-a {
+      width: 20%;
+    }
+    .section-b {
+      width: 20%;
+    }
+    .section-c {
+      width: 60%;
+    }
+  }
+}

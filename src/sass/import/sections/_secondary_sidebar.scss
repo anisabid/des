@@ -48,7 +48,7 @@ $ktv-layout-ssb-background: $ktv-color-info-darker !default;
       position: relative;
       line-height: $ktv-base-unit*4;
       display: block;
-      font-size: $font-size-large;
+      font-size: $font-size-base;
       font-weight: $ktv-font-weight-regular;
       @include clearfix;
 

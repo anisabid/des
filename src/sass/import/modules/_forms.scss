@@ -23,6 +23,14 @@ label .help {
   }
 }
 
+.btn {
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    color: $btn-default-color;
+  }
+}
+
 .form-control,
 .has-error .form-control {
   &,
@@ -43,10 +51,43 @@ label .help {
   }
 }
 
+.form-group {
+  &.required {
+    .control-label {
+      position: relative;
+      padding-right: $ktv-base-unit * 1.5;
+      margin-right: $ktv-base-unit;
+      &:after {
+        color: $ktv-color-danger;
+        content: "*";
+        font-family: arial;
+        font-size: $font-size-large;
+        position: absolute;
+        right: 0;
+        top: -($ktv-base-unit / 2);
+      }
+    }
+  }
+}
+
 // form-group-default
 .form-group-default {
   border: 1px solid $input-border;
-
+  position: relative;
+  &.required {
+    .control-label:after {
+      content: "";
+    }
+    &:after {
+      color: $ktv-color-danger;
+      content: "*";
+      font-family: arial;
+      font-size: 20px;
+      position: absolute;
+      right: 15px;
+      top: 9px;
+    }
+  }
   &.has-error,
   &.has-error.focused {
     border-color: $state-danger-text;

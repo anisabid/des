@@ -39,3 +39,14 @@
     window.KTJS = $$;
 
 })(window, jQuery);
+
+
+(function (window, $) {
+
+    $(document).ready(function () {
+        $('.mpe .section').hover(function () {
+            $('.mpe').attr('data-csection', $(this).data('section'));
+        });
+    });
+
+})(window, jQuery);
