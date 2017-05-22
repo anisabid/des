@@ -20565,7 +20565,8 @@ body {
   height: 100%;
   position: relative; }
   .mpe .content {
-    padding: 16px; }
+    padding: 25px;
+    height: 100%; }
   .mpe .section-a,
   .mpe .section-b,
   .mpe .section-c {
@@ -20575,15 +20576,46 @@ body {
     position: relative;
     height: 100%;
     float: left; }
+    .mpe .section-a:after, .mpe .section-a:before,
+    .mpe .section-b:after,
+    .mpe .section-b:before,
+    .mpe .section-c:after,
+    .mpe .section-c:before {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      bottom: 0;
+      width: 50px; }
   .mpe .section-a {
     width: 40%;
     background-color: #0c4ea2; }
+    .mpe .section-a:after {
+      right: -25px;
+      background-color: #0c4ea2;
+      -webkit-clip-path: polygon(0 100%, 0 0, 100% 0, 0 100%);
+      clip-path: polygon(0 100%, 0 0, 100% 0, 0 100%); }
   .mpe .section-b {
     width: 20%;
     background-color: #ffffff; }
+    .mpe .section-b:before {
+      left: -25px;
+      background-color: #ffffff;
+      -webkit-clip-path: polygon(100% 0, 100% 0, 0% 100%, 100% 100%);
+      clip-path: polygon(100% 0, 100% 0, 0% 100%, 100% 100%); }
+    .mpe .section-b:after {
+      right: -25px;
+      background-color: #ffffff;
+      -webkit-clip-path: polygon(0 100%, 0 0, 100% 0, 0 100%);
+      clip-path: polygon(0 100%, 0 0, 100% 0, 0 100%); }
   .mpe .section-c {
     width: 40%;
     background-color: #ee1c25; }
+    .mpe .section-c:before {
+      left: -25px;
+      background-color: #ee1c25;
+      -webkit-clip-path: polygon(100% 0, 100% 0, 0% 100%, 100% 100%);
+      clip-path: polygon(100% 0, 100% 0, 0% 100%, 100% 100%); }
   .mpe[data-csection="a"] .section-a {
     width: 60%; }
   .mpe[data-csection="a"] .section-b {
@@ -20602,3 +20634,43 @@ body {
     width: 20%; }
   .mpe[data-csection="c"] .section-c {
     width: 60%; }
+  .mpe .section-b .header-logo {
+    margin-top: 100px; }
+    .mpe .section-b .header-logo .title {
+      width: 150px;
+      border: 1px solid #ccc;
+      margin: 0 auto; }
+      .mpe .section-b .header-logo .title .text {
+        font-family: "Times New Roman";
+        font-size: 13px;
+        text-transform: uppercase;
+        width: 148px;
+        padding: 5px;
+        margin-top: 10px;
+        text-align: center;
+        border-top: 1px solid #CCCCCC;
+        line-height: 15px;
+        letter-spacing: 1px;
+        color: #666; }
+      .mpe .section-b .header-logo .title .logo {
+        width: 140px;
+        height: 83px;
+        background: url("../img/lrf.svg") 50% 50% no-repeat;
+        background-size: 100%;
+        margin: 5px auto; }
+    .mpe .section-b .header-logo .url {
+      margin: 0 auto;
+      font-size: 11px;
+      text-align: center;
+      padding: 5px;
+      color: #999; }
+  .mpe .section-b .header-language {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 50px;
+    padding: 5px;
+    border-top: 1px solid #CCCCCC;
+    z-index: 20;
+    text-align: center;
+    color: #999; }

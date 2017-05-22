@@ -1,13 +1,17 @@
-$bg-a: #0c4ea2;
-$bg-b: #ffffff;
-$bg-c: #ee1c25;
+$mpe-bg-a: #0c4ea2;
+$mpe-bg-b: #ffffff;
+$mpe-bg-c: #ee1c25;
+
+$mpe-clip-width: 50px;
 
 .mpe {
   @include full;
   position: relative;
 
   .content {
-    padding: 16px;
+    padding: 25px;
+    //background-color: #ff00dd;
+    height: 100%;
   }
 
   .section-a,
@@ -17,21 +21,59 @@ $bg-c: #ee1c25;
     position: relative;
     height: 100%;
     float: left;
+
+    &:after,
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      bottom: 0;
+      width: $mpe-clip-width;
+    }
   }
 
   .section-a {
     width: 40%;
-    background-color: $bg-a;
+    background-color: $mpe-bg-a;
+
+    &:after {
+      right: -($mpe-clip-width/2);
+      background-color: $mpe-bg-a;
+      -webkit-clip-path: polygon(0 100%, 0 0, 100% 0, 0 100%);
+      clip-path: polygon(0 100%, 0 0, 100% 0, 0 100%);
+    }
   }
 
   .section-b {
     width: 20%;
-    background-color: $bg-b;
+    background-color: $mpe-bg-b;
+
+    &:before {
+      left: -($mpe-clip-width/2);
+      background-color: $mpe-bg-b;
+      -webkit-clip-path: polygon(100% 0, 100% 0, 0% 100%, 100% 100%);
+      clip-path: polygon(100% 0, 100% 0, 0% 100%, 100% 100%);
+    }
+
+    &:after {
+      right: -($mpe-clip-width/2);
+      background-color: $mpe-bg-b;
+      -webkit-clip-path: polygon(0 100%, 0 0, 100% 0, 0 100%);
+      clip-path: polygon(0 100%, 0 0, 100% 0, 0 100%);
+    }
   }
 
   .section-c {
     width: 40%;
-    background-color: $bg-c;
+    background-color: $mpe-bg-c;
+
+    &:before {
+      left: -($mpe-clip-width/2);
+      background-color: $mpe-bg-c;
+      -webkit-clip-path: polygon(100% 0, 100% 0, 0% 100%, 100% 100%);
+      clip-path: polygon(100% 0, 100% 0, 0% 100%, 100% 100%);
+    }
   }
 
   &[data-csection="a"] {
@@ -68,5 +110,62 @@ $bg-c: #ee1c25;
     .section-c {
       width: 60%;
     }
+  }
+
+  .section-b {
+
+    .header-logo{
+      margin-top: 100px;
+
+      .title {
+        width: 150px;
+        border: 1px solid #ccc;;
+        margin: 0 auto;
+
+        .text{
+          font-family: "Times New Roman";
+          font-size: 13px;
+          text-transform: uppercase;
+          width: 148px;
+          padding: 5px;
+          margin-top: 10px;
+          text-align: center;
+          border-top: 1px solid #CCCCCC;
+          line-height: 15px;
+          letter-spacing: 1px;
+          color: #666;
+        }
+
+        .logo {
+          width: 140px;
+          height: 83px;
+          background: url('../img/lrf.svg') 50% 50% no-repeat;
+          background-size: 100%;
+          margin: 5px auto;
+        }
+      }
+
+      .url{
+        margin: 0 auto;
+        font-size: 11px;
+        text-align: center;
+        padding: 5px;
+        color:#999;
+      }
+
+    }
+
+    .header-language{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: $mpe-clip-width;
+      padding: 5px;
+      border-top: 1px solid #CCCCCC;
+      z-index: 20;
+      text-align: center;
+      color: #999;
+    }
+
   }
 }
