@@ -3,6 +3,10 @@
 .#{$ktv-prefix-class}vertical-align {
   display: table;
   width: 100%;
+
+  &.full {
+    @include full-height;
+  }
 }
 
 .#{$ktv-prefix-class}vertical-align > [class*="col-"],

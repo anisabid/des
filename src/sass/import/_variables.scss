@@ -58,7 +58,7 @@ $CONST-FONT-ICONS: "FontAwesome" !default;
 // --------------------------------------------------
 $ktv-prefix-class: #{$CONST-NAMESPACE}- !default;
 $ktv-base-unit: 8px !default;
-$ktv-link-transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s  !important !default;
+$ktv-link-transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s,  padding 0.2s linear 0s  !important !default;
 
 // Header
 // --------------------------------------------------

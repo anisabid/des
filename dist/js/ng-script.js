@@ -47,6 +47,14 @@
         $('.mpe .section').hover(function () {
             $('.mpe').attr('data-csection', $(this).data('section'));
         });
+
+
+        $('.mpe .section [data-toggle="tooltip"]').tooltip();
+
+        /*$('.list-services .icon').click(function(){
+            $(this).addClass('active');
+        })*/
+
     });
 
 })(window, jQuery);
