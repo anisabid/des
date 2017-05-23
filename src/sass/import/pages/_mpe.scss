@@ -145,12 +145,12 @@ $mpe-list-options-width: 300px;
       width: 60%;
 
       .map-search {
-        .map{
+        .map {
           float: left;
           margin-left: 24px;
         }
         .search {
-          visibility: visible;
+          display: block;
           > .row {
             @include fadeInLeft();
           }
@@ -583,22 +583,20 @@ $mpe-list-options-width: 300px;
 
       .search {
         width: 400px;
-
-        visibility: hidden;
-        > .row{
+        display: none;
+        > .row {
           opacity: 0;
 
           @include fadeOutRight();
         }
 
-
         .form-group {
-          .select2 .select2-selection{
+          .select2 .select2-selection {
             background-color: $ktv-color-white;
           }
         }
 
-        .btn-search{
+        .btn-search {
 
         }
 

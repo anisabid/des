@@ -20653,7 +20653,7 @@ body {
       float: left;
       margin-left: 24px; }
     .mpe[data-csection="c"] .section-c .map-search .search {
-      visibility: visible; }
+      display: block; }
       .mpe[data-csection="c"] .section-c .map-search .search > .row {
         -webkit-animation-name: fadeInLeft;
         animation-name: fadeInLeft;
@@ -21121,7 +21121,7 @@ body {
       margin: 0 auto; }
     .mpe .section-c .map-search .search {
       width: 400px;
-      visibility: hidden; }
+      display: none; }
       .mpe .section-c .map-search .search > .row {
         opacity: 0;
         -webkit-animation-name: fadeOutRight;
