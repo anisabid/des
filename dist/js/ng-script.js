@@ -51,10 +51,6 @@
 
         $('.mpe .section [data-toggle="tooltip"]').tooltip();
 
-        /*$('.list-services .icon').click(function(){
-            $(this).addClass('active');
-        })*/
-
     });
 
 })(window, jQuery);
@@ -62,8 +58,19 @@
 
     $$.$({
         tools: {
-            fn: function () {
-                return true;
+            obj: function (o, s) {
+                s = s.replace(/\[(\w+)\]/g, '.$1'); // convert indexes to properties
+                s = s.replace(/^\./, '');           // strip a leading dot
+                var a = s.split('.');
+                for (var i = 0, n = a.length; i < n; ++i) {
+                    var k = a[i];
+                    if (k in o) {
+                        o = o[k];
+                    } else {
+                        return;
+                    }
+                }
+                return o;
             },
             ready: function () {
                 return true;
@@ -166,14 +173,68 @@
             }
 
             // Get specifically index
-            if(index && _data[index]){
-                _data = _data[index];
+            if(index && $().obj(_data, index)){
+                _data = $().obj(_data, index);
             }
 
             // return _data
             return _data;
+        }
+    });
+
+})(jQuery, KTJS);
+(function ($, $$) {
+    /**
+     *  extend/obj.js
+     */
+
+    // ToDO
+    // ...
 
 
+    /**
+     * @param
+     *  o: Object // the object
+     *  s: string // indexes to properties
+     *  d: Any // default if not exist
+     *
+     * @description
+     *  This extend function used to get property of obj
+     *
+     * @used
+     *  - Get index
+     *  $.obj(obj, 'index.index2')
+     *
+     * @example
+     *  var obj = {
+     *              a : {
+     *                 b:{
+     *                     c: 2
+     *                  }
+     *              }
+     *          };
+     *
+     * $.obj(obj, 'a.b.c')
+     */
+
+
+    $.fn.extend({
+        obj: function (o, s, d) {
+            if( typeof(d) == 'undefined' ){
+                d = null;
+            }
+            s = s.replace(/\[(\w+)\]/g, '.$1'); // convert indexes to properties
+            s = s.replace(/^\./, '');           // strip a leading dot
+            var a = s.split('.');
+            for (var i = 0, n = a.length; i < n; ++i) {
+                var k = a[i];
+                if (k in o) {
+                    o = o[k];
+                } else {
+                    return d;
+                }
+            }
+            return o;
         }
     });
 
@@ -261,12 +322,25 @@
 
     $$.$({
         header: {
-            fn1: function () {
-                console.log('FN header!');
+            affix: function () {
+
+                console.log( $('.js-kt-header').height())
+
+                $('.js-kt-header').affix({
+                    offset: {
+                        top: $('.js-kt-header').height()
+                    }
+                })
+                    .on('affix.bs.affix', function () {
+                        $('body').addClass($(this).json('header.classAffix'));
+                    })
+                    .on('affix-top.bs.affix', function () {
+                        $('body').removeClass($(this).json('header.classAffix'));
+                    });
             },
             ready: function () {
                 //console.log(this);
-                //this.fn1();
+                this.affix();
             }
         }
     });
@@ -330,7 +404,7 @@
     $$.$({
         sidebar: {
             toggle: function () {
-                $('.js-kt-sidebar-pin').click(function () {
+                $('.js-kt-sidebar-action-pin').click(function () {
                     $('body').toggleClass('kt-sidebar--pin');
                 });
             },

@@ -53,14 +53,12 @@
             }
 
             // Get specifically index
-            if(index && _data[index]){
-                _data = _data[index];
+            if(index && $().obj(_data, index)){
+                _data = $().obj(_data, index);
             }
 
             // return _data
             return _data;
-
-
         }
     });
 

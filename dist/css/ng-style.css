@@ -19786,9 +19786,9 @@ button.close {
 */
 a {
   text-shadow: none !important;
-  -webkit-transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s !important;
-  -o-transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s !important;
-  transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s !important; }
+  -webkit-transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s, box-shadow 0.2s linear 0s !important;
+  -o-transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s, box-shadow 0.2s linear 0s !important;
+  transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s, box-shadow 0.2s linear 0s !important; }
   a.active {
     color: #24a0f6; }
 
@@ -19830,8 +19830,9 @@ a {
   .panel-transparent > .panel-footer + .panel-collapse > .panel-body {
     border-bottom-color: transparent; }
 
+/*
 .caret {
-  /*position: relative;
+  position: relative;
   border: 0;
 
   &:after {
@@ -19840,8 +19841,9 @@ a {
     margin-top: -(floor(($font-size-base * $line-height-base)) / 2);
     display: block;
     //padding-left: $ktv-base-unit/2;
-  }*/ }
-
+  }
+}
+*/
 label .help {
   font-size: 11px;
   opacity: .4; }
@@ -20146,11 +20148,20 @@ body {
   background-color: #fff;
   border: 0;
   border-bottom: 1px solid #e6e6e6;
-  border-radius: 0; }
+  border-radius: 0;
+  font-size: 12px;
+  -webkit-transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s, box-shadow 0.2s linear 0s !important;
+  -o-transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s, box-shadow 0.2s linear 0s !important;
+  transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s, box-shadow 0.2s linear 0s !important;
+  /* Profile dropdown
+  ------------------------------------
+  */ }
   .kt-fixed-header .kt-header {
     position: fixed;
     left: 0;
     top: 0; }
+  .kt-header.affix {
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.26); }
   .kt-header .navbar {
     border: 0;
     margin: 0;
@@ -20164,6 +20175,63 @@ body {
     .kt-sidebar--floating .kt-header .navbar-brand {
       width: 280px;
       padding-left: 88px; }
+  .kt-header .profile {
+    margin-top: 8px; }
+    .kt-header .profile:before, .kt-header .profile:after {
+      content: " ";
+      display: table; }
+    .kt-header .profile:after {
+      clear: both; }
+    .kt-header .profile .profile-name {
+      font-size: 15px;
+      line-height: 32px;
+      padding: 8px; }
+    .kt-header .profile .profile-thumb {
+      width: 32px;
+      height: 32px; }
+    .kt-header .profile .profile-dropdown {
+      background: #fff;
+      padding: 0; }
+      .kt-header .profile .profile-dropdown:before {
+        position: absolute;
+        top: -7px;
+        right: 15px;
+        display: inline-block;
+        border-right: 7px solid transparent;
+        border-bottom: 7px solid #ccc;
+        border-left: 7px solid transparent;
+        border-bottom-color: rgba(0, 0, 0, 0.2);
+        content: ''; }
+      .kt-header .profile .profile-dropdown:after {
+        position: absolute;
+        top: -6px;
+        right: 16px;
+        display: inline-block;
+        border-right: 6px solid transparent;
+        border-bottom: 6px solid #ffffff;
+        border-left: 6px solid transparent;
+        content: ''; }
+      .kt-header .profile .profile-dropdown li:last-child {
+        border-top: 1px solid rgba(0, 0, 0, 0.157);
+        padding: 0; }
+      .kt-header .profile .profile-dropdown li > a {
+        opacity: .5;
+        -webkit-transition: opacity ease 0.3s;
+        -o-transition: opacity ease 0.3s;
+        transition: opacity ease 0.3s;
+        padding: 8px 16px;
+        min-width: 138px; }
+        .kt-header .profile .profile-dropdown li > a > i {
+          margin-right: 5px; }
+        .kt-header .profile .profile-dropdown li > a:hover {
+          opacity: 1; }
+    .kt-header .profile .profile-dropdown-toggle {
+      background: transparent;
+      border: none;
+      padding: 8px;
+      display: block; }
+      .kt-header .profile .profile-dropdown-toggle:focus {
+        outline: none; }
 
 /* [1.3] Page Container
 ------------------------------------
@@ -20275,9 +20343,9 @@ body {
     color: rgba(255, 255, 255, 0.4);
     text-transform: uppercase;
     text-decoration: none;
-    -webkit-transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s !important;
-    -o-transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s !important;
-    transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s !important; }
+    -webkit-transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s, box-shadow 0.2s linear 0s !important;
+    -o-transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s, box-shadow 0.2s linear 0s !important;
+    transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s, box-shadow 0.2s linear 0s !important; }
     .kt-sidebar a:before, .kt-sidebar a:after,
     .kt-sidebar .btn-link:before,
     .kt-sidebar .btn-link:after,
@@ -20437,13 +20505,18 @@ body {
   .kt-horizontal-menu .navbar {
     margin: 0;
     border: 0; }
-    .kt-horizontal-menu .navbar .navbar-nav li a {
-      color: #333333; }
-    .kt-header .kt-horizontal-menu .navbar .navbar-nav > li > a {
-      font-size: 15px;
-      height: 63px;
-      padding-top: 23.5px;
-      padding-bottom: 23.5px; }
+    .kt-horizontal-menu .navbar .navbar-nav {
+      /*> li > a {
+        .kt-header & {
+          //line-height: $ktv-layout-header-height;
+          font-size: $font-size-large;
+          height: $ktv-layout-header-height - 1;
+          padding-top: (($ktv-layout-header-height - $line-height-computed) / 2);
+          padding-bottom: (($ktv-layout-header-height - $line-height-computed) / 2);
+        }
+      }*/ }
+      .kt-horizontal-menu .navbar .navbar-nav li a {
+        color: #333333; }
   @media screen and (min-width: 768px) {
     .kt-horizontal-menu .megamenu {
       position: inherit; }
@@ -20451,36 +20524,35 @@ body {
         left: 0;
         right: 0;
         padding-top: 16px;
-        padding-bottom: 16px; }
-        .kt-horizontal-menu .megamenu > .dropdown-menu {
-          border-radius: 0;
-          -webkit-box-shadow: 0 4px 9px rgba(0, 0, 0, 0.075);
-          box-shadow: 0 4px 9px rgba(0, 0, 0, 0.075); }
-          .kt-horizontal-menu .megamenu > .dropdown-menu li a {
-            display: block;
-            clear: both;
-            font-weight: normal;
-            line-height: 1.42857;
-            color: #333333;
-            white-space: nowrap; }
-            .kt-horizontal-menu .megamenu > .dropdown-menu li a:hover, .kt-horizontal-menu .megamenu > .dropdown-menu li a:focus, .kt-horizontal-menu .megamenu > .dropdown-menu li a.active {
-              text-decoration: none;
-              color: #6dc0f9; }
-          .kt-horizontal-menu .megamenu > .dropdown-menu li.active > a {
+        padding-bottom: 16px;
+        border-radius: 0;
+        -webkit-box-shadow: 0 4px 9px rgba(0, 0, 0, 0.075);
+        box-shadow: 0 4px 9px rgba(0, 0, 0, 0.075); }
+        .kt-horizontal-menu .megamenu > .dropdown-menu li a {
+          display: block;
+          clear: both;
+          font-weight: normal;
+          line-height: 1.42857;
+          color: #333333;
+          white-space: nowrap; }
+          .kt-horizontal-menu .megamenu > .dropdown-menu li a:hover, .kt-horizontal-menu .megamenu > .dropdown-menu li a:focus, .kt-horizontal-menu .megamenu > .dropdown-menu li a.active {
             text-decoration: none;
             color: #6dc0f9; }
-          .kt-horizontal-menu .megamenu > .dropdown-menu .active > a, .kt-horizontal-menu .megamenu > .dropdown-menu .active > a:hover, .kt-horizontal-menu .megamenu > .dropdown-menu .active > a:focus {
-            color: underline;
-            text-decoration: none;
-            outline: 0; }
-          .kt-horizontal-menu .megamenu > .dropdown-menu .disabled a, .kt-horizontal-menu .megamenu > .dropdown-menu .disabled a:hover, .kt-horizontal-menu .megamenu > .dropdown-menu .disabled a:focus {
-            color: #777777; }
-          .kt-horizontal-menu .megamenu > .dropdown-menu .disabled a:hover, .kt-horizontal-menu .megamenu > .dropdown-menu .disabled a:focus {
-            text-decoration: none;
-            background-color: transparent;
-            background-image: none;
-            filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-            cursor: not-allowed; } }
+        .kt-horizontal-menu .megamenu > .dropdown-menu li.active > a {
+          text-decoration: none;
+          color: #6dc0f9; }
+        .kt-horizontal-menu .megamenu > .dropdown-menu .active > a, .kt-horizontal-menu .megamenu > .dropdown-menu .active > a:hover, .kt-horizontal-menu .megamenu > .dropdown-menu .active > a:focus {
+          color: underline;
+          text-decoration: none;
+          outline: 0; }
+        .kt-horizontal-menu .megamenu > .dropdown-menu .disabled a, .kt-horizontal-menu .megamenu > .dropdown-menu .disabled a:hover, .kt-horizontal-menu .megamenu > .dropdown-menu .disabled a:focus {
+          color: #777777; }
+        .kt-horizontal-menu .megamenu > .dropdown-menu .disabled a:hover, .kt-horizontal-menu .megamenu > .dropdown-menu .disabled a:focus {
+          text-decoration: none;
+          background-color: transparent;
+          background-image: none;
+          filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+          cursor: not-allowed; } }
   .kt-horizontal-menu .dropdown-md > .dropdown-menu {
     min-width: 450px; }
   .kt-horizontal-menu .dropdown-lg > .dropdown-menu {
@@ -20551,9 +20623,9 @@ body {
     top: 13px;
     margin-left: -24px;
     border-radius: 50%;
-    -webkit-transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s !important;
-    -o-transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s !important;
-    transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s !important;
+    -webkit-transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s, box-shadow 0.2s linear 0s !important;
+    -o-transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s, box-shadow 0.2s linear 0s !important;
+    transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s, box-shadow 0.2s linear 0s !important;
     opacity: 0; }
   .kt-secondary-sidebar .main-menu > li > a:hover:before, .kt-secondary-sidebar .main-menu > li > a.active:before {
     opacity: 1; }
@@ -20858,17 +20930,17 @@ body {
       height: 50pxpx;
       display: inline-block;
       margin: 0 8px;
-      -webkit-transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s !important;
-      -o-transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s !important;
-      transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s !important; }
+      -webkit-transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s, box-shadow 0.2s linear 0s !important;
+      -o-transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s, box-shadow 0.2s linear 0s !important;
+      transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s, box-shadow 0.2s linear 0s !important; }
       .mpe .section-b .header-connexion .btn-connexion .btn-wrap {
         height: 50px;
         background-color: #ffffff;
         border: 1px solid #034EA2;
         border-radius: 5px;
-        -webkit-transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s !important;
-        -o-transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s !important;
-        transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s !important; }
+        -webkit-transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s, box-shadow 0.2s linear 0s !important;
+        -o-transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s, box-shadow 0.2s linear 0s !important;
+        transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s, box-shadow 0.2s linear 0s !important; }
       .mpe .section-b .header-connexion .btn-connexion .icone {
         width: 50px;
         height: 50px;
@@ -20885,9 +20957,9 @@ body {
         padding: 0;
         font-size: 15px;
         color: #034EA2;
-        -webkit-transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s !important;
-        -o-transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s !important;
-        transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s !important; }
+        -webkit-transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s, box-shadow 0.2s linear 0s !important;
+        -o-transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s, box-shadow 0.2s linear 0s !important;
+        transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s, width 0.2s linear 0s, padding 0.2s linear 0s, box-shadow 0.2s linear 0s !important; }
       .mpe .section-b .header-connexion .btn-connexion.btn-inscription .icone {
         background-image: url("../img/icone-lock.svg"); }
       .mpe .section-b .header-connexion .btn-connexion.btn-france-connect .icone {

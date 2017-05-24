@@ -51,10 +51,6 @@
 
         $('.mpe .section [data-toggle="tooltip"]').tooltip();
 
-        /*$('.list-services .icon').click(function(){
-            $(this).addClass('active');
-        })*/
-
     });
 
 })(window, jQuery);

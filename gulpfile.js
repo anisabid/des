@@ -1,5 +1,6 @@
 var fs = require('fs'),
     gulp = require('gulp'),
+    gulpLoadPlugins = require('gulp-load-plugins'),
     path = require('path'),
     argv = require('yargs').argv,
     runSequence = require('run-sequence'),
@@ -12,10 +13,12 @@ var fs = require('fs'),
     extender = require('gulp-html-extend')
     config = require('./gulp.config')();
 
+
+var $ = gulpLoadPlugins();
+
 gulp.task('build-clean', function () {
-    var clean = require('gulp-clean');
     return gulp.src(config.dist, {read: false})
-        .pipe(clean());
+        .pipe($.clean());
 });
 
 gulp.task('build-libs', function () {

@@ -32,7 +32,7 @@ $ktv-layout-hzm-background: $ktv-color-white !default;
         color: $dropdown-link-color;
       }
 
-      > li > a {
+      /*> li > a {
         .#{$ktv-prefix-class}header & {
           //line-height: $ktv-layout-header-height;
           font-size: $font-size-large;
@@ -40,7 +40,7 @@ $ktv-layout-hzm-background: $ktv-color-white !default;
           padding-top: (($ktv-layout-header-height - $line-height-computed) / 2);
           padding-bottom: (($ktv-layout-header-height - $line-height-computed) / 2);
         }
-      }
+      }*/
 
     }
 
@@ -57,72 +57,71 @@ $ktv-layout-hzm-background: $ktv-color-white !default;
         padding-top: $ktv-base-unit*2;
         padding-bottom: $ktv-base-unit*2;
         // The dropdown menu (ul)
-        & {
-          border-radius: 0;
-          //border-top:0;
-          @include box-shadow(0 4px 9px rgba(0, 0, 0, .075));
 
-          // Links within the dropdown menu
-          li {
-            a {
+        border-radius: 0;
+        //border-top:0;
+        @include box-shadow(0 4px 9px rgba(0, 0, 0, .075));
 
-              display: block;
-              clear: both;
-              font-weight: normal;
-              line-height: $line-height-base;
-              color: $dropdown-link-color;
-              white-space: nowrap; // prevent links from randomly breaking onto new lines
+        // Links within the dropdown menu
+        li {
+          a {
 
-              // Hover/Focus state
+            display: block;
+            clear: both;
+            font-weight: normal;
+            line-height: $line-height-base;
+            color: $dropdown-link-color;
+            white-space: nowrap; // prevent links from randomly breaking onto new lines
 
-              &:hover,
-              &:focus,
-              &.active {
-                text-decoration: none;
-                color: $link-color;
-              }
+            // Hover/Focus state
 
-            }
-            &.active > a {
+            &:hover,
+            &:focus,
+            &.active {
               text-decoration: none;
               color: $link-color;
             }
+
           }
-
-          // Active state
-          .active > a {
-            &,
-            &:hover,
-            &:focus {
-              color: $link-hover-decoration;
-              text-decoration: none;
-              outline: 0;
-            }
+          &.active > a {
+            text-decoration: none;
+            color: $link-color;
           }
-
-          // Disabled state
-          //
-          // Gray out text and ensure the hover/focus state remains gray
-
-          .disabled a {
-            &,
-            &:hover,
-            &:focus {
-              color: $dropdown-link-disabled-color;
-            }
-
-            // Nuke hover/focus effects
-            &:hover,
-            &:focus {
-              text-decoration: none;
-              background-color: transparent;
-              background-image: none; // Remove CSS gradient
-              @include reset-filter;
-              cursor: $cursor-disabled;
-            }
-          }
-
         }
+
+        // Active state
+        .active > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $link-hover-decoration;
+            text-decoration: none;
+            outline: 0;
+          }
+        }
+
+        // Disabled state
+        //
+        // Gray out text and ensure the hover/focus state remains gray
+
+        .disabled a {
+          &,
+          &:hover,
+          &:focus {
+            color: $dropdown-link-disabled-color;
+          }
+
+          // Nuke hover/focus effects
+          &:hover,
+          &:focus {
+            text-decoration: none;
+            background-color: transparent;
+            background-image: none; // Remove CSS gradient
+            @include reset-filter;
+            cursor: $cursor-disabled;
+          }
+        }
+
       }
     }
 

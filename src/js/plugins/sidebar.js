@@ -10,7 +10,7 @@
     $$.$({
         sidebar: {
             toggle: function () {
-                $('.js-kt-sidebar-pin').click(function () {
+                $('.js-kt-sidebar-action-pin').click(function () {
                     $('body').toggleClass('kt-sidebar--pin');
                 });
             },

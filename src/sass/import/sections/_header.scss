@@ -7,6 +7,7 @@
 $ktv-layout-header-height: $ktv-header-height !default;
 $ktv-layout-header-background: $ktv-color-white !default;
 $ktv-layout-header-border-bottom: 1px solid opacify($ktv-color-master-light, .7) !default;
+$ktv-layout-header-profile-size: $ktv-base-unit * 4;
 
 // Making
 // --------------------------------------------------
@@ -22,11 +23,17 @@ $ktv-layout-header-border-bottom: 1px solid opacify($ktv-color-master-light, .7)
   border: 0;
   border-bottom: 1px solid opacify($ktv-color-master-light, .7);
   border-radius: 0;
+  font-size: $font-size-h5;
+  @include transition($ktv-link-transition);
 
   .#{$ktv-prefix-class}fixed-header & {
     position: fixed;
     left: 0;
     top: 0;
+  }
+
+  &.affix {
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.26);
   }
 
   .navbar {
@@ -47,6 +54,78 @@ $ktv-layout-header-border-bottom: 1px solid opacify($ktv-color-master-light, .7)
       & {
         width: $ktv-sidebar-width;
         padding-left: $ktv-sidebar-offset + ($ktv-base-unit*2);
+      }
+    }
+  }
+
+  /* Profile dropdown
+  ------------------------------------
+  */
+  .profile {
+    @include clearfix;
+    margin-top: ($ktv-layout-header-height - ($ktv-layout-header-profile-size + ($ktv-base-unit * 2))) / 2;
+
+    .profile-name {
+      font-size: $font-size-h4;
+      line-height: $ktv-layout-header-profile-size;
+      padding: $ktv-base-unit;
+    }
+
+    .profile-thumb {
+      @include square($ktv-layout-header-profile-size)
+    }
+
+    .profile-dropdown {
+      background: #fff;
+      padding: 0;
+      &:before {
+        position: absolute;
+        top: -7px;
+        right: 15px;
+        display: inline-block;
+        border-right: 7px solid transparent;
+        border-bottom: 7px solid #ccc;
+        border-left: 7px solid transparent;
+        border-bottom-color: rgba(0, 0, 0, 0.2);
+        content: '';
+      }
+
+      &:after {
+        position: absolute;
+        top: -6px;
+        right: 16px;
+        display: inline-block;
+        border-right: 6px solid transparent;
+        border-bottom: 6px solid #ffffff;
+        border-left: 6px solid transparent;
+        content: '';
+      }
+      li {
+        &:last-child {
+          border-top: 1px solid rgba(0,0,0,.157);
+          padding: 0;
+        }
+        & > a {
+          opacity: .5;
+          @include transition(opacity ease .3s);
+          padding: $ktv-base-unit ($ktv-base-unit * 2);
+          min-width: 138px;
+          & > i {
+            margin-right: 5px;
+          }
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .profile-dropdown-toggle {
+      background: transparent;
+      border: none;
+      padding: $ktv-base-unit;
+      display: block;
+      &:focus {
+        outline: none;
       }
     }
   }
