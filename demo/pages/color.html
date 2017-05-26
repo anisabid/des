@@ -204,6 +204,13 @@
                             </a>
                         </li>
                         <li class="">
+                            <a href="header_profile.html">Header Profile
+                                <div class="pull-right">
+                                    <span class="icon-thumbnail">hp</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="">
                             <a href="rtl_layout.html">RTL
                                 <div class="pull-right">
                                     <span class="icon-thumbnail">rl</span>
@@ -580,18 +587,18 @@
         </div>
         <div class=" pull-right">
             <!-- START User Info-->
-            <div class="visible-lg visible-md profile">
-                <div class="pull-left profile-name">
-                    <span class="text-medium">Debra</span> <span class="">Watkins</span>
+            <div class="visible-lg visible-md profile" id="kt-header-profile">
+                <div class="pull-left kt-profile-name">
+                    <span class="text-medium">{{name.first}}</span> <span class="">{{name.last}}</span>
                 </div>
-                <div class="dropdown pull-right">
-                    <a href="#" class="profile-dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                <div class="dropdown pull-left">
+                    <a href="#" class="kt-profile-dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
                         <div class="thumbnail-wrapper">
-                            <img src="https://randomuser.me/api/portraits/thumb/women/17.jpg" alt="" class="img-circle profile-thumb">
+                            <img :src="picture.thumbnail" alt="" class="img-circle kt-profile-picture-thumbnail">
                         </div>
                     </a>
-                    <ul class="dropdown-menu profile-dropdown" role="menu">
+                    <ul class="dropdown-menu kt-profile-dropdown dropdown-menu-right" role="menu">
                         <li><a href="#"><i class="fa fa-gear"></i> Settings</a>
                         </li>
                         <li><a href="#"><i class="fa fa-question"></i> Help</a>
@@ -641,7 +648,7 @@
                 <!-- BEGIN CONTAINER FLUID -->
                 <div class="container-fluid">
 
-                        <div class="col-md-4">
+                        <div class="col-lg-4">
                             <!-- BEGIN PANEL -->
                             <div class="panel panel-transparent">
                                 <div class="panel-heading">
@@ -665,12 +672,12 @@
                             </div>
                             <!-- END PANEL -->
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-lg-8">
                             <!-- BEGIN PANEL -->
                             <div class="panel panel-transparent">
                                 <div class="panel-body">
                                     <div class="row">
-                                        <div class="col-md-3 col-sm-6">
+                                        <div class="col-lg-3 col-sm-6">
                                             <div class="bg-master clearfix m-b-2">
                                                 <div class="bg-white m-t-6 p-1 clearfix">
                                                     <p class=" no-margin pull-left">Master color</p>
@@ -678,7 +685,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-3 col-sm-6">
+                                        <div class="col-lg-3 col-sm-6">
                                             <div class="bg-primary clearfix m-b-2">
                                                 <div class="bg-white m-t-6 p-1 clearfix">
                                                     <p class=" no-margin pull-left">Master color</p>
@@ -686,7 +693,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-3 col-sm-6">
+                                        <div class="col-lg-3 col-sm-6">
                                             <div class="bg-complete clearfix m-b-2">
                                                 <div class="bg-white m-t-6 p-1 clearfix">
                                                     <p class=" no-margin pull-left">Master color</p>
@@ -694,7 +701,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-3 col-sm-6">
+                                        <div class="col-lg-3 col-sm-6">
                                             <div class="bg-success clearfix m-b-2">
                                                 <div class="bg-white m-t-6 p-1 clearfix">
                                                     <p class=" no-margin pull-left">Master color</p>
@@ -704,7 +711,7 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-3 col-sm-6">
+                                        <div class="col-lg-3 col-sm-6">
                                             <div class="bg-menu clearfix m-b-2">
                                                 <div class="bg-white m-t-6 p-1 clearfix">
                                                     <p class=" no-margin pull-left">Master color</p>
@@ -712,7 +719,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-3 col-sm-6">
+                                        <div class="col-lg-3 col-sm-6">
                                             <div class="bg-info clearfix m-b-2">
                                                 <div class="bg-white m-t-6 p-1 clearfix">
                                                     <p class=" no-margin pull-left">Master color</p>
@@ -720,7 +727,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-3 col-sm-6">
+                                        <div class="col-lg-3 col-sm-6">
                                             <div class="bg-danger clearfix m-b-2">
                                                 <div class="bg-white m-t-6 p-1 clearfix">
                                                     <p class=" no-margin pull-left">Master color</p>
@@ -728,7 +735,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-3 col-sm-6">
+                                        <div class="col-lg-3 col-sm-6">
                                             <div class="bg-warning clearfix m-b-2">
                                                 <div class="bg-white m-t-6 p-1 clearfix">
                                                     <p class=" no-margin pull-left">Master color</p>
@@ -781,11 +788,14 @@
 <!-- start footer.tpl.html-->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="../../dist/lib/jquery/jquery.min.js"></script>
+<!-- Vue (necessary for dynamic data) -->
+<script src="../../dist/lib/vue/vue.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="../../dist/lib/bootstrap/bootstrap.min.js"></script>
 <script src="../../dist/lib/jquery.scrollbar/jquery.scrollbar.min.js"></script>
 <script src="../../dist/lib/select2/select2.full.min.js"></script>
 <script src="../../dist/js/ng-script.js"></script>
+
 <!-- end footer.tpl.html-->
 
 </body>

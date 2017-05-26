@@ -10,8 +10,6 @@
         header: {
             affix: function () {
 
-                console.log( $('.js-kt-header').height())
-
                 $('.js-kt-header').affix({
                     offset: {
                         top: $('.js-kt-header').height()

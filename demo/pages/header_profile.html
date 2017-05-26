@@ -35,7 +35,7 @@
 <![endif]-->
 <!-- end head.tpl.html-->
 </head>
-<body class="kt-fixed-header kt-sidebar--floating">
+<body class="kt-fixed-header kt-sidebar--floating kt-sidebar--pin">
 
 <!-- start sidebar.tpl.html-->
 <!-- BEGIN KT-SIDEBPANEL-->
@@ -620,7 +620,6 @@
 <!-- END KT-HEADER -->
 <!-- end header.tpl.html-->
 
-
     <!-- BEGIN KT-CONTENT-WRAPPER -->
     <div class="kt-content-wrapper">
 
@@ -629,226 +628,227 @@
             <!-- BEGIN KT-INNER-CONTENT -->
             <div class="kt-inner-content">
 
-<!-- start horizontal_menu.tpl.html-->
-<!-- BEGIN HORIZONTAL MENU -->
-<div class="kt-horizontal-menu">
-    <nav class="navbar">
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <div class="row pull-left">
-                <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                           aria-expanded="false">
-                            Gestion des procédures
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">One more separated link</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown megamenu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                           aria-expanded="false">
-                            Rédaction des pièces
-                            <span class="caret"></span>
-                        </a>
-                        <div class="dropdown-menu">
-                            <ul class="list-unstyled col-lg-5 col-sm-12" role="menu">
-                                <li class="clearfix">
-                                    <h4 class=" ">ADMINISTRATION EDITEUR</h4>
-                                    <div class="divider"></div>
-                                    <ul class="list-unstyled clearfix">
-                                        <li class="col-lg-4 col-sm-4">
-                                            <ul class="clearfix list-unstyled">
-                                                <li class="text-bold m-b-1">Clauses</li>
-                                                <li class="clearfix">
-                                                    <ul class="clearfix list-unstyled">
-                                                        <li class=""><a href="#">Rechercher</a></li>
-                                                        <li class=""><a href="#">Créer</a></li>
-                                                        <li class=""><a href="#">Exporter</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-
-                                        <li class="col-lg-4 col-sm-4">
-                                            <ul class="clearfix list-unstyled">
-                                                <li class="text-bold m-b-1">Canevas</li>
-                                                <li class="clearfix">
-                                                    <ul class="clearfix list-unstyled">
-                                                        <li><a href="#">Rechercher</a></li>
-                                                        <li><a href="#">Créer</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-
-                                        <li class="col-lg-4 col-sm-4">
-                                            <ul class="clearfix list-unstyled">
-                                                <li class="text-bold m-b-1">Version de clausier</li>
-                                                <li class="clearfix">
-                                                    <ul class="clearfix list-unstyled">
-                                                        <li><a href="#">Créer une version</a></li>
-                                                        <li><a href="#">Historique des versions</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-
-                                </li>
-                            </ul>
-                            <ul class="list-unstyled col-lg-4 col-sm-12" role="menu">
-                                <li class="clearfix">
-                                    <h4 class=" ">ADMINISTRATION</h4>
-                                    <div class="divider"></div>
-                                    <ul class="list-unstyled clearfix">
-                                        <li class="col-lg-4 col-sm-4">
-                                            <ul class="clearfix list-unstyled">
-                                                <li class="text-bold m-b-1">Clauses</li>
-                                                <li class="clearfix">
-                                                    <ul class="clearfix list-unstyled">
-                                                        <li class=""><a href="#">Rechercher</a></li>
-                                                        <li class=""><a href="#">Créer</a></li>
-                                                        <li class=""><a href="#">Exporter</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="col-lg-4 col-sm-4">
-                                            <ul class="clearfix list-unstyled">
-                                                <li class="text-bold m-b-1">Canevas</li>
-                                                <li class="clearfix">
-                                                    <ul class="clearfix list-unstyled">
-                                                        <li><a href="#">Rechercher</a></li>
-                                                        <li><a href="#">Créer</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-
-                                        <li class="col-lg-4 col-sm-4">
-                                            <ul class="clearfix list-unstyled">
-                                                <li class="text-bold m-b-1">Le logo</li>
-                                                <li class="clearfix">
-                                                    <ul class="clearfix list-unstyled">
-                                                        <li><a href="#">Modifier le logo</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-
-                                </li>
-                            </ul>
-                            <ul class="list-unstyled col-lg-3 col-sm-12" role="menu">
-                                <li class="clearfix">
-                                    <h4 class=" ">RÉDACTION</h4>
-                                    <div class="divider"></div>
-                                    <ul class="list-unstyled clearfix">
-                                        <li class="col-lg-12 col-sm-12">
-                                            <ul class="clearfix list-unstyled">
-                                                <li class=""><a href="#">Gérer les documents</a></li>
-                                                <li class=""><a href="#">Préférences Direction</a></li>
-                                                <li class=""><a href="#">Préférences Agent</a></li>
-                                            </ul>
-                                        </li>
-
-                                    </ul>
-
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="dropdown megamenu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                           aria-expanded="false">
-                            Gestion des commissions
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="container-fluid">
-                                <ul class="list-unstyled list-inline">
-                                    <li><a href="#">Action</a></li>
-                                    <li>&nbsp;-&nbsp;</li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li>&nbsp;-&nbsp;</li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li>&nbsp;-&nbsp;</li>
-                                    <li><a href="#">Separated link</a></li>
-                                    <li>&nbsp;-&nbsp;</li>
-                                    <li><a href="#">One more separated link</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                           aria-expanded="false">
-                            Exécution
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="text-bold m-b-1">
-                                <div class="container-fluid">CONTARTS</div>
-                            </li>
-                            <li><a href="#">Suivi des contrats</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li class="text-bold m-b-1">
-                                <div class="container-fluid">AVENANTS</div>
-                            </li>
-                            <li><a href="#">Créer</a></li>
-                            <li><a href="#">Supprimer</a></li>
-                            <li><a href="#">Rechercher</a></li>
-                            <li><a href="#">Mes avenants</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#"><i class="fa fa-bar-chart"></i> Statistiques</a></li>
-
-                </ul>
-            </div>
-            <ul class="nav navbar-nav navbar-right">
-                <form class="navbar-form navbar-left">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
-            </ul>
-
-        </div><!-- /.navbar-collapse -->
-    </nav><!-- /.navbar -->
-</div>
-<!-- END HORIZONTAL MENU -->
-<!-- end horizontal_menu.tpl.html-->
-
                 <div class="container-fluid">
                     <!-- BEGIN BREADCRUMB -->
                     <ol class="breadcrumb">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Layout</a></li>
-                        <li class="active">Horizontal menu</li>
+                        <li><a href="#">UI Elements</a></li>
+                        <li class="active">Color</li>
                     </ol>
                     <!-- END BREADCRUMB -->
                 </div>
                 <!-- BEGIN JUMBOTRON -->
                 <div class="jumbotron">
                     <div class="container-fluid">
-                        <div class="h3 ">Horizontal Menu</div>
+                        <div class="h3 ">Header Profile</div>
                     </div>
                 </div>
                 <!-- END JUMBOTRON -->
 
                 <!-- BEGIN CONTAINER FLUID -->
-                <div class="container-fluid">
-                    <div class="row">
+                <div class="container-fluid demo-profile">
+
+                    <div class="col-lg-6">
+                        <!-- BEGIN PANEL -->
+                        <div class="panel panel-transparent">
+                            <div class="panel-heading">
+                                <div class="panel-title">Simple widget Profile
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <p>The dashboard will synergize with the colour selection made by the user and
+                                    appropriately amend. Similarly, all other elements will sync according to the
+                                    base colours. </p>
+                                <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                        <p>Small</p>
+                                        <div class="clearfix demo-widget-profile" id="id-demo-widget-profile-a">
+                                            <div class="pull-right">
+                                                <!-- START User Info-->
+                                                <div class="profile kt-profile-lg">
+                                                    <div class="pull-left kt-profile-name">
+                                                        <span class="text-medium">{{name.first}}</span> <span class="">{{name.last}}</span>
+                                                    </div>
+                                                    <div class="dropdown pull-left">
+                                                        <div class="btn btn-link btn-block kt-profile-dropdown-toggle"
+                                                           data-toggle="dropdown"
+                                                           aria-haspopup="true"
+                                                           aria-expanded="false">
+                                                            <div class="thumbnail-wrapper">
+                                                                <img :src="picture.medium" alt=""
+                                                                     class="img-circle kt-profile-picture-thumbnail">
+                                                            </div>
+                                                        </div>
+                                                        <ul class="dropdown-menu kt-profile-dropdown dropdown-menu-right"
+                                                            role="menu">
+                                                            <li><a href="#"><i class="fa fa-gear"></i> Settings</a>
+                                                            </li>
+                                                            <li><a href="#"><i class="fa fa-question"></i> Help</a>
+                                                            </li>
+                                                            <li class="bg-master-lighter">
+                                                                <a href="#" class="clearfix">
+                                                                    <span class="pull-left">Logout</span>
+                                                            <span class="pull-right"><i
+                                                                    class="fa fa-power-off"></i></span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <!-- END User Info-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <p>Large</p>
+                                        <div class="clearfix demo-widget-profile" id="id-demo-widget-profile-b">
+                                            <div class="pull-right">
+                                                <!-- START User Info-->
+                                                <div class="profile">
+                                                    <div class="pull-left kt-profile-name">
+                                                        <span class="text-medium">{{name.first}}</span> <span class="">{{name.last}}</span>
+                                                    </div>
+                                                    <div class="dropdown pull-left">
+                                                        <div class="btn btn-link btn-block kt-profile-dropdown-toggle"
+                                                           data-toggle="dropdown"
+                                                           aria-haspopup="true"
+                                                           aria-expanded="false">
+                                                            <div class="thumbnail-wrapper">
+                                                                <img :src="picture.thumbnail" alt=""
+                                                                     class="img-circle kt-profile-picture-thumbnail">
+                                                            </div>
+                                                        </div>
+                                                        <ul class="dropdown-menu kt-profile-dropdown dropdown-menu-right"
+                                                            role="menu">
+                                                            <li><a href="#"><i class="fa fa-gear"></i> Settings</a>
+                                                            </li>
+                                                            <li><a href="#"><i class="fa fa-question"></i> Help</a>
+                                                            </li>
+                                                            <li class="bg-master-lighter">
+                                                                <a href="#" class="clearfix">
+                                                                    <span class="pull-left">Logout</span>
+                                                            <span class="pull-right"><i
+                                                                    class="fa fa-power-off"></i></span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <!-- END User Info-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- END PANEL -->
                     </div>
+                    <div class="col-lg-6">
+                        <!-- BEGIN PANEL -->
+                        <div class="panel panel-transparent">
+                            <div class="panel-heading">
+                                <div class="panel-title">Simple widget Profile
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <p>The dashboard will synergize with the colour selection made by the user and
+                                    appropriately amend. Similarly, all other elements will sync according to the
+                                    base colours. </p>
+                                <br>
+                                <div class="clearfix demo-widget-profile" id="id-demo-widget-profile-c">
+                                    <div class="pull-right">
+                                        <!-- START User Info-->
+                                        <div class="kt-profile">
+                                            <div class="pull-left kt-profile-name">
+                                                <span class="text-medium">{{name.first}}</span> <span class="">{{name.last}}</span>
+                                            </div>
+                                            <div class="dropdown pull-left">
+                                                <div class="btn btn-link btn-block kt-profile-dropdown-toggle" data-toggle="dropdown"
+                                                   aria-haspopup="true"
+                                                   aria-expanded="false">
+                                                    <div class="thumbnail-wrapper">
+                                                        <img :src="picture.thumbnail" alt=""
+                                                             class="img-circle kt-profile-picture-thumbnail"  data-status="">
+                                                        <div class="dropdown kt-profile-dropdown-status">
+                                                            <button class="btn btn-link profile-status kt-profile-status js-kt-profile-status" data-status="" id="id-profile-status-c" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <span class="sr-only">[[current status]]</span>
+                                                            </button>
+                                                            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="id-profile-status-c" role="menu">
+                                                                <li><a href="">Online<span class="sr-only">Connecté</span></a></li>
+                                                                <li><a href="">Away<span class="sr-only">Absent</span></a></li>
+                                                                <li><a href="">Do Not Disturb<span class="sr-only">Ne pas dérenger</span></a></li>
+                                                                <li><a href="">Invisible<span class="sr-only">Invesible</span></a></li>
+                                                                <li><a href="">Offline<span class="sr-only">Déconnecter</span></a></li>
+                                                                <li role="separator" class="divider"></li>
+                                                                <li><a href="">Configurer<span class="sr-only">Connecté</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown-menu kt-profile-dropdown kt-profile-dropdown-lg dropdown-menu-right"
+                                                     role="menu">
+                                                    <div class="kt-profile-dropdown-header">
+                                                        <div class="col-lg-12 p-1">
+                                                            <div class="pull-left m-r-2">
+                                                                <a href="#" class="btn-block">
+                                                                    <img :src="picture.medium" alt=""
+                                                                         class="img-circle kt-profile-picture-medium">
+                                                                </a>
+                                                            </div>
+
+                                                            <div class="pull-left">
+                                                                <div class="h4 text-transform-capitalize">
+                                                                    <span class="text-medium">{{name.first}}</span>
+                                                                    <span class="text-light">{{name.last}}</span>
+                                                                </div>
+                                                                <div class="kt-profile-email help">
+                                                                    <span class="">{{email}}</span>
+                                                                </div>
+                                                                <div class="h5">
+                                                                    {{login.username}}
+                                                                </div>
+                                                                <div class="clearfix">
+                                                                    <a href="#" class="btn btn-primery">Settings</a>
+                                                                    -
+                                                                    <a href="#" class="btn btn-primery">Confidentiality</a>
+
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="bg-master-lighter kt-profile-dropdown-footer">
+                                                        <div class="col-lg-12">
+                                                            <a href="#" class="pull-left btn btn-complete">
+                                                                <span class="pull-right">My Account</span>
+                                                            </a>
+                                                            <a href="#" class="pull-right btn btn-default">
+                                                                <span class="pull-left">Logout</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END User Info-->
+                                    </div>
+                                </div>
+
+                                <div class="snippet" id="snippet">
+
+                                        <pre class="xml">
+                                            <h1>tset</h1>
+                                            <h2>tset</h2>
+                                        </pre>
+                                    <a id="language-link" href="/?snippet=4&amp;style=9" class="">http</a>
+                                    <a id="style-link" href="/?snippet=3&amp;style=10">zenburn</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END PANEL -->
+                    </div>
+
                 </div>
                 <!-- END CONTAINER FLUID -->
 

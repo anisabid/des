@@ -37,10 +37,8 @@
   @include box-shadow(none);
 }
 
-
-
 // btn-clear
-@mixin btn-clear($margin: $ktv-base-unit, $padding: $ktv-base-unit, $height: null, $width: null, $text-align: center) {
+@mixin btn-clear($margin: $ktv-base-unit, $padding: $ktv-base-unit, $height: auto, $width: auto, $text-align: center) {
   @if $height {
     height: $height;
   }
@@ -49,14 +47,31 @@
   }
   margin: $margin;
   padding: $padding;
-  @if $padding == 0 {
-    line-height: $height;
+  @if $height != auto {
+    @if $padding == 0 {
+      line-height: $height;
+    } @else {
+      line-height: $height - $padding*2;
+    }
   } @else {
-    line-height: $height - $padding*2;
+    line-height: 0;
   }
   text-align: $text-align;
   border: 0;
   outline: none;
+}
+
+.btn-clear {
+  @include btn-clear(0, 0);
+}
+
+// None Outline
+.none-outline,
+.no-outline {
+  &:focus {
+    outline: none;
+  }
+
 }
 
 // Container Fluid LG
@@ -68,8 +83,6 @@
 .#{$ktv-prefix-class}container-fluid-lg {
   @include container-fluid-lg;
 }
-
-
 
 // Offset SideBar
 @mixin offset-sidebar() {

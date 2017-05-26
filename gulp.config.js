@@ -32,6 +32,10 @@ module.exports = function () {
                 dist: './dist/lib/jquery/'
             },
             {
+                src: 'bower_components/vue/dist/vue.min.js',
+                dist: './dist/lib/vue/'
+            },
+            {
                 src: 'bower_components/bootstrap/dist/js/bootstrap.min.js',
                 dist: './dist/lib/bootstrap/'
             },

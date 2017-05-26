@@ -5,9 +5,10 @@
   [3. Variables bootstrap]
   [4. Components]
   [5. Utilities]
-  [6. Modules]
-  [7. Pages]
-  [8. Demo]
+  [6. Widget]
+  [7. Modules]
+  [8. Pages]
+  [9. Demo]
 */
 /**
   kt    : Kite Trends
@@ -19106,6 +19107,20 @@ button.close {
   -webkit-box-shadow: none;
   box-shadow: none; }
 
+.btn-clear {
+  height: auto;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  text-align: center;
+  border: 0;
+  outline: none; }
+
+.none-outline:focus,
+.no-outline:focus {
+  outline: none; }
+
 .kt-container-fluid-lg {
   width: 90%;
   margin: 0 5%; }
@@ -19781,6 +19796,18 @@ button.close {
 .text-black {
   font-weight: 900 !important; }
 
+.text-transform-capitalize {
+  text-transform: capitalize !important; }
+
+.text-transform-lowercase {
+  text-transform: lowercase !important; }
+
+.text-transform-uppercase {
+  text-transform: uppercase !important; }
+
+.text-transform-none {
+  text-transform: none !important; }
+
 /* Lins and Others
 ------------------------------------
 */
@@ -19803,6 +19830,119 @@ a {
   display: table-cell;
   vertical-align: middle;
   float: none; }
+
+/* [W.] Profile
+------------------------------------
+*/
+.profile.kt-profile-lg:before, .profile.kt-profile-lg:after {
+  content: " ";
+  display: table; }
+
+.profile.kt-profile-lg:after {
+  clear: both; }
+
+.profile.kt-profile-lg .kt-profile-name {
+  font-size: 15px;
+  line-height: 64px;
+  padding: 8px;
+  text-transform: capitalize; }
+
+.profile.kt-profile-lg .kt-profile-picture-thumbnail {
+  width: 64px;
+  height: 64px; }
+
+.profile.kt-profile-lg .kt-profile-picture-medium {
+  width: 160px;
+  height: 160px; }
+
+.profile.kt-profile-lg .kt-profile-dropdown {
+  background: #fff;
+  padding: 0; }
+  .profile.kt-profile-lg .kt-profile-dropdown.kt-profile-dropdown-lg {
+    min-width: 320px; }
+  .profile.kt-profile-lg .kt-profile-dropdown:before {
+    position: absolute;
+    top: -7px;
+    right: 31px;
+    display: inline-block;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #ccc;
+    border-left: 7px solid transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+    content: ''; }
+  .profile.kt-profile-lg .kt-profile-dropdown:after {
+    position: absolute;
+    top: -6px;
+    right: 32px;
+    display: inline-block;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #ffffff;
+    border-left: 6px solid transparent;
+    content: ''; }
+  .profile.kt-profile-lg .kt-profile-dropdown li:last-child {
+    border-top: 1px solid rgba(0, 0, 0, 0.157);
+    padding: 0; }
+  .profile.kt-profile-lg .kt-profile-dropdown li > a {
+    opacity: .5;
+    -webkit-transition: opacity ease 0.3s;
+    -o-transition: opacity ease 0.3s;
+    transition: opacity ease 0.3s;
+    padding: 8px 16px;
+    min-width: 138px; }
+    .profile.kt-profile-lg .kt-profile-dropdown li > a > i {
+      margin-right: 5px; }
+    .profile.kt-profile-lg .kt-profile-dropdown li > a:hover {
+      opacity: 1; }
+  .profile.kt-profile-lg .kt-profile-dropdown .kt-profile-dropdown-header:before, .profile.kt-profile-lg .kt-profile-dropdown .kt-profile-dropdown-header:after,
+  .profile.kt-profile-lg .kt-profile-dropdown li.kt-profile-dropdown-header:before,
+  .profile.kt-profile-lg .kt-profile-dropdown li.kt-profile-dropdown-header:after,
+  .profile.kt-profile-lg .kt-profile-dropdown .kt-profile-dropdown-footer:before,
+  .profile.kt-profile-lg .kt-profile-dropdown .kt-profile-dropdown-footer:after,
+  .profile.kt-profile-lg .kt-profile-dropdown li.kt-profile-dropdown-footer:before,
+  .profile.kt-profile-lg .kt-profile-dropdown li.kt-profile-dropdown-footer:after {
+    content: " ";
+    display: table; }
+  .profile.kt-profile-lg .kt-profile-dropdown .kt-profile-dropdown-header:after,
+  .profile.kt-profile-lg .kt-profile-dropdown li.kt-profile-dropdown-header:after,
+  .profile.kt-profile-lg .kt-profile-dropdown .kt-profile-dropdown-footer:after,
+  .profile.kt-profile-lg .kt-profile-dropdown li.kt-profile-dropdown-footer:after {
+    clear: both; }
+  .profile.kt-profile-lg .kt-profile-dropdown .kt-profile-dropdown-footer,
+  .profile.kt-profile-lg .kt-profile-dropdown li.kt-profile-dropdown-footer {
+    padding-top: 8px;
+    padding-bottom: 8px; }
+
+.profile.kt-profile-lg .kt-profile-dropdown-toggle {
+  background: transparent;
+  border: none;
+  padding: 8px;
+  display: block;
+  position: relative; }
+  .profile.kt-profile-lg .kt-profile-dropdown-toggle:focus {
+    outline: none; }
+  .profile.kt-profile-lg .kt-profile-dropdown-toggle .thumbnail-wrapper {
+    position: relative; }
+  .profile.kt-profile-lg .kt-profile-dropdown-toggle .kt-profile-picture-thumbnail[data-status] {
+    border-radius: 50%;
+    border: 2px solid transparent; }
+  .profile.kt-profile-lg .kt-profile-dropdown-toggle .kt-profile-dropdown-status {
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    line-height: 0; }
+
+.profile.kt-profile-lg .kt-profile-dropdown-status .btn.profile-status {
+  height: 12px;
+  width: 12px;
+  margin: 0;
+  padding: 0;
+  line-height: 12px;
+  text-align: center;
+  border: 0;
+  outline: none;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid #10CFBD; }
 
 .breadcrumb {
   margin: 0;
@@ -20111,7 +20251,7 @@ fieldset[disabled] .btn {
   top: 0;
   width: 3px; }
 
-/*------------------------------------------------------------------
+/*
 [1. Sections]
   [1.1 Body]
   [1.2 Header]
@@ -20122,7 +20262,7 @@ fieldset[disabled] .btn {
   [1.7 Secondary SideBar]
 */
 /* [1.1] Body
-------------------------------------------------------------------
+--------------------------------------------------
 */
 html {
   height: 100%; }
@@ -20182,17 +20322,23 @@ body {
       display: table; }
     .kt-header .profile:after {
       clear: both; }
-    .kt-header .profile .profile-name {
+    .kt-header .profile .kt-profile-name {
       font-size: 15px;
       line-height: 32px;
-      padding: 8px; }
-    .kt-header .profile .profile-thumb {
+      padding: 8px;
+      text-transform: capitalize; }
+    .kt-header .profile .kt-profile-picture-thumbnail {
       width: 32px;
       height: 32px; }
-    .kt-header .profile .profile-dropdown {
+    .kt-header .profile .kt-profile-picture-medium {
+      width: 80px;
+      height: 80px; }
+    .kt-header .profile .kt-profile-dropdown {
       background: #fff;
       padding: 0; }
-      .kt-header .profile .profile-dropdown:before {
+      .kt-header .profile .kt-profile-dropdown.kt-profile-dropdown-lg {
+        min-width: 320px; }
+      .kt-header .profile .kt-profile-dropdown:before {
         position: absolute;
         top: -7px;
         right: 15px;
@@ -20200,9 +20346,9 @@ body {
         border-right: 7px solid transparent;
         border-bottom: 7px solid #ccc;
         border-left: 7px solid transparent;
-        border-bottom-color: rgba(0, 0, 0, 0.2);
+        border-bottom-color: rgba(0, 0, 0, 0.1);
         content: ''; }
-      .kt-header .profile .profile-dropdown:after {
+      .kt-header .profile .kt-profile-dropdown:after {
         position: absolute;
         top: -6px;
         right: 16px;
@@ -20211,27 +20357,68 @@ body {
         border-bottom: 6px solid #ffffff;
         border-left: 6px solid transparent;
         content: ''; }
-      .kt-header .profile .profile-dropdown li:last-child {
+      .kt-header .profile .kt-profile-dropdown li:last-child {
         border-top: 1px solid rgba(0, 0, 0, 0.157);
         padding: 0; }
-      .kt-header .profile .profile-dropdown li > a {
+      .kt-header .profile .kt-profile-dropdown li > a {
         opacity: .5;
         -webkit-transition: opacity ease 0.3s;
         -o-transition: opacity ease 0.3s;
         transition: opacity ease 0.3s;
         padding: 8px 16px;
         min-width: 138px; }
-        .kt-header .profile .profile-dropdown li > a > i {
+        .kt-header .profile .kt-profile-dropdown li > a > i {
           margin-right: 5px; }
-        .kt-header .profile .profile-dropdown li > a:hover {
+        .kt-header .profile .kt-profile-dropdown li > a:hover {
           opacity: 1; }
-    .kt-header .profile .profile-dropdown-toggle {
+      .kt-header .profile .kt-profile-dropdown .kt-profile-dropdown-header:before, .kt-header .profile .kt-profile-dropdown .kt-profile-dropdown-header:after,
+      .kt-header .profile .kt-profile-dropdown li.kt-profile-dropdown-header:before,
+      .kt-header .profile .kt-profile-dropdown li.kt-profile-dropdown-header:after,
+      .kt-header .profile .kt-profile-dropdown .kt-profile-dropdown-footer:before,
+      .kt-header .profile .kt-profile-dropdown .kt-profile-dropdown-footer:after,
+      .kt-header .profile .kt-profile-dropdown li.kt-profile-dropdown-footer:before,
+      .kt-header .profile .kt-profile-dropdown li.kt-profile-dropdown-footer:after {
+        content: " ";
+        display: table; }
+      .kt-header .profile .kt-profile-dropdown .kt-profile-dropdown-header:after,
+      .kt-header .profile .kt-profile-dropdown li.kt-profile-dropdown-header:after,
+      .kt-header .profile .kt-profile-dropdown .kt-profile-dropdown-footer:after,
+      .kt-header .profile .kt-profile-dropdown li.kt-profile-dropdown-footer:after {
+        clear: both; }
+      .kt-header .profile .kt-profile-dropdown .kt-profile-dropdown-footer,
+      .kt-header .profile .kt-profile-dropdown li.kt-profile-dropdown-footer {
+        padding-top: 8px;
+        padding-bottom: 8px; }
+    .kt-header .profile .kt-profile-dropdown-toggle {
       background: transparent;
       border: none;
       padding: 8px;
-      display: block; }
-      .kt-header .profile .profile-dropdown-toggle:focus {
+      display: block;
+      position: relative; }
+      .kt-header .profile .kt-profile-dropdown-toggle:focus {
         outline: none; }
+      .kt-header .profile .kt-profile-dropdown-toggle .thumbnail-wrapper {
+        position: relative; }
+      .kt-header .profile .kt-profile-dropdown-toggle .kt-profile-picture-thumbnail[data-status] {
+        border-radius: 50%;
+        border: 2px solid transparent; }
+      .kt-header .profile .kt-profile-dropdown-toggle .kt-profile-dropdown-status {
+        position: absolute;
+        bottom: -1px;
+        right: -1px;
+        line-height: 0; }
+    .kt-header .profile .kt-profile-dropdown-status .btn.profile-status {
+      height: 12px;
+      width: 12px;
+      margin: 0;
+      padding: 0;
+      line-height: 12px;
+      text-align: center;
+      border: 0;
+      outline: none;
+      background-color: #fff;
+      border-radius: 50%;
+      border: 2px solid #10CFBD; }
 
 /* [1.3] Page Container
 ------------------------------------
@@ -21230,3 +21417,113 @@ body {
         backface-visibility: hidden; }
       .mpe .section-c .map-search .search .form-group .select2 .select2-selection {
         background-color: #fff; }
+
+.demo-profile:before, .demo-profile:after {
+  content: " ";
+  display: table; }
+
+.demo-profile:after {
+  clear: both; }
+
+.demo-profile .kt-profile-name {
+  font-size: 15px;
+  line-height: 32px;
+  padding: 8px;
+  text-transform: capitalize; }
+
+.demo-profile .kt-profile-picture-thumbnail {
+  width: 32px;
+  height: 32px; }
+
+.demo-profile .kt-profile-picture-medium {
+  width: 80px;
+  height: 80px; }
+
+.demo-profile .kt-profile-dropdown {
+  background: #fff;
+  padding: 0; }
+  .demo-profile .kt-profile-dropdown.kt-profile-dropdown-lg {
+    min-width: 320px; }
+  .demo-profile .kt-profile-dropdown:before {
+    position: absolute;
+    top: -7px;
+    right: 15px;
+    display: inline-block;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #ccc;
+    border-left: 7px solid transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+    content: ''; }
+  .demo-profile .kt-profile-dropdown:after {
+    position: absolute;
+    top: -6px;
+    right: 16px;
+    display: inline-block;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #ffffff;
+    border-left: 6px solid transparent;
+    content: ''; }
+  .demo-profile .kt-profile-dropdown li:last-child {
+    border-top: 1px solid rgba(0, 0, 0, 0.157);
+    padding: 0; }
+  .demo-profile .kt-profile-dropdown li > a {
+    opacity: .5;
+    -webkit-transition: opacity ease 0.3s;
+    -o-transition: opacity ease 0.3s;
+    transition: opacity ease 0.3s;
+    padding: 8px 16px;
+    min-width: 138px; }
+    .demo-profile .kt-profile-dropdown li > a > i {
+      margin-right: 5px; }
+    .demo-profile .kt-profile-dropdown li > a:hover {
+      opacity: 1; }
+  .demo-profile .kt-profile-dropdown .kt-profile-dropdown-header:before, .demo-profile .kt-profile-dropdown .kt-profile-dropdown-header:after,
+  .demo-profile .kt-profile-dropdown li.kt-profile-dropdown-header:before,
+  .demo-profile .kt-profile-dropdown li.kt-profile-dropdown-header:after,
+  .demo-profile .kt-profile-dropdown .kt-profile-dropdown-footer:before,
+  .demo-profile .kt-profile-dropdown .kt-profile-dropdown-footer:after,
+  .demo-profile .kt-profile-dropdown li.kt-profile-dropdown-footer:before,
+  .demo-profile .kt-profile-dropdown li.kt-profile-dropdown-footer:after {
+    content: " ";
+    display: table; }
+  .demo-profile .kt-profile-dropdown .kt-profile-dropdown-header:after,
+  .demo-profile .kt-profile-dropdown li.kt-profile-dropdown-header:after,
+  .demo-profile .kt-profile-dropdown .kt-profile-dropdown-footer:after,
+  .demo-profile .kt-profile-dropdown li.kt-profile-dropdown-footer:after {
+    clear: both; }
+  .demo-profile .kt-profile-dropdown .kt-profile-dropdown-footer,
+  .demo-profile .kt-profile-dropdown li.kt-profile-dropdown-footer {
+    padding-top: 8px;
+    padding-bottom: 8px; }
+
+.demo-profile .kt-profile-dropdown-toggle {
+  background: transparent;
+  border: none;
+  padding: 8px;
+  display: block;
+  position: relative; }
+  .demo-profile .kt-profile-dropdown-toggle:focus {
+    outline: none; }
+  .demo-profile .kt-profile-dropdown-toggle .thumbnail-wrapper {
+    position: relative; }
+  .demo-profile .kt-profile-dropdown-toggle .kt-profile-picture-thumbnail[data-status] {
+    border-radius: 50%;
+    border: 2px solid transparent; }
+  .demo-profile .kt-profile-dropdown-toggle .kt-profile-dropdown-status {
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    line-height: 0; }
+
+.demo-profile .kt-profile-dropdown-status .btn.profile-status {
+  height: 12px;
+  width: 12px;
+  margin: 0;
+  padding: 0;
+  line-height: 12px;
+  text-align: center;
+  border: 0;
+  outline: none;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid #10CFBD; }

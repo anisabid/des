@@ -37,6 +37,24 @@
   font-weight: $ktv-font-weight-black !important;
 }
 
+// Text Transform
+//------------------------------------
+.text-transform-capitalize {
+  text-transform: capitalize !important;
+}
+
+.text-transform-lowercase {
+  text-transform: lowercase !important;
+}
+
+.text-transform-uppercase {
+  text-transform: uppercase !important;
+}
+
+.text-transform-none {
+  text-transform: none !important;
+}
+
 /* Lins and Others
 ------------------------------------
 */

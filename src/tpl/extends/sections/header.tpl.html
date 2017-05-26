@@ -24,18 +24,18 @@
         </div>
         <div class=" pull-right">
             <!-- START User Info-->
-            <div class="visible-lg visible-md profile">
-                <div class="pull-left profile-name">
-                    <span class="text-medium">Debra</span> <span class="">Watkins</span>
+            <div class="visible-lg visible-md profile" id="kt-header-profile">
+                <div class="pull-left kt-profile-name">
+                    <span class="text-medium">{{name.first}}</span> <span class="">{{name.last}}</span>
                 </div>
-                <div class="dropdown pull-right">
-                    <a href="#" class="profile-dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                <div class="dropdown pull-left">
+                    <a href="#" class="kt-profile-dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
                         <div class="thumbnail-wrapper">
-                            <img src="https://randomuser.me/api/portraits/thumb/women/17.jpg" alt="" class="img-circle profile-thumb">
+                            <img :src="picture.thumbnail" alt="" class="img-circle kt-profile-picture-thumbnail">
                         </div>
                     </a>
-                    <ul class="dropdown-menu profile-dropdown" role="menu">
+                    <ul class="dropdown-menu kt-profile-dropdown dropdown-menu-right" role="menu">
                         <li><a href="#"><i class="fa fa-gear"></i> Settings</a>
                         </li>
                         <li><a href="#"><i class="fa fa-question"></i> Help</a>
