@@ -139,8 +139,11 @@ $ktv-widget-profile-size: $ktv-base-unit * 4;
       outline: none;
     }
 
-    .thumbnail-wrapper {
+    .thumbnail {
       position: relative;
+      border: 0;
+      padding: 0;
+      margin: 0;
       .img-circle {
         @include widget-profile-status;
         @include square($_ktv-widget-profile-size);

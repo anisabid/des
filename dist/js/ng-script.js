@@ -81,6 +81,56 @@
 })(jQuery, KTJS);
 
 (function ($, $$) {
+
+    /**
+     *  plugin/sidebar.js
+     */
+
+    // ToDO
+    // Bug open subnav level 2
+
+    $$.$({
+        demo: {
+            fn: {
+                highlight: function () {
+                    if (typeof hljs !== 'undefined') {
+                        //hljs.initHighlightingOnLoad();
+                        $('pre code').each(function (i, block) {
+                            hljs.highlightBlock(block);
+                        });
+                    }
+                },
+                profile: function () {
+
+                    // Header profile
+                    $.get("https://randomuser.me/api/?nat=FR", function (data) {
+                        var appKtHeaderProfile = new Vue({
+                            el: '#kt-header-profile',
+                            data: data.results[0]
+                        })
+                    });
+
+                    // Demo Profile
+                    // Demo profile a
+                    /*$.get("https://randomuser.me/api/?nat=FR", function (data) {
+                        var appKtHeaderProfile = new Vue({
+                            el: '.demo-profile',
+                            data: data.results[0]
+                        })
+                    });*/
+
+
+                }
+            },
+            ready: function () {
+                this.fn.profile();
+                this.fn.highlight();
+            }
+        }
+    });
+
+})(jQuery, KTJS);
+(function ($, $$) {
     /**
      *  extend/data-init.js
      */
@@ -241,56 +291,6 @@
 
 })(jQuery, KTJS);
 (function ($, $$) {
-
-    /**
-     *  plugin/sidebar.js
-     */
-
-    // ToDO
-    // Bug open subnav level 2
-
-    $$.$({
-        demo: {
-            fn: {
-                highlight: function () {
-                    if (typeof hljs !== 'undefined') {
-                        //hljs.initHighlightingOnLoad();
-                        $('pre code').each(function (i, block) {
-                            hljs.highlightBlock(block);
-                        });
-                    }
-                },
-                profile: function () {
-
-                    // Header profile
-                    $.get("https://randomuser.me/api/?nat=FR", function (data) {
-                        var appKtHeaderProfile = new Vue({
-                            el: '#kt-header-profile',
-                            data: data.results[0]
-                        })
-                    });
-
-                    // Demo Profile
-                    // Demo profile a
-                    /*$.get("https://randomuser.me/api/?nat=FR", function (data) {
-                        var appKtHeaderProfile = new Vue({
-                            el: '.demo-profile',
-                            data: data.results[0]
-                        })
-                    });*/
-
-
-                }
-            },
-            ready: function () {
-                this.fn.profile();
-                this.fn.highlight();
-            }
-        }
-    });
-
-})(jQuery, KTJS);
-(function ($, $$) {
     /**
      *  plugin/footer.js
      */
@@ -420,6 +420,35 @@
     });
 
 })(jQuery, KTJS);
+(function ($, $$) {
+    /**
+     *  plugin/form.js
+     */
+
+    // ToDO
+    // ...
+
+    $$.$({
+        profile: {
+            status: function () {
+                $('.kt-profile-status').each(function () {
+                    var $this = $(this);
+                    $this.find('.kt-profile-status-list a[data-status]').click(function (event) {
+                        event.preventDefault();
+                        $this.find('.btn[data-status]').attr('data-status', $(this).data('status'))
+                        return true;
+                    })
+                });
+            },
+            ready: function () {
+                this.status();
+            }
+        }
+    });
+
+})(jQuery, KTJS);
+
+
 (function ($, $$) {
     /**
      *  plugin/scrollbar.js

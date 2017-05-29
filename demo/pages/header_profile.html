@@ -668,7 +668,7 @@
                                         <div class="clearfix demo-widget-profile" id="id-demo-widget-profile-a">
                                             <div class="pull-right">
                                                 <!-- START User Info-->
-                                                <div class="kt-profile kt-profile-lg">
+                                                <div class="kt-profile kt-profile-lg" data-widget="profile">
                                                     <div class="pull-left kt-profile-text">
                                                         <span class="text-medium">Faustine</span> <span class="">Deschamps</span>
                                                     </div>
@@ -683,28 +683,49 @@
                                                             </button>
                                                             <ul class="dropdown-menu dropdown-menu-right kt-profile-status-list"
                                                                 aria-labelledby="id-profile-status-c" role="menu">
-                                                                <li><a href="#">Online<span
-                                                                        class="sr-only">Connecté</span></a></li>
-                                                                <li><a href="#">Away<span
-                                                                        class="sr-only">Absent</span></a></li>
-                                                                <li><a href="#">Do Not Disturb<span class="sr-only">Ne pas dérenger</span></a>
+                                                                <li>
+                                                                    <a data-status="online" href="#">Online
+                                                                        <span class="sr-only">Connecté</span>
+                                                                    </a>
                                                                 </li>
-                                                                <li><a href="#">Invisible<span
-                                                                        class="sr-only">Invesible</span></a></li>
-                                                                <li><a href="#">Offline<span
-                                                                        class="sr-only">Déconnecter</span></a></li>
+                                                                <li>
+                                                                    <a data-status="away" href="#">Away
+                                                                        <span class="sr-only">Absent</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a data-status="do-not-disturb" href="#">Do Not
+                                                                        Disturb
+                                                                        <span class="sr-only">Ne pas dérenger</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a data-status="invisible" href="#">Invisible
+                                                                        <span class="sr-only">Invesible</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a data-status="offline" href="#">Offline
+                                                                        <span class="sr-only">Déconnecter</span>
+                                                                    </a>
+                                                                </li>
                                                                 <li role="separator" class="divider"></li>
-                                                                <li><a href="#">Configurer<span
-                                                                        class="sr-only">Connecté</span></a></li>
+                                                                <li>
+                                                                    <a href="#">Configurer
+                                                                        <span class="sr-only">Connecté</span>
+                                                                    </a>
+                                                                </li>
                                                             </ul>
                                                         </div>
                                                         <div class="btn btn-link btn-block kt-profile-dropdown-toggle"
                                                              data-toggle="dropdown"
                                                              aria-haspopup="true"
                                                              aria-expanded="false">
-                                                            <div class="thumbnail-wrapper">
-                                                                <img src="https://randomuser.me/api/portraits/med/women/81.jpg" alt=""
-                                                                     class="img-circle kt-profile-picture-thumbnail" data-status="">
+                                                            <div class="thumbnail">
+                                                                <img src="https://randomuser.me/api/portraits/med/women/81.jpg"
+                                                                     alt=""
+                                                                     class="img-circle kt-profile-picture-thumbnail"
+                                                                     data-status="">
                                                             </div>
                                                         </div>
                                                         <ul class="dropdown-menu kt-profile-dropdown dropdown-menu-right"
@@ -732,7 +753,7 @@
                                         <div class="clearfix demo-widget-profile" id="id-demo-widget-profile-b">
                                             <div class="pull-right">
                                                 <!-- START User Info-->
-                                                <div class="kt-profile">
+                                                <div class="kt-profile" data-widget="profile">
                                                     <div class="pull-left kt-profile-text">
                                                         <span class="text-medium">Faustine</span> <span class="">Deschamps</span>
                                                     </div>
@@ -741,8 +762,9 @@
                                                              data-toggle="dropdown"
                                                              aria-haspopup="true"
                                                              aria-expanded="false">
-                                                            <div class="thumbnail-wrapper">
-                                                                <img src="https://randomuser.me/api/portraits/thumb/women/81.jpg" alt=""
+                                                            <div class="thumbnail">
+                                                                <img src="https://randomuser.me/api/portraits/thumb/women/81.jpg"
+                                                                     alt=""
                                                                      class="img-circle" data-status="">
                                                             </div>
                                                         </div>
@@ -787,9 +809,10 @@
                                 <div class="clearfix demo-widget-profile" id="id-demo-widget-profile-c">
                                     <div class="pull-right">
                                         <!-- START User Info-->
-                                        <div class="kt-profile">
+                                        <div class="kt-profile" data-widget="profile">
                                             <div class="pull-left kt-profile-text">
-                                                <span class="text-medium">Faustine</span> <span class="">Deschamps</span>
+                                                <span class="text-medium">Faustine</span> <span
+                                                    class="">Deschamps</span>
                                             </div>
                                             <div class="dropdown pull-left">
                                                 <div class="dropdown kt-profile-status">
@@ -802,27 +825,47 @@
                                                     </button>
                                                     <ul class="dropdown-menu dropdown-menu-right kt-profile-status-list"
                                                         aria-labelledby="id-profile-status-c" role="menu">
-                                                        <li><a href="">Online<span
-                                                                class="sr-only">Connecté</span></a></li>
-                                                        <li><a href="">Away<span
-                                                                class="sr-only">Absent</span></a></li>
-                                                        <li><a href="">Do Not Disturb<span class="sr-only">Ne pas dérenger</span></a>
+                                                        <li>
+                                                            <a data-status="online" href="#">Online
+                                                                <span class="sr-only">Connecté</span>
+                                                            </a>
                                                         </li>
-                                                        <li><a href="">Invisible<span
-                                                                class="sr-only">Invesible</span></a></li>
-                                                        <li><a href="">Offline<span
-                                                                class="sr-only">Déconnecter</span></a></li>
+                                                        <li>
+                                                            <a data-status="away" href="#">Away
+                                                                <span class="sr-only">Absent</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a data-status="do-not-disturb" href="#">Do Not
+                                                                Disturb
+                                                                <span class="sr-only">Ne pas dérenger</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a data-status="invisible" href="#">Invisible
+                                                                <span class="sr-only">Invesible</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a data-status="offline" href="#">Offline
+                                                                <span class="sr-only">Déconnecter</span>
+                                                            </a>
+                                                        </li>
                                                         <li role="separator" class="divider"></li>
-                                                        <li><a href="">Configurer<span
-                                                                class="sr-only">Connecté</span></a></li>
+                                                        <li>
+                                                            <a href="#">Configurer
+                                                                <span class="sr-only">Connecté</span>
+                                                            </a>
+                                                        </li>
                                                     </ul>
                                                 </div>
                                                 <div class="btn btn-link btn-block kt-profile-dropdown-toggle"
                                                      data-toggle="dropdown"
                                                      aria-haspopup="true"
                                                      aria-expanded="false">
-                                                    <div class="thumbnail-wrapper">
-                                                        <img src="https://randomuser.me/api/portraits/thumb/women/81.jpg" alt=""
+                                                    <div class="thumbnail">
+                                                        <img src="https://randomuser.me/api/portraits/thumb/women/81.jpg"
+                                                             alt=""
                                                              class="img-circle"
                                                              data-status="">
                                                     </div>
@@ -833,7 +876,8 @@
                                                         <div class="col-lg-12 p-1">
                                                             <div class="pull-left m-r-2">
                                                                 <a href="#" class="btn-block">
-                                                                    <img src="https://randomuser.me/api/portraits/med/women/81.jpg" alt=""
+                                                                    <img src="https://randomuser.me/api/portraits/med/women/81.jpg"
+                                                                         alt=""
                                                                          class="img-circle medium" data-status="">
                                                                 </a>
                                                             </div>
