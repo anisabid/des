@@ -34,10 +34,9 @@ $ktv-layout-header-profile-size: $ktv-base-unit * 4;
     background: #fff;
     padding: 0;
 
-    &.profile-dropdown-lg{
+    &.profile-dropdown-lg {
       min-width: $ktv-base-unit * 40;
     }
-
 
     &:before {
       position: absolute;
@@ -151,9 +150,8 @@ $ktv-layout-header-profile-size: $ktv-base-unit * 4;
   /* Profile dropdown
   ------------------------------------
   */
-  .profile {
+  .#{$ktv-prefix-class}profile {
     margin-top: ($ktv-layout-header-height - ($ktv-layout-header-profile-size + ($ktv-base-unit * 2))) / 2;
-    @include widget-profile;
   }
 
 }

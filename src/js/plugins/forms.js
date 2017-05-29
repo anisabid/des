@@ -29,7 +29,7 @@
             },
             initPlugin: function () {
                 $('[data-init-plugin="select2"]').select2(
-                    $('#select2-test-json').json().select2
+                    //$('#select2-test-json').json().select2
                 ).on('select2:open', function (e) {
                     $('.select2-results .select2-results__options').addClass('scrollbar-inner').scrollbar({
                         ignoreMobile: false

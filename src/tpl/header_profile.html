@@ -52,22 +52,47 @@
                                     base colours. </p>
                                 <div class="col-lg-12">
                                     <div class="col-lg-6">
-                                        <p>Small</p>
+                                        <p class="xxx">Large</p>
                                         <div class="clearfix demo-widget-profile" id="id-demo-widget-profile-a">
                                             <div class="pull-right">
                                                 <!-- START User Info-->
-                                                <div class="profile kt-profile-lg">
-                                                    <div class="pull-left kt-profile-name">
-                                                        <span class="text-medium">{{name.first}}</span> <span class="">{{name.last}}</span>
+                                                <div class="kt-profile kt-profile-lg">
+                                                    <div class="pull-left kt-profile-text">
+                                                        <span class="text-medium">Faustine</span> <span class="">Deschamps</span>
                                                     </div>
                                                     <div class="dropdown pull-left">
+                                                        <div class="dropdown kt-profile-status">
+                                                            <button class="btn btn-link js-kt-profile-status"
+                                                                    data-status="" id="id-profile-status-a"
+                                                                    type="button" data-toggle="dropdown"
+                                                                    aria-haspopup="true" aria-expanded="false">
+                                                                <span class="sr-only">[[current status]]</span>
+                                                                <span class="fa fa-caret-down"></span>
+                                                            </button>
+                                                            <ul class="dropdown-menu dropdown-menu-right kt-profile-status-list"
+                                                                aria-labelledby="id-profile-status-c" role="menu">
+                                                                <li><a href="#">Online<span
+                                                                        class="sr-only">Connecté</span></a></li>
+                                                                <li><a href="#">Away<span
+                                                                        class="sr-only">Absent</span></a></li>
+                                                                <li><a href="#">Do Not Disturb<span class="sr-only">Ne pas dérenger</span></a>
+                                                                </li>
+                                                                <li><a href="#">Invisible<span
+                                                                        class="sr-only">Invesible</span></a></li>
+                                                                <li><a href="#">Offline<span
+                                                                        class="sr-only">Déconnecter</span></a></li>
+                                                                <li role="separator" class="divider"></li>
+                                                                <li><a href="#">Configurer<span
+                                                                        class="sr-only">Connecté</span></a></li>
+                                                            </ul>
+                                                        </div>
                                                         <div class="btn btn-link btn-block kt-profile-dropdown-toggle"
-                                                           data-toggle="dropdown"
-                                                           aria-haspopup="true"
-                                                           aria-expanded="false">
+                                                             data-toggle="dropdown"
+                                                             aria-haspopup="true"
+                                                             aria-expanded="false">
                                                             <div class="thumbnail-wrapper">
-                                                                <img :src="picture.medium" alt=""
-                                                                     class="img-circle kt-profile-picture-thumbnail">
+                                                                <img src="https://randomuser.me/api/portraits/med/women/81.jpg" alt=""
+                                                                     class="img-circle kt-profile-picture-thumbnail" data-status="">
                                                             </div>
                                                         </div>
                                                         <ul class="dropdown-menu kt-profile-dropdown dropdown-menu-right"
@@ -91,22 +116,22 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
-                                        <p>Large</p>
+                                        <p>Small</p>
                                         <div class="clearfix demo-widget-profile" id="id-demo-widget-profile-b">
                                             <div class="pull-right">
                                                 <!-- START User Info-->
-                                                <div class="profile">
-                                                    <div class="pull-left kt-profile-name">
-                                                        <span class="text-medium">{{name.first}}</span> <span class="">{{name.last}}</span>
+                                                <div class="kt-profile">
+                                                    <div class="pull-left kt-profile-text">
+                                                        <span class="text-medium">Faustine</span> <span class="">Deschamps</span>
                                                     </div>
                                                     <div class="dropdown pull-left">
                                                         <div class="btn btn-link btn-block kt-profile-dropdown-toggle"
-                                                           data-toggle="dropdown"
-                                                           aria-haspopup="true"
-                                                           aria-expanded="false">
+                                                             data-toggle="dropdown"
+                                                             aria-haspopup="true"
+                                                             aria-expanded="false">
                                                             <div class="thumbnail-wrapper">
-                                                                <img :src="picture.thumbnail" alt=""
-                                                                     class="img-circle kt-profile-picture-thumbnail">
+                                                                <img src="https://randomuser.me/api/portraits/thumb/women/81.jpg" alt=""
+                                                                     class="img-circle" data-status="">
                                                             </div>
                                                         </div>
                                                         <ul class="dropdown-menu kt-profile-dropdown dropdown-menu-right"
@@ -151,30 +176,43 @@
                                     <div class="pull-right">
                                         <!-- START User Info-->
                                         <div class="kt-profile">
-                                            <div class="pull-left kt-profile-name">
-                                                <span class="text-medium">{{name.first}}</span> <span class="">{{name.last}}</span>
+                                            <div class="pull-left kt-profile-text">
+                                                <span class="text-medium">Faustine</span> <span class="">Deschamps</span>
                                             </div>
                                             <div class="dropdown pull-left">
-                                                <div class="btn btn-link btn-block kt-profile-dropdown-toggle" data-toggle="dropdown"
-                                                   aria-haspopup="true"
-                                                   aria-expanded="false">
+                                                <div class="dropdown kt-profile-status">
+                                                    <button class="btn btn-link js-kt-profile-status"
+                                                            data-status="" id="id-profile-status-c"
+                                                            type="button" data-toggle="dropdown"
+                                                            aria-haspopup="true" aria-expanded="false">
+                                                        <span class="sr-only">[[current status]]</span>
+                                                        <span class="fa fa-caret-down"></span>
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-right kt-profile-status-list"
+                                                        aria-labelledby="id-profile-status-c" role="menu">
+                                                        <li><a href="">Online<span
+                                                                class="sr-only">Connecté</span></a></li>
+                                                        <li><a href="">Away<span
+                                                                class="sr-only">Absent</span></a></li>
+                                                        <li><a href="">Do Not Disturb<span class="sr-only">Ne pas dérenger</span></a>
+                                                        </li>
+                                                        <li><a href="">Invisible<span
+                                                                class="sr-only">Invesible</span></a></li>
+                                                        <li><a href="">Offline<span
+                                                                class="sr-only">Déconnecter</span></a></li>
+                                                        <li role="separator" class="divider"></li>
+                                                        <li><a href="">Configurer<span
+                                                                class="sr-only">Connecté</span></a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="btn btn-link btn-block kt-profile-dropdown-toggle"
+                                                     data-toggle="dropdown"
+                                                     aria-haspopup="true"
+                                                     aria-expanded="false">
                                                     <div class="thumbnail-wrapper">
-                                                        <img :src="picture.thumbnail" alt=""
-                                                             class="img-circle kt-profile-picture-thumbnail"  data-status="">
-                                                        <div class="dropdown kt-profile-dropdown-status">
-                                                            <button class="btn btn-link profile-status kt-profile-status js-kt-profile-status" data-status="" id="id-profile-status-c" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                <span class="sr-only">[[current status]]</span>
-                                                            </button>
-                                                            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="id-profile-status-c" role="menu">
-                                                                <li><a href="">Online<span class="sr-only">Connecté</span></a></li>
-                                                                <li><a href="">Away<span class="sr-only">Absent</span></a></li>
-                                                                <li><a href="">Do Not Disturb<span class="sr-only">Ne pas dérenger</span></a></li>
-                                                                <li><a href="">Invisible<span class="sr-only">Invesible</span></a></li>
-                                                                <li><a href="">Offline<span class="sr-only">Déconnecter</span></a></li>
-                                                                <li role="separator" class="divider"></li>
-                                                                <li><a href="">Configurer<span class="sr-only">Connecté</span></a></li>
-                                                            </ul>
-                                                        </div>
+                                                        <img src="https://randomuser.me/api/portraits/thumb/women/81.jpg" alt=""
+                                                             class="img-circle"
+                                                             data-status="">
                                                     </div>
                                                 </div>
                                                 <div class="dropdown-menu kt-profile-dropdown kt-profile-dropdown-lg dropdown-menu-right"
@@ -183,26 +221,27 @@
                                                         <div class="col-lg-12 p-1">
                                                             <div class="pull-left m-r-2">
                                                                 <a href="#" class="btn-block">
-                                                                    <img :src="picture.medium" alt=""
-                                                                         class="img-circle kt-profile-picture-medium">
+                                                                    <img src="https://randomuser.me/api/portraits/med/women/81.jpg" alt=""
+                                                                         class="img-circle medium" data-status="">
                                                                 </a>
                                                             </div>
 
                                                             <div class="pull-left">
                                                                 <div class="h4 text-transform-capitalize">
-                                                                    <span class="text-medium">{{name.first}}</span>
-                                                                    <span class="text-light">{{name.last}}</span>
+                                                                    <span class="text-medium">Faustine</span>
+                                                                    <span class="text-light">Deschamps</span>
                                                                 </div>
                                                                 <div class="kt-profile-email help">
-                                                                    <span class="">{{email}}</span>
+                                                                    <span class="">faustine.deschamps@example.com</span>
                                                                 </div>
                                                                 <div class="h5">
-                                                                    {{login.username}}
+                                                                    redsnake
                                                                 </div>
                                                                 <div class="clearfix">
                                                                     <a href="#" class="btn btn-primery">Settings</a>
                                                                     -
-                                                                    <a href="#" class="btn btn-primery">Confidentiality</a>
+                                                                    <a href="#"
+                                                                       class="btn btn-primery">Confidentiality</a>
 
                                                                 </div>
                                                             </div>
@@ -226,14 +265,19 @@
                                     </div>
                                 </div>
 
-                                <div class="snippet" id="snippet">
-
-                                        <pre class="xml">
-                                            <h1>tset</h1>
-                                            <h2>tset</h2>
-                                        </pre>
-                                    <a id="language-link" href="/?snippet=4&amp;style=9" class="">http</a>
-                                    <a id="style-link" href="/?snippet=3&amp;style=10">zenburn</a>
+                                <div class="col-lg-12">
+                                    <pre><code>
+                                        &lt;div class="tets"&gt;
+                                            test
+                                        &lt;/div&gt;
+                                    </code></pre>
+                                    <pre><code class="javascript">
+                                    $(document).ready(function() {
+                                      $('pre code').each(function(i, block) {
+                                        hljs.highlightBlock(block);
+                                      });
+                                    });
+                                    </code></pre>
                                 </div>
                             </div>
                         </div>
