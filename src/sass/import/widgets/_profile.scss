@@ -14,6 +14,29 @@ $ktv-widget-profile-size: $ktv-base-unit * 4;
     border-radius: 50%;
     border: 2px solid $ktv-color-transparent;
   }
+
+  &[data-status=online] {
+    border-radius: 50%;
+    border: 2px solid $ktv-color-success;
+  }
+  &[data-status=away] {
+    border-radius: 50%;
+    border: 2px solid $ktv-color-warning;
+  }
+  &[data-status=do-not-disturb] {
+    border-radius: 50%;
+    border: 2px solid $ktv-color-danger;
+  }
+  &[data-status=invisible] {
+    border-radius: 50%;
+    border: 2px solid $ktv-color-info-lightest;
+  }
+  &[data-status=offline] {
+    border-radius: 50%;
+    border: 2px solid $ktv-color-info-lighter;
+  }
+
+
 }
 
 @mixin widget-profile-dropdown-status($_size) {
@@ -27,8 +50,7 @@ $ktv-widget-profile-size: $ktv-base-unit * 4;
   .btn[data-toggle="dropdown"] {
     @include btn-clear(0, 0, $ktv-base-unit*$_size, $ktv-base-unit*$_size);
     background-color: $ktv-color-white;
-    border-radius: 50%;
-    border: 2px solid $ktv-color-success;
+    @include widget-profile-status;
     text-decoration: none;
 
     .fa-caret-down {
