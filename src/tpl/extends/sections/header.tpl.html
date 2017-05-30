@@ -24,18 +24,23 @@
         </div>
         <div class=" pull-right">
             <!-- START User Info-->
-            <div class="visible-lg visible-md kt-profile" data-widget="profile" id="kt-header-profile">
-                <div class="pull-left kt-profile-name">
-                    <span class="text-medium">{{name.first}}</span> <span class="">{{name.last}}</span>
+            <div class="visible-lg visible-md kt-profile" data-widget="profile" id="kt-header-profile" data-status="">
+                <div class="pull-left kt-profile-text">
+                    <span class="text-medium">Faustine</span> <span class="">Deschamps</span>
                 </div>
                 <div class="dropdown pull-left">
-                    <a href="#" class="kt-profile-dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                        <div class="thumbnail-wrapper">
-                            <img :src="picture.thumbnail" alt="" class="img-circle kt-profile-picture-thumbnail">
+                    <div class="btn btn-link btn-block kt-profile-dropdown-toggle"
+                         data-toggle="dropdown"
+                         aria-haspopup="true"
+                         aria-expanded="false">
+                        <div class="thumbnail">
+                            <img src="https://randomuser.me/api/portraits/thumb/women/81.jpg"
+                                 alt=""
+                                 class="img-circle">
                         </div>
-                    </a>
-                    <ul class="dropdown-menu kt-profile-dropdown dropdown-menu-right" role="menu">
+                    </div>
+                    <ul class="dropdown-menu kt-profile-dropdown dropdown-menu-right"
+                        role="menu">
                         <li><a href="#"><i class="fa fa-gear"></i> Settings</a>
                         </li>
                         <li><a href="#"><i class="fa fa-question"></i> Help</a>
@@ -43,7 +48,8 @@
                         <li class="bg-master-lighter">
                             <a href="#" class="clearfix">
                                 <span class="pull-left">Logout</span>
-                                <span class="pull-right"><i class="fa fa-power-off"></i></span>
+                                                            <span class="pull-right"><i
+                                                                    class="fa fa-power-off"></i></span>
                             </a>
                         </li>
                     </ul>

@@ -1,0 +1,35 @@
+<div class="kt-profile kt-profile-2x" data-widget="profile"
+     data-status="<!-- @@var status -->">
+    <div class="pull-left kt-profile-text">
+        <span class="text-medium">Faustine</span> <span class="">Deschamps</span>
+    </div>
+    <div class="dropdown pull-left">
+        <!-- @@include= ./profile_status.tpl.html {"id": "<!-- @@var id -->", "status": "<!-- @@var status -->"} -->
+        <div class="btn btn-link btn-block kt-profile-dropdown-toggle"
+             data-toggle="dropdown"
+             aria-haspopup="true"
+             aria-expanded="false">
+            <div class="thumbnail">
+                <img src="https://randomuser.me/api/portraits/med/women/81.jpg"
+                     alt=""
+                     class="img-circle"
+                     data-status="<!-- @@var status -->">
+            </div>
+        </div>
+        <ul class="dropdown-menu kt-profile-dropdown dropdown-menu-right"
+            role="menu">
+            <li><a href="#"><i class="fa fa-gear"></i> Settings</a>
+            </li>
+            <li><a href="#"><i class="fa fa-question"></i> Help</a>
+            </li>
+            <li class="bg-master-lighter">
+                <a href="#" class="clearfix">
+                    <span class="pull-left">Logout</span>
+                    <span class="pull-right">
+                        <i class="fa fa-power-off"></i>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -56,82 +56,7 @@
                                         <div class="clearfix demo-widget-profile" id="id-demo-widget-profile-a">
                                             <div class="pull-right">
                                                 <!-- START User Info-->
-                                                <div class="kt-profile kt-profile-lg" data-widget="profile">
-                                                    <div class="pull-left kt-profile-text">
-                                                        <span class="text-medium">Faustine</span> <span class="">Deschamps</span>
-                                                    </div>
-                                                    <div class="dropdown pull-left">
-                                                        <div class="dropdown kt-profile-status">
-                                                            <button class="btn btn-link js-kt-profile-status"
-                                                                    data-status="online" id="id-profile-status-a"
-                                                                    type="button" data-toggle="dropdown"
-                                                                    aria-haspopup="true" aria-expanded="false">
-                                                                <span class="sr-only">[[current status]]</span>
-                                                                <span class="fa fa-caret-down"></span>
-                                                            </button>
-                                                            <ul class="dropdown-menu dropdown-menu-right kt-profile-status-list"
-                                                                aria-labelledby="id-profile-status-c" role="menu">
-                                                                <li>
-                                                                    <a data-status="online" href="#">Online
-                                                                        <span class="sr-only">Connecté</span>
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a data-status="away" href="#">Away
-                                                                        <span class="sr-only">Absent</span>
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a data-status="do-not-disturb" href="#">Do Not
-                                                                        Disturb
-                                                                        <span class="sr-only">Ne pas dérenger</span>
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a data-status="invisible" href="#">Invisible
-                                                                        <span class="sr-only">Invesible</span>
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a data-status="offline" href="#">Offline
-                                                                        <span class="sr-only">Déconnecter</span>
-                                                                    </a>
-                                                                </li>
-                                                                <li role="separator" class="divider"></li>
-                                                                <li>
-                                                                    <a href="#">Configurer
-                                                                        <span class="sr-only">Connecté</span>
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="btn btn-link btn-block kt-profile-dropdown-toggle"
-                                                             data-toggle="dropdown"
-                                                             aria-haspopup="true"
-                                                             aria-expanded="false">
-                                                            <div class="thumbnail">
-                                                                <img src="https://randomuser.me/api/portraits/med/women/81.jpg"
-                                                                     alt=""
-                                                                     class="img-circle kt-profile-picture-thumbnail"
-                                                                     data-status="">
-                                                            </div>
-                                                        </div>
-                                                        <ul class="dropdown-menu kt-profile-dropdown dropdown-menu-right"
-                                                            role="menu">
-                                                            <li><a href="#"><i class="fa fa-gear"></i> Settings</a>
-                                                            </li>
-                                                            <li><a href="#"><i class="fa fa-question"></i> Help</a>
-                                                            </li>
-                                                            <li class="bg-master-lighter">
-                                                                <a href="#" class="clearfix">
-                                                                    <span class="pull-left">Logout</span>
-                                                            <span class="pull-right"><i
-                                                                    class="fa fa-power-off"></i></span>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
+                                                <!-- @@include= ./extends/widgets/profile/profile_2x.tpl.html {"id": "id-demo-widget-profile-a", "status": "away"} -->
                                                 <!-- END User Info-->
                                             </div>
                                         </div>
@@ -140,39 +65,9 @@
                                         <p>Small</p>
                                         <div class="clearfix demo-widget-profile" id="id-demo-widget-profile-b">
                                             <div class="pull-right">
-                                                <!-- START User Info-->
-                                                <div class="kt-profile" data-widget="profile">
-                                                    <div class="pull-left kt-profile-text">
-                                                        <span class="text-medium">Faustine</span> <span class="">Deschamps</span>
-                                                    </div>
-                                                    <div class="dropdown pull-left">
-                                                        <div class="btn btn-link btn-block kt-profile-dropdown-toggle"
-                                                             data-toggle="dropdown"
-                                                             aria-haspopup="true"
-                                                             aria-expanded="false">
-                                                            <div class="thumbnail">
-                                                                <img src="https://randomuser.me/api/portraits/thumb/women/81.jpg"
-                                                                     alt=""
-                                                                     class="img-circle" data-status="">
-                                                            </div>
-                                                        </div>
-                                                        <ul class="dropdown-menu kt-profile-dropdown dropdown-menu-right"
-                                                            role="menu">
-                                                            <li><a href="#"><i class="fa fa-gear"></i> Settings</a>
-                                                            </li>
-                                                            <li><a href="#"><i class="fa fa-question"></i> Help</a>
-                                                            </li>
-                                                            <li class="bg-master-lighter">
-                                                                <a href="#" class="clearfix">
-                                                                    <span class="pull-left">Logout</span>
-                                                            <span class="pull-right"><i
-                                                                    class="fa fa-power-off"></i></span>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <!-- END User Info-->
+                                                <!-- START Widget Profile-->
+                                                <!-- @@include= ./extends/widgets/profile/profile.tpl.html {"id": "id-demo-widget-profile-b", "status": "online"} -->
+                                                <!-- END  Widget Profile-->
                                             </div>
                                         </div>
                                     </div>
@@ -197,114 +92,7 @@
                                 <div class="clearfix demo-widget-profile" id="id-demo-widget-profile-c">
                                     <div class="pull-right">
                                         <!-- START User Info-->
-                                        <div class="kt-profile" data-widget="profile">
-                                            <div class="pull-left kt-profile-text">
-                                                <span class="text-medium">Faustine</span> <span
-                                                    class="">Deschamps</span>
-                                            </div>
-                                            <div class="dropdown pull-left">
-                                                <div class="dropdown kt-profile-status">
-                                                    <button class="btn btn-link js-kt-profile-status"
-                                                            data-status="online" id="id-profile-status-c"
-                                                            type="button" data-toggle="dropdown"
-                                                            aria-haspopup="true" aria-expanded="false">
-                                                        <span class="sr-only">[[current status]]</span>
-                                                        <span class="fa fa-caret-down"></span>
-                                                    </button>
-                                                    <ul class="dropdown-menu dropdown-menu-right kt-profile-status-list"
-                                                        aria-labelledby="id-profile-status-c" role="menu">
-                                                        <li>
-                                                            <a data-status="online" href="#">Online
-                                                                <span class="sr-only">Connecté</span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a data-status="away" href="#">Away
-                                                                <span class="sr-only">Absent</span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a data-status="do-not-disturb" href="#">Do Not
-                                                                Disturb
-                                                                <span class="sr-only">Ne pas dérenger</span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a data-status="invisible" href="#">Invisible
-                                                                <span class="sr-only">Invesible</span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a data-status="offline" href="#">Offline
-                                                                <span class="sr-only">Déconnecter</span>
-                                                            </a>
-                                                        </li>
-                                                        <li role="separator" class="divider"></li>
-                                                        <li>
-                                                            <a href="#">Configurer
-                                                                <span class="sr-only">Connecté</span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="btn btn-link btn-block kt-profile-dropdown-toggle"
-                                                     data-toggle="dropdown"
-                                                     aria-haspopup="true"
-                                                     aria-expanded="false">
-                                                    <div class="thumbnail">
-                                                        <img src="https://randomuser.me/api/portraits/thumb/women/81.jpg"
-                                                             alt=""
-                                                             class="img-circle"
-                                                             data-status="">
-                                                    </div>
-                                                </div>
-                                                <div class="dropdown-menu kt-profile-dropdown kt-profile-dropdown-lg dropdown-menu-right"
-                                                     role="menu">
-                                                    <div class="kt-profile-dropdown-header">
-                                                        <div class="col-lg-12 p-1">
-                                                            <div class="pull-left m-r-2">
-                                                                <a href="#" class="btn-block">
-                                                                    <img src="https://randomuser.me/api/portraits/med/women/81.jpg"
-                                                                         alt=""
-                                                                         class="img-circle medium" data-status="">
-                                                                </a>
-                                                            </div>
-
-                                                            <div class="pull-left">
-                                                                <div class="h4 text-transform-capitalize">
-                                                                    <span class="text-medium">Faustine</span>
-                                                                    <span class="text-light">Deschamps</span>
-                                                                </div>
-                                                                <div class="kt-profile-email help">
-                                                                    <span class="">faustine.deschamps@example.com</span>
-                                                                </div>
-                                                                <div class="h5">
-                                                                    redsnake
-                                                                </div>
-                                                                <div class="clearfix">
-                                                                    <a href="#" class="btn btn-primery">Settings</a>
-                                                                    -
-                                                                    <a href="#"
-                                                                       class="btn btn-primery">Confidentiality</a>
-
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="bg-master-lighter kt-profile-dropdown-footer">
-                                                        <div class="col-lg-12">
-                                                            <a href="#" class="pull-left btn btn-complete">
-                                                                <span class="pull-right">My Account</span>
-                                                            </a>
-                                                            <a href="#" class="pull-right btn btn-default">
-                                                                <span class="pull-left">Logout</span>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <!-- @@include= ./extends/widgets/profile/profile_lg.tpl.html {"id": "id-demo-widget-profile-c", "status": "online"} -->
                                         <!-- END User Info-->
                                     </div>
                                 </div>

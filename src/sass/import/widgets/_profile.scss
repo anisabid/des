@@ -36,14 +36,13 @@ $ktv-widget-profile-size: $ktv-base-unit * 4;
     border: 2px solid $ktv-color-info-lighter;
   }
 
-
 }
 
 @mixin widget-profile-dropdown-status($_size) {
 
   position: absolute;
-  bottom: ($_size * $ktv-base-unit) - ($_size * 2);
-  right: ($_size * $ktv-base-unit) - ($_size * 2);
+  bottom: ($_size * $ktv-base-unit) - ($_size * 2.5);
+  right: ($_size * $ktv-base-unit) - ($_size * 2.5);
   line-height: 0;
   z-index: 1;
 
@@ -73,6 +72,40 @@ $ktv-widget-profile-size: $ktv-base-unit * 4;
     .btn.profile-status .fa-caret-down {
       display: block;
     }
+  }
+
+  .#{$ktv-prefix-class}profile-status-list {
+    [data-status=online],
+    [data-status-value=online] {
+      .fa {
+        color: $ktv-color-success;
+      }
+    }
+    [data-status=away],
+    [data-status-value=away] {
+      .fa {
+        color: $ktv-color-warning;
+      }
+    }
+    [data-status=do-not-disturb],
+    [data-status-value=do-not-disturb] {
+      .fa {
+        color: $ktv-color-danger;
+      }
+    }
+    [data-status=invisible],
+    [data-status-value=invisible] {
+      .fa {
+        color: $ktv-color-info-lightest;
+      }
+    }
+    [data-status=offline],
+    [data-status-value=offline] {
+      .fa {
+        color: $ktv-color-info-lighter;
+      }
+    }
+
   }
 }
 
@@ -169,7 +202,8 @@ $ktv-widget-profile-size: $ktv-base-unit * 4;
       .img-circle {
         @include widget-profile-status;
         @include square($_ktv-widget-profile-size);
-        &.medium{
+        @include box-shadow(1px 1px 3px rgba(0, 0, 0, .175));
+        &.medium {
           @include square($_ktv-widget-profile-size * 2.5)
         }
       }
@@ -185,7 +219,7 @@ $ktv-widget-profile-size: $ktv-base-unit * 4;
 
 .#{$ktv-prefix-class}profile {
   @include widget-profile;
-  &.kt-profile-lg{
+  &.kt-profile-2x {
     @include widget-profile($ktv-base-unit * 8, 2);
   }
 }

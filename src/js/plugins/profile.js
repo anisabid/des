@@ -9,11 +9,11 @@
     $$.$({
         profile: {
             status: function () {
-                $('.kt-profile-status').each(function () {
+                $('.kt-profile').each(function () {
                     var $this = $(this);
-                    $this.find('.kt-profile-status-list a[data-status]').click(function (event) {
+                    $this.find('[data-status-value]').click(function (event) {
                         event.preventDefault();
-                        $this.find('.btn[data-status]').attr('data-status', $(this).data('status'))
+                        $this.find('[data-status]').attr('data-status', $(this).data('status-value'));
                         return true;
                     })
                 });

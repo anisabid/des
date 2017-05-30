@@ -103,12 +103,12 @@
                 profile: function () {
 
                     // Header profile
-                    $.get("https://randomuser.me/api/?nat=FR", function (data) {
+                    /*$.get("https://randomuser.me/api/?nat=FR", function (data) {
                         var appKtHeaderProfile = new Vue({
                             el: '#kt-header-profile',
                             data: data.results[0]
                         })
-                    });
+                    });*/
 
                     // Demo Profile
                     // Demo profile a
@@ -431,11 +431,11 @@
     $$.$({
         profile: {
             status: function () {
-                $('.kt-profile-status').each(function () {
+                $('.kt-profile').each(function () {
                     var $this = $(this);
-                    $this.find('.kt-profile-status-list a[data-status]').click(function (event) {
+                    $this.find('[data-status-value]').click(function (event) {
                         event.preventDefault();
-                        $this.find('.btn[data-status]').attr('data-status', $(this).data('status'))
+                        $this.find('[data-status]').attr('data-status', $(this).data('status-value'));
                         return true;
                     })
                 });

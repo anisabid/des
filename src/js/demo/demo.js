@@ -21,12 +21,12 @@
                 profile: function () {
 
                     // Header profile
-                    $.get("https://randomuser.me/api/?nat=FR", function (data) {
+                    /*$.get("https://randomuser.me/api/?nat=FR", function (data) {
                         var appKtHeaderProfile = new Vue({
                             el: '#kt-header-profile',
                             data: data.results[0]
                         })
-                    });
+                    });*/
 
                     // Demo Profile
                     // Demo profile a
