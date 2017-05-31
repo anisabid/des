@@ -38,7 +38,7 @@
 <![endif]-->
 <!-- end head.tpl.html-->
 </head>
-<body class="kt-fixed-header kt-sidebar--floating kt-secondary-sidebar--pin">
+<body class="kt-fixed-header kt-sidebar--floating kt-sidebar--pin">
 
 <!-- start sidebar.tpl.html-->
 <!-- BEGIN KT-SIDEBPANEL-->
@@ -646,83 +646,11 @@
 <!-- END KT-HEADER -->
 <!-- end header.tpl.html-->
 
-
     <!-- BEGIN KT-CONTENT-WRAPPER -->
     <div class="kt-content-wrapper">
 
         <!-- BEGIN KT-CONTENT -->
         <div class="kt-content">
-
-<!-- start secondary-sidebar.tpl.html-->
-<!-- START SECONDARY SIDEBAR MENU-->
-<div class="kt-secondary-sidebar-wrapper">
-    <nav class="kt-secondary-sidebar">
-        <div class="kt-secondary-sidebar-wrap">
-            <div class="kt-inner-secondary-sidebar">
-                <a href="email_compose.html" class="btn btn-complete btn-block">Compose</a>
-                <p class="menu-title">BROWSE</p>
-                <ul class="main-menu">
-                    <li class="active">
-                        <a href="#" class="active">
-                            <span class="title"><i class="fa fa-inbox"></i> Inbox</span>
-                            <span class="badge">5</span>
-                        </a>
-                    </li>
-                    <li class="">
-                        <a href="#">
-                            <span class="title"><i class="fa fa-folder"></i> All mail</span>
-                        </a>
-                        <ul class="sub-menu no-padding">
-                            <li>
-                                <a href="#">
-                                    <span class="title">Important</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="title">Labeled</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="title"><i class="fa fa-paper-plane"></i> Sent</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="title"><i class="fa fa-exclamation-triangle"></i> Spam</span>
-                            <span class="badge">10</span>
-                        </a>
-                    </li>
-                </ul>
-                <p class="menu-title">Quick view</p>
-                <ul class="sub-menu no-padding">
-                    <li>
-                        <a href="#">
-                            <span class="title">Documents</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="title">Flagged</span>
-                            <span class="badge ">5</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="title">Images</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</div>
-<!-- END SECONDARY SIDEBAR MENU -->
-<!-- end secondary-sidebar.tpl.html-->
-
             <!-- BEGIN KT-INNER-CONTENT -->
             <div class="kt-inner-content">
 
@@ -730,20 +658,328 @@
                     <!-- BEGIN BREADCRUMB -->
                     <ol class="breadcrumb">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Layout</a></li>
-                        <li class="active">Secondary layout</li>
+                        <li><a href="#">UI Elements</a></li>
+                        <li class="active">Color</li>
                     </ol>
                     <!-- END BREADCRUMB -->
                 </div>
-
                 <!-- BEGIN JUMBOTRON -->
                 <div class="jumbotron">
-                    <div class="container-fluid kt-container-fluid-lg">
-                        <div class="h3 ">Secondary Laout</div>
+                    <div class="container-fluid">
+                        <div class="h3 ">Header Profile</div>
                     </div>
                 </div>
                 <!-- END JUMBOTRON -->
 
+                <!-- BEGIN CONTAINER FLUID -->
+                <div class="container-fluid demo-profile">
+
+                    <div class="col-lg-6">
+                        <!-- BEGIN PANEL -->
+                        <div class="panel panel-transparent">
+                            <div class="panel-heading">
+                                <div class="panel-title">Simple widget Profile
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <p>The dashboard will synergize with the colour selection made by the user and
+                                    appropriately amend. Similarly, all other elements will sync according to the
+                                    base colours. </p>
+                                <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                        <p class="xxx">Large</p>
+                                        <div class="clearfix demo-widget-profile" id="id-demo-widget-profile-a">
+                                            <div class="pull-right">
+                                                <!-- START User Info-->
+<!-- start profile_2x.tpl.html-->
+<div class="kt-profile kt-profile-2x" data-widget="profile"
+     data-status="away">
+    <div class="pull-left kt-profile-text">
+        <span class="text-medium">Faustine</span> <span class="">Deschamps</span>
+    </div>
+    <div class="dropdown pull-left">
+<!-- start profile_status.tpl.html-->
+<div class="dropdown kt-profile-status">
+    <button class="btn btn-link js-kt-profile-status"
+            data-status="away" id="id-demo-widget-profile-a"
+            type="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+        <span class="sr-only">[[current status]]</span>
+        <span class="fa fa-caret-down"></span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-right kt-profile-status-list"
+        aria-labelledby="id-demo-widget-profile-a" role="menu">
+        <li>
+            <a data-status-value="online" href="#"><span class="fa fa-circle-o"></span> Online
+                <span class="sr-only">Connecté</span>
+            </a>
+        </li>
+        <li>
+            <a data-status-value="away" href="#"><span class="fa fa-circle-o"></span> Away
+                <span class="sr-only">Absent</span>
+            </a>
+        </li>
+        <li>
+            <a data-status-value="do-not-disturb" href="#"><span class="fa fa-circle-o"></span> Do Not
+                Disturb
+                <span class="sr-only">Ne pas dérenger</span>
+            </a>
+        </li>
+        <li>
+            <a data-status-value="invisible" href="#"><span class="fa fa-circle-o"></span> Invisible
+                <span class="sr-only">Invesible</span>
+            </a>
+        </li>
+        <li>
+            <a data-status-value="offline" href="#"><span class="fa fa-circle-o"></span> Offline
+                <span class="sr-only">Déconnecter</span>
+            </a>
+        </li>
+        <li role="separator" class="divider"></li>
+        <li>
+            <a href="#">Configurer
+                <span class="sr-only">Connecté</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- end profile_status.tpl.html-->
+        <div class="btn btn-link btn-block kt-profile-dropdown-toggle"
+             data-toggle="dropdown"
+             aria-haspopup="true"
+             aria-expanded="false">
+            <div class="thumbnail">
+                <img src="https://randomuser.me/api/portraits/med/women/81.jpg"
+                     alt=""
+                     class="img-circle"
+                     data-status="away">
+            </div>
+        </div>
+        <ul class="dropdown-menu kt-profile-dropdown dropdown-menu-right"
+            role="menu">
+            <li><a href="#"><i class="fa fa-gear"></i> Settings</a>
+            </li>
+            <li><a href="#"><i class="fa fa-question"></i> Help</a>
+            </li>
+            <li class="bg-master-lighter">
+                <a href="#" class="clearfix">
+                    <span class="pull-left">Logout</span>
+                    <span class="pull-right">
+                        <i class="fa fa-power-off"></i>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- end profile_2x.tpl.html-->
+                                                <!-- END User Info-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <p>Small</p>
+                                        <div class="clearfix demo-widget-profile" id="id-demo-widget-profile-b">
+                                            <div class="pull-right">
+                                                <!-- START Widget Profile-->
+<!-- start profile.tpl.html-->
+<!-- START Widget Profile-->
+<div class="kt-profile" data-widget="profile" data-status="online">
+    <div class="pull-left kt-profile-text">
+        <span class="text-medium">Faustine</span> <span class="">Deschamps</span>
+    </div>
+    <div class="dropdown pull-left">
+        <div class="btn btn-link btn-block kt-profile-dropdown-toggle"
+             data-toggle="dropdown"
+             aria-haspopup="true"
+             aria-expanded="false">
+            <div class="thumbnail">
+                <img src="https://randomuser.me/api/portraits/thumb/women/81.jpg"
+                     alt=""
+                     class="img-circle" data-status="online">
+            </div>
+        </div>
+        <ul class="dropdown-menu kt-profile-dropdown dropdown-menu-right"
+            role="menu">
+            <li><a href="#"><i class="fa fa-gear"></i> Settings</a>
+            </li>
+            <li><a href="#"><i class="fa fa-question"></i> Help</a>
+            </li>
+            <li class="bg-master-lighter">
+                <a href="#" class="clearfix">
+                    <span class="pull-left">Logout</span>
+                    <span class="pull-right">
+                        <i class="fa fa-power-off"></i>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- END  Widget Profile-->
+<!-- end profile.tpl.html-->
+                                                <!-- END  Widget Profile-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- END PANEL -->
+                    </div>
+                    <div class="col-lg-6">
+                        <!-- BEGIN PANEL -->
+                        <div class="panel panel-transparent">
+                            <div class="panel-heading">
+                                <div class="panel-title">Simple widget Profile
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <p>The dashboard will synergize with the colour selection made by the user and
+                                    appropriately amend. Similarly, all other elements will sync according to the
+                                    base colours. </p>
+                                <br>
+                                <div class="clearfix demo-widget-profile" id="id-demo-widget-profile-c">
+                                    <div class="pull-right">
+                                        <!-- START User Info-->
+<!-- start profile_lg.tpl.html-->
+<div class="kt-profile" data-widget="profile" data-status="online">
+    <div class="pull-left kt-profile-text">
+        <span class="text-medium">Faustine</span> <span
+            class="">Deschamps</span>
+    </div>
+    <div class="dropdown pull-left">
+<!-- start profile_status.tpl.html-->
+<div class="dropdown kt-profile-status">
+    <button class="btn btn-link js-kt-profile-status"
+            data-status="online" id="id-demo-widget-profile-c"
+            type="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+        <span class="sr-only">[[current status]]</span>
+        <span class="fa fa-caret-down"></span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-right kt-profile-status-list"
+        aria-labelledby="id-demo-widget-profile-c" role="menu">
+        <li>
+            <a data-status-value="online" href="#"><span class="fa fa-circle-o"></span> Online
+                <span class="sr-only">Connecté</span>
+            </a>
+        </li>
+        <li>
+            <a data-status-value="away" href="#"><span class="fa fa-circle-o"></span> Away
+                <span class="sr-only">Absent</span>
+            </a>
+        </li>
+        <li>
+            <a data-status-value="do-not-disturb" href="#"><span class="fa fa-circle-o"></span> Do Not
+                Disturb
+                <span class="sr-only">Ne pas dérenger</span>
+            </a>
+        </li>
+        <li>
+            <a data-status-value="invisible" href="#"><span class="fa fa-circle-o"></span> Invisible
+                <span class="sr-only">Invesible</span>
+            </a>
+        </li>
+        <li>
+            <a data-status-value="offline" href="#"><span class="fa fa-circle-o"></span> Offline
+                <span class="sr-only">Déconnecter</span>
+            </a>
+        </li>
+        <li role="separator" class="divider"></li>
+        <li>
+            <a href="#">Configurer
+                <span class="sr-only">Connecté</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- end profile_status.tpl.html-->
+        <div class="btn btn-link btn-block kt-profile-dropdown-toggle"
+             data-toggle="dropdown"
+             aria-haspopup="true"
+             aria-expanded="false">
+            <div class="thumbnail">
+                <img src="https://randomuser.me/api/portraits/thumb/women/81.jpg"
+                     alt=""
+                     class="img-circle"
+                     data-status="online">
+            </div>
+        </div>
+        <div class="dropdown-menu kt-profile-dropdown kt-profile-dropdown-lg dropdown-menu-right"
+             role="menu">
+            <div class="kt-profile-dropdown-header">
+                <div class="col-lg-12 p-1">
+                    <div class="pull-left m-r-2">
+                        <a href="#" class="btn-block">
+                            <img src="https://randomuser.me/api/portraits/med/women/81.jpg"
+                                 alt=""
+                                 class="img-circle medium" data-status="">
+                        </a>
+                    </div>
+
+                    <div class="pull-left">
+                        <div class="h4 text-transform-capitalize">
+                            <span class="text-medium">Faustine</span>
+                            <span class="text-light">Deschamps</span>
+                        </div>
+                        <div class="kt-profile-email help">
+                            <span class="">faustine.deschamps@example.com</span>
+                        </div>
+                        <div class="h5">
+                            redsnake
+                        </div>
+                        <div class="clearfix">
+                            <a href="#" class="btn btn-primery">Settings</a>
+                            -
+                            <a href="#"
+                               class="btn btn-primery">Confidentiality</a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="bg-master-lighter kt-profile-dropdown-footer">
+                <div class="col-lg-12">
+                    <a href="#" class="pull-left btn btn-complete">
+                        <span class="pull-right">My Account</span>
+                    </a>
+                    <a href="#" class="pull-right btn btn-default">
+                        <span class="pull-left">Logout</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end profile_lg.tpl.html-->
+                                        <!-- END User Info-->
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12">
+                                    <pre><code>
+                                        &lt;div class="tets"&gt;
+                                            test
+                                        &lt;/div&gt;
+                                    </code></pre>
+                                    <pre><code class="javascript">
+                                    $(document).ready(function() {
+                                      $('pre code').each(function(i, block) {
+                                        hljs.highlightBlock(block);
+                                      });
+                                    });
+                                    </code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END PANEL -->
+                    </div>
+
+                </div>
+                <!-- END CONTAINER FLUID -->
 
             </div>
             <!-- END KT-INNER-CONTENT -->

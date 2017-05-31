@@ -2,6 +2,9 @@
 // Copyright Reserved AA - 2017
 // --------------------------------------------------
 
+// Import FontAwesome
+@import "../../../bower_components/sass-material-colors/sass/sass-material-colors-classes";
+
 @mixin generate-button-color($background, $color) {
   $border: darken($background, 2%);
 

@@ -23,6 +23,7 @@
     "select2": "^4.0.3",
     "jquery.scrollbar": "^0.2.11",
     "vue": "^2.3.3",
-    "highlight": "^9.11.0"
+    "highlight": "^9.11.0",
+    "sass-material-colors": "^0.0.5"
   }
 }

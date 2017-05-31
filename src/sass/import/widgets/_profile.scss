@@ -59,6 +59,7 @@ $ktv-widget-profile-size: $ktv-base-unit * 4;
       position: relative;
       display: none;
       font-size: 10px;
+      color: $ktv-color-black;
     }
 
     &:hover {
@@ -69,7 +70,7 @@ $ktv-widget-profile-size: $ktv-base-unit * 4;
   }
 
   &.open {
-    .btn.profile-status .fa-caret-down {
+    .btn[data-toggle="dropdown"] .fa-caret-down {
       display: block;
     }
   }
